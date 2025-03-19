@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI and Job Markets Presentation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .slide {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            page-break-after: always;
+            min-height: 600px;
+            position: relative;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #718096;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #2d3748;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.2rem;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .section-title h2 {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .wef-logo {
+            background-color: #3182CE;
+        }
+        
+        .mgi-logo {
+            background-color: #805AD5;
+        }
+        
+        .stat-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .stat-box {
+            flex-basis: 48%;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-box.positive {
+            background-color: #ebf8ff;
+            border-left: 5px solid #3182ce;
+        }
+        
+        .stat-box.negative {
+            background-color: #fff5f5;
+            border-left: 5px solid #e53e3e;
+        }
+        
+        .stat-box.neutral {
+            background-color: #f7fafc;
+            border-left: 5px solid #718096;
+        }
+        
+        .big-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .stat-description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .chart {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .bar-chart {
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        
+        .bar {
+            width: 100px;
+            background-color: #4299e1;
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            transition: height 1s ease;
+            margin: 0 20px;
+        }
+        
+        .bar.positive {
+            background-color: #48bb78;
+        }
+        
+        .bar.negative {
+            background-color: #f56565;
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -40px;
+            left: -10px;
+            right: -10px;
+            text-align: center;
+            font-size: 0.9rem;
+            width: 120px;
+            margin: 0 auto;
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            flex-basis: 48%;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            background-color: #f7fafc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .info-card ul {
+            padding-left: 20px;
+        }
+        
+        .info-card li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            display: inline-block;
+            padding: 0 5px;
+            background-color: #ebf8ff;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .highlight.positive {
+            background-color: #e6fffa;
+            color: #2c7a7b;
+        }
+        
+        .highlight.negative {
+            background-color: #fff5f5;
+            color: #c53030;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .stat-box, .info-card {
+                flex-basis: 100%;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .slide {
+                box-shadow: none;
+                margin: 0;
+                height: 100vh;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            
+            @page {
+                size: landscape;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Slide -->
+    <div class="slide">
+        <header>
+            <h1>AI and Job Markets</h1>
+            <p class="subtitle">Automation & Future Employment Trends</p>
+        </header>
+        
+        <div style="text-align: center; margin-top: 80px;">
+            <img src="https://placehold.co/400x300" alt="AI and Job Markets" style="max-width: 400px; border-radius: 10px;">
+            <p style="margin-top: 40px; font-size: 1.2rem;">Based on data from World Economic Forum and McKinsey Global Institute</p>
+        </div>
+        
+        <div class="slide-number">1</div>
+    </div>
+    
+    <!-- Overview Slide -->
+    <div class="slide">
+        <h2>Key Findings Overview</h2>
+        
+        <div class="stat-container">
+            <div class="stat-box positive">
+                <div class="big-number">69M</div>
+                <p class="stat-description">New jobs expected to be created by 2027</p>
+            </div>
+            
+            <div class="stat-box negative">
+                <div class="big-number">83M</div>
+                <p class="stat-description">Jobs expected to be eliminated by 2027</p>
+            </div>
+            
+            <div class="stat-box negative">
+                <div class="big-number">-14M</div>
+                <p class="stat-description">Net job change (approximately 2% of current employment)</p>
+            </div>
+            
+            <div class="stat-box neutral">
+                <div class="big-number">23%</div>
+                <p class="stat-description">Percentage of jobs expected to change by 2027</p>
+            </div>
+        </div>
+        
+        <div class="slide-number">2</div>
+    </div>
+    
+    <!-- WEF Report Slide 1 -->
+    <div class="slide">
+        <div class="section-title">
+            <div class="logo wef-logo">WEF</div>
+            <h2>World Economic Forum: Future of Jobs Report 2023</h2>
+        </div>
+        
+        <div class="chart">
+            <h3 style="text-align: center; margin-bottom: 15px;">AI Adoption Plans By Companies</h3>
+            <div class="bar-chart">
+                <div class="bar positive" style="height: 75%;">
+                    <div class="bar-value">75%</div>
+                    <div class="bar-label" style="width: 120px; text-align: center;">Plan to adopt AI by 2027</div>
+                </div>
+                
+                <div class="bar positive" style="height: 50%;">
+                    <div class="bar-value">50%</div>
+                    <div class="bar-label" style="width: 120px; text-align: center;">Expect AI to create jobs</div>
+                </div>
+                
+                <div class="bar negative" style="height: 25%;">
+                    <div class="bar-value">25%</div>
+                    <div class="bar-label" style="width: 120px; text-align: center;">Anticipate job losses</div>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">
+            Nearly 75% of companies surveyed plan to adopt AI by 2027, with half expecting AI to create job growth
+        </p>
+        
+        <div class="slide-number">3</div>
+    </div>
+    
+    <!-- WEF Report Slide 2 -->
+    <div class="slide">
+        <div class="section-title">
+            <div class="logo wef-logo">WEF</div>
+            <h2>Changing Occupations</h2>
+        </div>
+        
+        <div class="info-row">
+            <div class="info-card">
+                <h3>Fastest-Growing Occupations</h3>
+                <ul>
+                    <li><span class="highlight positive">AI and Machine Learning Specialists</span></li>
+                    <li>Sustainability Specialists</li>
+                    <li>Business Intelligence Analysts</li>
+                    <li>Information Security Analysts</li>
+                    <li>Fintech Engineers</li>
+                    <li>Data Analysts and Scientists</li>
+                    <li>Robotics Engineers</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>Fast-Declining Occupations</h3>
+                <ul>
+                    <li><span class="highlight negative">Clerical and Administrative Roles</span></li>
+                    <li>Bank Tellers and Related Clerks</li>
+                    <li>Data Entry Clerks</li>
+                    <li>Postal Service Clerks</li>
+                    <li>Cashiers and Ticket Clerks</li>
+                    <li>Administrative Secretaries</li>
+                    <li>Accounting and Bookkeeping</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">
+            AI-related roles top the list of fastest-growing occupations, while clerical and administrative roles are fast-declining due to automation
+        </p>
+        
+        <div class="slide-number">4</div>
+    </div>
+    
+    <!-- McKinsey Report Slide 1 -->
+    <div class="slide">
+        <div class="section-title">
+            <div class="logo mgi-logo">MGI</div>
+            <h2>McKinsey Global Institute: The Future of Work after COVID-19</h2>
+        </div>
+        
+        <div class="stat-container">
+            <div class="stat-box neutral">
+                <div class="big-number">25%</div>
+                <p class="stat-description">More workers needing to change occupations by 2030 than pre-pandemic estimates</p>
+            </div>
+            
+            <div class="stat-box neutral">
+                <div class="big-number">100M+</div>
+                <p class="stat-description">Workers (1 in 16) across eight major economies may need to transition to new occupations by 2030</p>
+            </div>
+        </div>
+        
+        <div class="info-row">
+            <div class="info-card">
+                <h3>COVID-19 Impact</h3>
+                <p>The pandemic has accelerated automation and AI adoption, particularly in areas with high physical proximity requirements.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Key Challenge: Workforce Shift</h3>
+                <p>Rather than mass unemployment, the primary challenge is helping workers transition to different roles as AI takes over certain tasks.</p>
+            </div>
+        </div>
+        
+        <div class="slide-number">5</div>
+    </div>
+    
+    <!-- McKinsey Report Slide 2 -->
+    <div class="slide">
+        <div class="section-title">
+            <div class="logo mgi-logo">MGI</div>
+            <h2>Skills in Demand & Recommendations</h2>
+        </div>
+        
+        <div class="info-row">
+            <div class="info-card">
+                <h3>Skills in Demand</h3>
+                <ul>
+                    <li><span class="highlight positive">Social skills</span></li>
+                    <li><span class="highlight positive">Creative thinking</span></li>
+                    <li><span class="highlight positive">Analytical capabilities</span></li>
+                    <li>Technological proficiency</li>
+                    <li>Adaptability and resilience</li>
+                    <li>Problem-solving abilities</li>
+                    <li>Emotional intelligence</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>McKinsey's Recommendations</h3>
+                <ul>
+                    <li>Focus on retraining programs</li>
+                    <li>Invest in education systems</li>
+                    <li>Create workforce transition support</li>
+                    <li>Develop lifelong learning opportunities</li>
+                    <li>Public-private partnerships for skills development</li>
+                    <li>Strengthen social safety nets during transitions</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">
+            AI will create demand for social, creative, and analytical skills that are harder to automate
+        </p>
+        
+        <div class="slide-number">6</div>
+    </div>
+    
+    <!-- Conclusion Slide -->
+    <div class="slide">
+        <h2 style="text-align: center; margin-bottom: 40px;">Key Takeaways</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <ul style="font-size: 1.2rem; line-height: 1.8;">
+                <li>AI will transform job markets with both job creation and elimination</li>
+                <li>Net effect expected to be a 2% reduction in current employment by 2027</li>
+                <li>75% of companies plan to adopt AI, with half expecting job growth</li>
+                <li>AI-related roles are among the fastest-growing occupations</li>
+                <li>Administrative and clerical roles face highest risk of automation</li>
+                <li>Focus should be on workforce transitions rather than fearing mass unemployment</li>
+                <li>Skills in social interaction, creativity, and analysis will be increasingly valuable</li>
+            </ul>
+        </div>
+        
+        <div class="slide-number">7</div>
+    </div>
+    
+    <!-- References Slide -->
+    <div class="slide">
+        <h2 style="text-align: center; margin-bottom: 40px;">Data Sources</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                <strong>World Economic Forum – Future of Jobs Report 2023:</strong><br>
+                Comprehensive analysis predicting 23% of jobs will change by 2027, with 69 million new jobs created and 83 million eliminated.
+            </p>
+            
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                <strong>McKinsey Global Institute – The Future of Work after COVID-19 (2021):</strong><br>
+                Analysis showing pandemic accelerated automation and AI adoption, potentially requiring 25% more workers to change occupations by 2030 than previously estimated.
+            </p>
+        </div>
+        
+        <footer>
+            <p>Presentation created based on data from World Economic Forum Future of Jobs Report 2023 and McKinsey Global Institute The Future of Work after COVID-19 (2021)</p>
+        </footer>
+        
+        <div class="slide-number">8</div>
+    </div>
+</body>
+</html>

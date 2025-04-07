@@ -77,9 +77,7 @@ Bu çok yönlü araçlar, akademi için özel olarak tasarlanmamış olsalar da,
 
 ---
 
-### Önemli Kaynaklar
-
-### Key Citations
+### Kaynaklar
 
 - [Georgetown University Library: AI Tools for Research](https://guides.library.georgetown.edu/ai/tools)
 - [Autogpt: 18 Best AI for Research in 2025](https://autogpt.net/20-best-ai-for-research-in-2025/)

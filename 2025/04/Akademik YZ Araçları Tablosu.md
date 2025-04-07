@@ -79,8 +79,10 @@ Bu çok yönlü araçlar, akademi için özel olarak tasarlanmamış olsalar da,
 
 ### Önemli Kaynaklar
 
-- [Georgetown Üniversitesi Kütüphanesi: Araştırma için Yapay Zeka Araçları](https://guides.library.georgetown.edu/ai/tools)
-- [Autogpt: 2025'te Araştırma için En İyi 18 Yapay Zeka](https://autogpt.net/20-best-ai-for-research-in-2025/)
-- [Powerdrill: Mart 2025'te En İyi 10 Akademik Yapay Zeka Aracı](https://powerdrill.ai/blog/top-academic-ai-tools)
-- [Zipy: En İyi 14 Nitel Veri Analizi Aracı](https://www.zipy.ai/blog/qualitative-data-analysis-tools)
-- [Euronews: Akademik araştırmanızı güçlendirecek en iyi yapay zeka araçları](https://www.euronews.com/next/2024/01/20/best-ai-tools-academic-research-chatgpt-consensus-chatpdf-elicit-research-rabbit-scite)
+### Key Citations
+
+- [Georgetown University Library: AI Tools for Research](https://guides.library.georgetown.edu/ai/tools)
+- [Autogpt: 18 Best AI for Research in 2025](https://autogpt.net/20-best-ai-for-research-in-2025/)
+- [Powerdrill: Top 10 Academic AI Tools in March 2025](https://powerdrill.ai/blog/top-academic-ai-tools)
+- [Zipy: 14 Best Qualitative Data Analysis Tools](https://www.zipy.ai/blog/qualitative-data-analysis-tools)
+- [Euronews: The best AI tools to power your academic research](https://www.euronews.com/next/2024/01/20/best-ai-tools-academic-research-chatgpt-consensus-chatpdf-elicit-research-rabbit-scite)

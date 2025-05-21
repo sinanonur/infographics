@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google I/O 2025: Gemini Çağı - Yapay Zeka İnfografiği</title>
+    <title>Google I/O 2025: Gemini Çağı - AI İnfografiği</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
             }
         }
         .stat-card {
-            background-color: #0077B6; /* Ana Mavi */
+            background-color: #0077B6; /* Birel Mavi */
             color: white;
             padding: 1.5rem;
             border-radius: 0.5rem;
@@ -44,7 +44,7 @@
             margin-top: 0.5rem;
         }
         .section-title {
-            color: #0077B6; /* Ana Mavi */
+            color: #0077B6; /* Birel Mavi */
         }
         .accent-text {
             color: #FFC300; /* Canlı Sarı/Turuncu Vurgu */
@@ -57,8 +57,8 @@
             margin-bottom: 1.5rem; /* mb-6 */
         }
         .flow-step {
-            background-color: #E0F7FA; /* Açık Camgöbeği */
-            border-left: 4px solid #00B4D8; /* İkincil Mavi */
+            background-color: #E0F7FA; /* Açık Cam */
+            border-left: 4px solid #00B4D8; /* İkinil Mavi */
             padding: 1rem;
             margin-bottom: 0.75rem;
             border-radius: 0.375rem;
@@ -66,11 +66,11 @@
         .flow-arrow {
             text-align: center;
             font-size: 1.5rem;
-            color: #00B4D8; /* İkincil Mavi */
+            color: #00B4D8; /* İkinil Mavi */
             margin: 0.25rem 0;
         }
         .table-header {
-            background-color: #0077B6; /* Ana Mavi */
+            background-color: #0077B6; /* Birel Mavi */
             color: white;
         }
         .table-cell {
@@ -78,49 +78,49 @@
             border: 1px solid #E0E0E0;
         }
         .nav-item {
-            scroll-margin-top: 80px; /* Yapışkan başlık varsa ofset */
+            scroll-margin-top: 80px; /* Yapışkan başlık varsa kaydırma ofseti */
         }
     </style>
-    <!-- 
-        İnfografik Anlatı Planı:
-        0. Yönetici Özeti: I/O 2025 YZ duyurularının önemli başlıkları.
-        1. Giriş/Kahraman: "Gemini Çağı" - I/O 2025'te YZ Hakimiyeti. Anahtar istatistik: "Gemini" bahsi.
-        2. Gemini'nin Bir Sonraki Evrimi: Gemini 2.5 Pro, Flash, Deep Think. Anahtar yetenekler (ses, LearnLM), Ironwood TPU.
-        3. YZ Google'ın Temel Ürünlerini Yeniden Hayal Ediyor: Arama (YZ Modu, YZ Genel Bakışları, Aracılı Yetenekler, Sanal Deneme), Meet, Gmail.
-        4. Üretken YZ ile Yaratıcılığı Serbest Bırakma: Veo 3, Imagen 4, Flow, Lyria 2.
-        5. Geliştiricileri Güçlendirme: MedGemma, Gemma 3n, Jules, Stitch, Firebase YZ, Gemini Kod Asistanı, Cihaz Üzerinde YZ.
-        6. Sürükleyici Web: Android XR ve YZ Yakınsaması.
-        7. Sorumlu YZ ve Para Kazanma: SynthID, YZ Abonelik Katmanları.
-        8. Sonuç Analizi: Temel çıkarımlar ve pazar etkisi.
+    <!--
+        İnfografi Anlatı Planı:
+        0. Yönetici Özeti: I/O 2025 AI duyurularının ö önemli noktaları.
+        1. Kahraman/Giriş: "Gemini Çağı" - I/O 2025'te AI Hakimiyeti. Ana istatistik: "Gemini" bahsetmeleri.
+        2. Gemini'nin Yeni Evrimi: Gemini 2.5 Pro, Flash, Deep Think. Ana yetenekler (ses, LearnLM), Ironwood TPU.
+        3. Google'ın Temel Ürünlerini AI Yeniden Tasarlamak: Arama (AI Modu, AI Genel Bakışlar, Ajansal Yetenekler, Sanal Deneme), Meet, Gmail.
+        4. Üretken AI ile Yaratıcılığı Serbest Bırakmak: Veo 3, Imagen 4, Flow, Lyria 2.
+        5. Geliştiricileri Güçlendirmek: MedGemma, Gemma 3n, Jules, Stitch, Firebase AI, Gemini Code Assist, Cihaz İçi AI.
+        6. Immersive Web: Android XR ve AI Yakışımı.
+        7. Sorumlu AI ve Monetasyon: SynthID, AI Abonelik Seviyeleri.
+        8. Sonuç Analizi: Ana çıkarımlar ve pazar etkisi.
 
         Görselleştirme Seçenekleri Özeti:
-        - "Gemini Bahsi": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "YZ Genel Bakış Kullanıcıları": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Tıklama Oranı Düşüşü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Ironwood TPU Gücü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Gemini 2.5 Pro Bağlam Penceresi": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Imagen 4 Çözünürlüğü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "SynthID Filigranları": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Gemini Kod Asistanı Artışı": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirme.
-        - "Abonelik Katmanları": HTML Tablosu. Amaç: Karşılaştırma.
-        - "Aracılı Ödeme Süreci": HTML/CSS Akış Şeması. Amaç: Organize Etme.
-        - "Flow Film Yapım Araç Seti Süreci": HTML/CSS Akış Şeması. Amaç: Organize Etme.
-        - "Jules Kodlama Aracısı Süreci": HTML/CSS Akış Şeması. Amaç: Organize Etme.
-        - Ana Model Duyuruları (Tablo 1): HTML Tablosu. Amaç: Organize Etme.
-        - Ürünlerdeki YZ Özellikleri (Tablo 2): HTML Tablosu. Amaç: Organize Etme.
-        - Üretken YZ Araçları (Tablo 3): HTML Tablosu. Amaç: Organize Etme.
-        - YZ Abonelik Katmanları (Rapordan Tablo 4): HTML Tablosu. Amaç: Organize Etme/Karşılaştırma.
-        - Diğer veri noktaları: Açıklayıcı paragraflar içinde metin olarak sunulmuştur.
-        - Tüm grafikler/şemalar Canvas tabanlıdır (uygun olduğunda Chart.js) veya HTML/CSS'dir. SVG YOKTUR, MERMAID JS YOKTUR.
+        - "Gemini Bahsetmeleri": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "AI Genel Bakışlar Kullanıcıları": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Tıklama Düşüşü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Ironwood TPU Gücü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Gemini 2.5 Pro Bağlam Penceresi": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Imagen 4 Çözünürlüğü": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "SynthID Filigranları": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Gemini Code Assist Yükseltmesi": Tek Büyük Sayı (HTML/CSS). Amaç: Bilgilendirmek.
+        - "Abonelik Seviyeleri": HTML Tablosu. Amaç: Karşılaştırmak.
+        - "Ajansal Ödeme Süreci": HTML/CSS Akış Şeması. Amaç: Düzenlemek.
+        - "Flow Film Yapım Ara Seti Süreci": HTML/CSS Akış Şeması. Amaç: Düzenlemek.
+        - "Jules Kodlama Ajanı Süreci": HTML/CSS Akış Şeması. Amaç: Düzenlemek.
+        - Ana Model Duyuruları (Tablo 1): HTML Tablosu. Amaç: Düzenlemek.
+        - Ürünlerdeki AI Özellikleri (Tablo 2): HTML Tablosu. Amaç: Düzenlemek.
+        - Üretken AI Araçları (Tablo 3): HTML Tablosu. Amaç: Düzenlemek.
+        - AI Abonelik Seviyeleri (raportordan Tablo 4): HTML Tablosu. Amaç: Düzenlemek/Karşılaştırmak.
+        - Diğer veri noktaları: Tanımlcı paragraflar içinde metin olarak sunulur.
+        - Tüm grafikler/şemalar Canvas tabanlı (uygun olduğu yerlerde Chart.js) veya HTML/CSS. SVG YOK, MERMAID JS YOK.
 
         Seçilen Renk Paleti: Canlı Maviler ve Sarı Vurgu
-        - Ana Mavi: #0077B6
-        - İkincil Mavi: #00B4D8
-        - Vurgu Sarısı/Turuncusu: #FFC300
+        - Birel Mavi: #0077B6
+        - İkinil Mavi: #00B4D8
+        - Vurgu Sarı/Turuncu: #FFC300
         - Arka Plan: #F0F8FF
         - Metin: #333333 (Koyu Gri), #FFFFFF (Beyaz)
 
-        Onay: Bu belgede NE Mermaid JS NE DE SVG kullanılmamıştır. Tüm şemalar HTML/CSS tabanlıdır. Tüm grafikler Chart.js aracılığıyla Canvas tabanlıdır.
+        Onay: Bu Belgede NE Mermaid JS, NE DE SVG Kullanılmamıştır. Tüm şemalar HTML/CSS tabanlıdır. Tüm grafikler Chart.js aracılığıyla Canvas tabanlıdır.
     -->
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -135,141 +135,141 @@
 
         <section id="executive-summary" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-2xl font-bold mb-4 text-center section-title">Yönetici Özeti: Önemli YZ Gelişmeleri</h2>
-                <p class="text-md mb-4 text-gray-700">Google I/O 2025, "Gemini Çağı"nı başlatarak büyük ölçüde Yapay Zekaya odaklandı. Önemli duyurular şunları içeriyordu:</p>
+                <h2 class="text-2xl font-bold mb-4 text-center section-title">Yönetici Özeti: Önemli AI Vurguları</h2>
+                <p class="text-md mb-4 text-gray-700">Google I/O 2025, büyük ölçüde Yapay Zekaya (AI) odaklanarak "Gemini Çağı"nı kurdu. Ana duyurular şunları içeriyordu:</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 text-sm md:text-base">
-                    <li><strong>Gemini Model Evrimi:</strong> <strong class="text-[#0077B6]">Gemini 2.5 Pro</strong> (1 milyon token bağlam penceresi, "Derin Düşünme" modu), <strong class="text-[#0077B6]">Gemini 2.5 Flash</strong> (hız/verimlilik) ve yeni <strong class="text-[#0077B6]">Ironwood TPU</strong> ile güçlendirilmiş yerel ses ve LearnLM entegrasyonu gibi yeni yeteneklerin lansmanı.</li>
-                    <li><strong>Temel Ürünlerde YZ:</strong> <strong class="text-[#0077B6]">Aramada YZ Modu</strong> (sohbet tabanlı, Project Mariner aracılığıyla aracılı yetenekler), YZ Genel Bakışlarının genişletilmesi ve Workspace'te Gemini entegrasyonu (Meet çevirileri, Gmail akıllı yanıtları).</li>
-                    <li><strong>Üretken YZ Gelişmeleri:</strong> <strong class="text-[#0077B6]">Veo 3</strong> (senkronize sesli video), <strong class="text-[#0077B6]">Imagen 4</strong> (2K görüntü kalitesi), <strong class="text-[#0077B6]">Flow</strong> (film yapım araç seti) ve müzik için Lyria 2.</li>
-                    <li><strong>Geliştirici Güçlendirme:</strong> Yeni açık modeller (<strong class="text-[#0077B6]">MedGemma, Gemma 3n</strong>), YZ araçları (<strong class="text-[#0077B6]">Jules</strong> kodlama aracısı, <strong class="text-[#0077B6]">Stitch</strong> kullanıcı arayüzü oluşturucu), Firebase YZ geliştirmeleri ve cihaz üzerinde YZ için Gemini Nano.</li>
-                    <li><strong>Sürükleyici Web ve XR:</strong> İş ortağı donanımlarında (Samsung, Gentle Monster, Warby Parker) YZ odaklı VR/AR için yerel Gemini entegrasyonuyla yeniden canlandırılan <strong class="text-[#0077B6]">Android XR</strong> platformu.</li>
-                    <li><strong>Sorumluluk ve Para Kazanma:</strong> YZ içerik tanımlama için <strong class="text-[#0077B6]">SynthID Dedektörü</strong> ve yeni <strong class="text-[#0077B6]">Google AI Ultra</strong> (aylık 249,99$) abonelik katmanı.</li>
+                    <li><strong>Gemini Modeli Evrimi:</strong> <strong class="text-[#0077B6]">Gemini 2.5 Pro</strong> (1M token penceresi, "Derin Düşünme" modu), <strong class="text-[#0077B6]">Gemini 2.5 Flash</strong> (hız/verimlilik) ve yeni <strong class="text-[#0077B6]">Ironwood TPU</strong> tarafından desteklenen doğal ses ve LearnLM entegrasyonu gibi yeni yeteneklerin lansmanı.</li>
+                    <li><strong>Temel Ürünlerde AI:</strong> <strong class="text-[#0077B6]">Search'te AI Modu</strong> (konuşmalı, Project Mariner aracılığıyla ajansal yetenekler), AI Genel Bakışların genişlemesi ve Workspace'a Gemini entegrasyonu (Meet çevirileri, Gmail akıllı yanıtlar).</li>
+                    <li><strong>Üretken AI Gelişmeleri:</strong> <strong class="text-[#0077B6]">Veo 3</strong> (senkronize ses video), <strong class="text-[#0077B6]">Imagen 4</strong> (2K görüntü kalitesi), <strong class="text-[#0077B6]">Flow</strong> (film yapım araç seti) ve Lyria 2 müzik için.</li>
+                    <li><strong>Geliştiricileri Güçlendirme:</strong> Yeni açık modeller (<strong class="text-[#0077B6]">MedGemma, Gemma 3n</strong>), AI araçları (<strong class="text-[#0077B6]">Jules</strong> kodlama ajanı, <strong class="text-[#0077B6]">Stitch</strong> UI oluşturucusu), Firebase AI geliştirmeleri ve cihaz içi AI için Gemini Nano.</li>
+                    <li><strong>Immersive Web ve XR:</strong> Partner donanımlarında (Samsung, Gentle Monster, Warby Parker) AI destekli VR/AR için doğal Gemini entegrasyonu ile <strong class="text-[#0077B6]">Android XR</strong> platformu.</li>
+                    <li><strong>Sorumluluk ve Monetasyon:</strong> AI içerik tespiti için <strong class="text-[#0077B6]">SynthID Dedektörü</strong> ve yeni <strong class="text-[#0077B6]">Google AI Ultra</strong> ($249.99/ay) abonelik seviyesi.</li>
                 </ul>
-                <p class="text-sm text-gray-600 italic">Etkinlik, Google'ın YZ'yi ekosistemine derinlemesine yerleştirme, gelişmiş modeller ve özel donanımlar aracılığıyla yeniliği teşvik etme ve YZ yatırımları için net para kazanma yolları oluşturma stratejisinin altını çizdi.</p>
+                <p class="text-sm text-gray-600 italic">Olay, Google'ın AI'yı ekosistemine derinlemesine gömme, gelişmiş modeller ve özel donanım kullanarak yenilik yaratma ve AI yatırımları için net gelir yolları oluşturma stratejisini vurguladı.</p>
             </div>
         </section>
 
         <section id="ai-center-stage" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">YZ Sahne Alıyor: "Gemini Çağı" Pekiştirildi</h2>
-                <p class="text-lg mb-4 text-gray-700">20-21 Mayıs'ta düzenlenen Google I/O 2025, Yapay Zekanın (YZ) baskın bir şekilde ön plana çıktığı kesin bir dönüm noktası oldu. Bu bilinçli gündem düzenlemesi, Google'ın YZ odaklı bir gelecek için ilerlemelerini ve vizyonunu sergilediği ana sahneyi açtı. Etkinlik, önceden bilgilendirilenlerin ötesinde geleneksel donanım veya önemli Android işletim sistemi güncellemelerini büyük ölçüde dışladı.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">AI Merkez Sahnedede: "Gemini Çağı"nın Sağlamlaşması</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, 20-21 Mayıs tarihlerinde gerçekleşti ve Yapay Zekanın (AI) oturumlara tamamen hakim olduğu kesin bir dönüm noktası oldu. Gündemin kasıtlı olarak düzenlenmesi Google'ın ilerlemelerini ve AI destekli geleceğe yönelik vizyonunu sergilemek için ana sahneyi boş bıraktı. Olay, önceden bilgilendirilmişlerin dışındaki önemli donanım veya Android OS güncellemelerinden büyük ölçüde kaçındı.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div class="stat-card">
                         <div class="stat-number">95</div>
-                        <div class="stat-label">Kez "Gemini" Açılış Konuşmasında Anıldı</div>
+                        <div class="stat-label">Ana Sunum Sırasında "Gemini" Bahsetme Sayısı</div>
                     </div>
                     <div class="p-6 bg-blue-50 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-[#0077B6] mb-2">Stratejik Konsolidasyon</h3>
-                        <p class="text-gray-700">"Gemini" terimi, "YZ"nin kendisinden önemli ölçüde daha fazla anılarak, Google'ın çeşitli YZ çabalarının Gemini markası altında stratejik bir şekilde birleştirildiğinin altını çizdi. Bu, güçlü bir tanınırlık oluşturmayı ve Google'ın YZ hikayesini kullanıcılar, geliştiriciler ve yatırımcılar için basitleştirmeyi amaçlıyor.</p>
+                        <h3 class="text-xl font-semibold text-[#0077B6] mb-2">Stratejik Birleşme</h3>
+                        <p class="text-gray-700">"Gemini" teriminin "AI"nin kendisinden çok daha fazla kez kullanılması, Google'ın çeşitli AI çabalarının Gemini markası altında stratejik olarak birleştiğini gösteriyor. Bu, kullanıcılar, geliştiriciler ve yatırımcılar için Google'ın AI hikayesini güçlü bir şekilde tanıtmayı ve basitleştirmeyi amaçlamaktadır.</p>
                     </div>
                 </div>
-                <p class="text-lg mb-4 text-gray-700">CEO Sundar Pichai, "Yıllık geliştirici konferansımızda, Gemini ile YZ'yi nasıl daha da yardımcı hale getirdiğimizi duyurduk" dedi. Bu uyumlu mesajlaşma, Google'ın YZ kimliğinin birleştiğini ve Gemini'yi bir sonraki inovasyon dalgasını yönlendiren temel motor olarak sunduğunu gösteriyor. Ancak bu sunumlar, Google'ı önemli YZ yatırımları için net para kazanma yolları göstermeye zorlayan artan yatırımcı ihtiyatına karşı gerçekleşti.</p>
-                <p class="text-md text-gray-600 italic">Yeniliğe rağmen, Alphabet'in hisseleri kısmen "YZ duyuru yorgunluğu" ve somut iş modelleri talebi nedeniyle mütevazı bir düşüş yaşadı.</p>
+                <p class="text-lg mb-4 text-gray-700">CEO Sundar Pichai, "Yıllık geliştirici konferansımızda, Gemini ile AI'yı daha faydalı hale getirdiğimizi duyurduk" dedi. Bu yoğun mesajlaşma Google'ın AI kimliğini birleştirdiğini ve Gemini'yi inovasyonun bir sonraki dalgasının temel motoru olarak sunduğunu işaret ediyor. Ancak bu gösteriler, artan yatırımcı dikkati ve Google'ın önemli AI yatırımları için net monetasyon yolları gösterme baskısı karşısında gerçekleşti.</p>
+                <p class="text-md text-gray-600 italic">İnovasyona rağmen, Alphabet'ın hisse senedi hafif bir düşüş yaşadı, kısmen "AI duyuru yorgunluğuna" ve somut iş modellerine olan talebe bağlandı.</p>
             </div>
         </section>
 
         <section id="gemini-evolution" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">Gemini'nin Bir Sonraki Evrimi: Google'ın YZ Geleceğini Güçlendirmek</h2>
-                <p class="text-lg mb-4 text-gray-700">I/O 2025'in merkezinde, özellikle Gemini 2.5 serisinin önemli evrimi yer alıyordu. Bu modeller, işlevsellik, güvenlik, şeffaflık, kullanıcı kontrolü ve maliyet verimliliği konularında iyileştirmelerle yeni amiral gemileri olarak konumlandırıldı.</p>
-                
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Gemini'nin Sonraki Evrimi: Google'ın AI Geleceğini Güçlendirmek</h2>
+                <p class="text-lg mb-4 text-gray-700">I/O 2025'in merkezinde Gemini model ailesinin önemli evrimi vardı, özellikle Gemini 2.5 serisi, işlevsellik, güvenlik, şeffaflık, kullanıcı kontrolü ve maliyet verimliliğinde iyileştirmelerle yeni amiral gemiler olarak konumlandı.</p>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini 2.5 Pro</h3>
-                        <p class="text-gray-700 mb-2">Google'ın "şimdiye kadarki en akıllı modeli" olarak selamlandı ve karşılaştırmalı değerlendirmelerde lider performans sergiledi.</p>
+                        <p class="text-gray-700 mb-2">Google'ın "şu ana kadarki en akıllı modeli" olarak övüldü, karşılaştırmalarda öncü performans gösterdi.</p>
                         <div class="stat-card bg-[#00B4D8] mb-2">
                             <div class="stat-number text-2xl">1M</div>
                             <div class="stat-label text-sm">Token Bağlam Penceresi</div>
                         </div>
                         <p class="text-gray-700 font-semibold">Deneysel "Derin Düşünme" Modu:</p>
-                        <p class="text-gray-700 text-sm">Karmaşık problemler (ileri matematik, programlama) için geliştirilmiş muhakeme, paralel olarak birden fazla muhakeme hattı çalıştırır. Şu anda test aşamasında.</p>
+                        <p class="text-gray-700 text-sm">Karmaşık problemler (gelişmiş matematik, programlama) için geliştirilmiş akıl yürütme, paralel olarak birçok akıl yürütme hattı çalıştırma. Şu anda test ediliyor.</p>
                     </div>
 
                     <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini 2.5 Flash</h3>
-                        <p class="text-gray-700 mb-2">Güçlü muhakeme ve kodlama ile hız için optimize edilmiş daha hızlı, verimli, hafif sürüm.</p>
-                        <p class="text-gray-700 mb-2 font-semibold">Önceki yinelemelere göre <span class="accent-text">%20-30 daha az token</span> kullanır.</p>
-                        <p class="text-gray-700 text-sm">Gemini uygulaması, Google AI Studio, Vertex AI aracılığıyla kullanılabilir. Haziran'da önizleme.</p>
+                        <p class="text-gray-700 mb-2">Hız için optimize edilmiş daha hızlı, verimli, hafif bir sürüm; güçlü akıl yürütme ve kodlama ile.</p>
+                        <p class="text-gray-700 mb-2 font-semibold">Önceki iterasyonlara göre <span class="accent-text">%20-30 daha az token</span> kullanır.</p>
+                        <p class="text-gray-700 text-sm">Gemini uygulaması, Google AI Studio, Vertex AI aracılığıyla mevcut. Haziran'da önizlemede.</p>
                     </div>
 
                     <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini Diffusion</h3>
-                        <p class="text-gray-700 mb-2">Deneysel metin difüzyon modeli. Yüksek performanslı bir sürüm (muhtemelen kod odaklı) güvenilir test kullanıcılarına açık, kod odaklı bir sürümün Haziran'da genel kullanıma sunulması bekleniyor.</p>
+                        <p class="text-gray-700 mb-2">Deneysel metin difüzyon modeli. Güvenilir test ediciler için yüksek performanslı bir sürüm (belki kod odaklı) açık; kod odaklı bir sürümün Haziran'da genel kullanıma sunumu bekleniyor.</p>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3 mt-6">Gemini 2.5 Genelinde Gelişmiş Yetenekler:</h3>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3 mt-6">Gemini 2.5'te Gelişmiş Yetenekler:</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                    <li><strong class="text-[#0077B6]">Yerel Ses Çıkışı ve Duygusal Diyalog:</strong> Çeşitli tonlar, aksanlar, stiller ve duygu tespiti ile daha doğal metin okuma.</li>
-                    <li><strong class="text-[#0077B6]">Proaktif Ses:</strong> Konuşma akışının daha iyi anlaşılması, ilgisiz seslerin göz ardı edilmesi.</li>
-                    <li><strong class="text-[#0077B6]">Çok Dilli Destek:</strong> TTS, 24'ten fazla dili destekler ve konuşma ortasında sorunsuz bir şekilde geçiş yapar.</li>
-                    <li><strong class="text-[#0077B6]">LearnLM Entegrasyonu:</strong> Eğitim görevleri için özel sürüm, kişiselleştirilmiş öğrenmeyi, sınavları ve açıklayıcı videoları geliştirir.</li>
-                    <li><strong class="text-[#0077B6]">API Geliştirmeleri:</strong> Yerel ses, gerçek zamanlı konuşmalar, bilgisayar kullanım yetenekleri (Project Mariner), URL bağlamı alma, eşzamansız işlev çağırma.</li>
+                    <li><strong class="text-[#0077B6]">Doğal Ses Çıktısı ve Duygusal Diyalog:</strong> Farklı tonlar, aksanlar, stiller ve duygu tespiti ile daha doğal metinden sese dönüş.</li>
+                    <li><strong class="text-[#0077B6]">Proaktif Ses:</strong> Konuşma akışını daha iyi anlama, alakasız sesleri göz ardı etme.</li>
+                    <li><strong class="text-[#0077B6]">Çok Dilli Destek:</strong> TTS 24'ten fazla dili destekler, sohbet ortasında sorunsuz geçiş yapar.</li>
+                    <li><strong class="text-[#0077B6]">LearnLM Entegrasyonu:</strong> Kişiselleştirilmiş öğrenmeyi, sınavları ve açıklama videolarını artıran eğitim görevleri için özel bir sürüm.</li>
+                    <li><strong class="text-[#0077B6]">API Geliştirmeleri:</strong> Doğal ses, gerçek zamanlı sohbetler, bilgisayar kullanımı yetenekleri (Project Mariner), URL bağlam geri alma, asenkron fonksiyon çağrıları.</li>
                 </ul>
 
                 <div class="card bg-gray-50">
                     <h3 class="text-2xl font-semibold text-[#0077B6] mb-3">Ironwood TPU: Gelişmelerin Arkasındaki Motor</h3>
-                    <p class="text-gray-700 mb-4">Google'ın çıkarım için tasarlanmış 7. nesil Tensör İşlem Birimi, bu model iyileştirmelerinin temelini oluşturuyor.</p>
+                    <p class="text-gray-700 mb-4">Google'ın 7. nesil Tensor İşleme Birimi, çıkarım için tasarlanmış bu model iyileştirmelerini temel alır.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div class="stat-card bg-[#00B4D8] p-4">
                             <div class="stat-number text-xl">10x</div>
-                            <div class="stat-label text-xs">Öncekinden Daha Güçlü</div>
+                            <div class="stat-label text-xs">Öncekisinden Daha Güçlü</div>
                         </div>
                         <div class="stat-card bg-[#00B4D8] p-4">
                             <div class="stat-number text-xl">42.5</div>
-                            <div class="stat-label text-xs">Exaflop/Pod</div>
+                            <div class="stat-label text-xs">Pod Başına Exaflop</div>
                         </div>
                          <div class="stat-card bg-[#00B4D8] p-4">
                             <div class="stat-number text-xl">192GB</div>
-                            <div class="stat-label text-xs">Çip Başına HBM Kapasitesi (6 kat artış)</div>
+                            <div class="stat-label text-xs">Chip Başına HBM Kapasitesi (6 kat artış)</div>
                         </div>
                         <div class="stat-card bg-[#00B4D8] p-4">
                             <div class="stat-number text-xl">7.37TB/s</div>
-                            <div class="stat-label text-xs">Çip Başına HBM Bant Genişliği (4.5 kat artış)</div>
+                            <div class="stat-label text-xs">Chip Başına HBM Bant Genişliği (4.5 kat artış)</div>
                         </div>
                         <div class="stat-card bg-[#00B4D8] p-4">
                             <div class="stat-number text-xl">2x</div>
-                            <div class="stat-label text-xs">Performans/Watt (Trillium'a kıyasla)</div>
+                            <div class="stat-label text-xs">Trillium'a Karşı Performans/Watt</div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-4 text-sm">Ironwood'un mimarisi, Gemini modellerinin daha hızlı, uygun maliyetli çalışmasını sağlar, gelişmiş "düşünme" yeteneklerine sahip süper büyük LLM'leri ve MoE modellerini destekler ve gelişmiş sıvı soğutma ile güç verimliliğine odaklanır.</p>
+                    <p class="text-gray-600 mt-4 text-sm">Ironwood mimarisi, Gemini modellerinin daha hızlı ve maliyet etkin bir şekilde çalışmasını sağlar, gelişmiş "düşünme" yeteneklerine sahip çok büyük LLM'leri ve MoE modellerini destekler ve gelişmiş sıvı soğutma ile güç verimliliğine odaklanır.</p>
                 </div>
                 
-                <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Tablo 1: Önemli YZ Model Duyuruları (Gemini Odaklı)</h3>
+                <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Tablo 1: Temel AI Model Duyuruları (Gemini Odaklı)</h3>
                 <div class="overflow-x-auto">
                     <table class="min-w-full border-collapse border border-gray-300">
                         <thead>
                             <tr>
                                 <th class="table-header table-cell">Model Adı</th>
-                                <th class="table-header table-cell">Temel Özellikler/Geliştirmeler</th>
-                                <th class="table-header table-cell">Belirtilen Kullanılabilirlik/Durum</th>
+                                <th class="table-header table-cell">Temel Özellikler/İyileştirmeler</th>
+                                <th class="table-header table-cell">Belirtilen Kullanabilirlik/Durum</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="table-cell">Gemini 2.5 Pro</td>
-                                <td class="table-cell">1 milyon token bağlam penceresi, lider karşılaştırmalı performans, video anlama.</td>
-                                <td class="table-cell">Genel Kullanıma Sunuldu</td>
+                                <td class="table-cell">1M token bağlam penceresi, lider kıyas testi performansı, video anlama.</td>
+                                <td class="table-cell">Genel Kullanıma Açık</td>
                             </tr>
                             <tr>
-                                <td class="table-cell">Gemini 2.5 Pro (Derin Düşünme ile)</td>
-                                <td class="table-cell">Karmaşık problem çözme (matematik, programlama) için deneysel geliştirilmiş muhakeme.</td>
-                                <td class="table-cell">Güvenilir test kullanıcılarıyla test ediliyor</td>
+                                <td class="table-cell">Gemini 2.5 Pro ile Derin Düşünme</td>
+                                <td class="table-cell">Karmaşık problem çözme için deneysel geliştirilmiş akıl yürütme (matematik, programlama).</td>
+                                <td class="table-cell">Güvenilir test edicilerle test ediliyor</td>
                             </tr>
                             <tr>
                                 <td class="table-cell">Gemini 2.5 Flash</td>
-                                <td class="table-cell">Hızlı, verimli, hafif; geliştirilmiş muhakeme, kodlama, çoklu modalite; %20-30 daha az token kullanır.</td>
-                                <td class="table-cell">Gemini uygulaması, Google AI Studio, Vertex AI'da mevcut; Haziran'da Önizleme</td>
+                                <td class="table-cell">Hızlı, verimli, hafif; geliştirilmiş akıl yürütme, kodlama, çok modellik; %20-30 daha az token kullanır.</td>
+                                <td class="table-cell">Gemini uygulaması, Google AI Studio, Vertex AI'de mevcut; Haziran'da Önizleme</td>
                             </tr>
                             <tr>
                                 <td class="table-cell">Gemini Diffusion</td>
-                                <td class="table-cell">Deneysel metin difüzyon modeli; (ayrıca güvenilir test kullanıcıları için yüksek performanslı sürüm).</td>
-                                <td class="table-cell">Kod odaklı sürümün Haziran'da genel kullanıma sunulması; araştırma modeli durumu</td>
+                                <td class="table-cell">Deneysel metin difüzyon modeli; (ayn zamanda güvenilir test ediciler için yüksek performanslı bir sürüm).</td>
+                                <td class="table-cell">Kod odaklı sürümün Haziran'da genel kullanıma sunumu; araştırma modeli durumu</td>
                             </tr>
                             <tr>
                                 <td class="table-cell">LearnLM</td>
-                                <td class="table-cell">Eğitim görevleri için özel Gemini, öğrenme yeteneklerini geliştirir.</td>
-                                <td class="table-cell">Gemini 2.5'e entegre edildi</td>
+                                <td class="table-cell">Eğitim görevleri için özel Gemini, öğrenme yeteneklerini artırır.</td>
+                                <td class="table-cell">Gemini 2.5'e Entegre Edildi</td>
                             </tr>
                         </tbody>
                     </table>
@@ -279,211 +279,211 @@
 
         <section id="ai-in-products" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">YZ, Google'ın Temel Ürün Ekosistemini Yeniden Hayal Ediyor</h2>
-                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, ağırlıklı olarak Gemini tarafından desteklenen YZ'yi tüm temel ürün paketine yerleştirerek arama, üretkenlik ve iletişim alanlarındaki kullanıcı deneyimlerini dönüştüren yaygın bir strateji sergiledi.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Google'ın Temel Ürün Ekosistemini AI Yeniden Tasarlamak</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, AI'yı büyük ölçüde Gemini tarafından desteklenen, tüm temel ürün setine gömmenin yaygın bir stratejisini sergiledi, arama, verimlilik ve iletişim alanlarında kullanıcı deneyimlerini dönüştürdü.</p>
 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Aramayı Dönüştürmek: Yeni "YZ Modu" ve Ötesi</h3>
-                <p class="text-gray-700 mb-4">Google Arama, en önemli YZ odaklı revizyonundan geçiyor. Gemini 2.5 tarafından desteklenen <strong class="accent-text">YZ Modu</strong>, tüm ABD kullanıcıları için başlatıldı ve karmaşık sorgular için sohbet tabanlı arama ve özel grafik oluşturma sunuyor.</p>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Aramayı Dönüştürmek: Yeni "AI Modu" ve Ötesi</h3>
+                <p class="text-gray-700 mb-4">Google Arama, en önemli AI destekli yeniden yapılanmasından geçiyor. Gemini 2.5 tarafından desteklenen <strong class="accent-text">AI Modu</strong>, tüm ABD kullanıcıları için başlatıldı ve karmaşık sorgular için konuşmalı arama ve özel grafik oluşturma sunuyor.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div class="stat-card">
-                        <div class="stat-number">1.5 Milyar</div>
-                        <div class="stat-label">Aylık YZ Genel Bakışlarını Görüntüleyen Kullanıcı</div>
+                        <div class="stat-number">1.5B</div>
+                        <div class="stat-label">Ayda AI Genel Bakışları Görüleyen Kullanıcılar</div>
                     </div>
                     <div class="stat-card bg-red-500">
-                        <div class="stat-number">~%30</div>
-                        <div class="stat-label">Dış Sitelere Tıklama Oranlarında Düşüş (bazı çalışmalara göre)</div>
+                        <div class="stat-number">~30%</div>
+                        <div class="stat-label">Harici Sitelere Tıklama Oranlarında Düşüş (bazı araştırmalara göre)</div>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">YZ Genel Bakışları:</strong> 200'den fazla ülke/bölgeye, 40'tan fazla dile genişliyor.</p>
-                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Derin Arama:</strong> YZ Modu içinde, kapsamlı, alıntılanmış, uzman düzeyinde raporlar sunar.</p>
-                <p class="text-gray-700 mb-4"><strong class="text-[#0077B6]">Aracılı Yetenekler (Project Mariner):</strong> YZ, daire bulma, tur planlama, bilet alma gibi görevleri otomatikleştirir. Yakında AI Ultra ABD aboneleri için erken sürüm. Bu "öğret ve tekrarla" sistemi, daha otonom YZ'ye doğru bir hareketi işaret ediyor.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">AI Genel Bakışlar:</strong> 200+ ülke/bölgeye, 40+ dilde genişliyor.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Derin Arama:</strong> AI Modu içinde kapsamlı, alıntılı, uzman seviyesinde raporlar sağlar.</p>
+                <p class="text-gray-700 mb-4"><strong class="text-[#0077B6]">Ajansal Yetenekler (Project Mariner):</strong> AI, daire bulma, turları ayarlama, bilet alma gibi görevleri otomatikleştirir. Yakında AI Ultra ABD aboneleri için erken bir sürüm gelecek. Bu "öğren ve tekrarla" sistemi, daha otonom AI'ya geçişi işaret ediyor.</p>
                 
                 <div class="mt-6 mb-8 p-6 bg-yellow-50 rounded-lg shadow">
-                    <h4 class="text-xl font-semibold text-[#D69E2E] mb-3">Aramada YZ Destekli Alışveriş</h4>
-                    <p class="text-gray-700 mb-2">Gemini, Google'ın Alışveriş Grafiği (<span class="font-bold accent-text">50 Milyar+</span> ürün listesi) ile entegre olur.</p>
+                    <h4 class="text-xl font-semibold text-[#D69E2E] mb-3">Aramada AI Destekli Alışveriş</h4>
+                    <p class="text-gray-700 mb-2">Gemini, Google'ın Alışveriş Grafıyla (<span class="font-bold accent-text">50 Milyar+</span> ürün listesi) entegre olur.</p>
                     <ul class="list-disc list-inside space-y-1 text-gray-700 mb-3">
-                        <li><strong class="text-[#D69E2E]">Sanal Deneme:</strong> Giysilerin sanal bir bedende nasıl görüneceğini görmek için bir fotoğraf yükleyin (Arama Laboratuvarları, ABD).</li>
-                        <li><strong class="text-[#D69E2E]">Aracılı Ödeme:</strong> YZ, ürün fiyatını takip eder ve denetim altında, fiyat düştüğünde Google Pay aracılığıyla satın almayı otomatik olarak tamamlar.</li>
+                        <li><strong class="text-[#D69E2E]">Sanal Deneme:</strong> Bir fotoğraf yükleyerek giysfetlerin sanal bir vücut üzerinde nasıl görüneceğini görün (Arama Labs, ABD).</li>
+                        <li><strong class="text-[#D69E2E]">Ajansal Ödeme:</strong> AI ürün fiyatını takip eder ve, denetimle, fiyat düştüğünde Google Pay üzerinden satın alma işlemini tamamlar.</li>
                     </ul>
-                    <p class="text-gray-700 mb-3">Bu, Aracılı Ödeme için bir süreç akışı örneğidir:</p>
+                    <p class="text-gray-700 mb-3">Ajansal Ödeme için bir süreç akışı örneği:</p>
                     <div class="space-y-2">
-                        <div class="flow-step">1. Kullanıcı niyetini belirtir (örneğin, "Bu gömlek 20 doların altına düşerse al").</div>
+                        <div class="flow-step">1. Kullanıcı niyetini ifade eder (örneğin, "Bu gömlek 20$'ın altına düşerse satın al").</div>
                         <div class="flow-arrow">▼</div>
-                        <div class="flow-step">2. YZ (Gemini), gömleğin çeşitli sitelerdeki fiyatını takip eder.</div>
+                        <div class="flow-step">2. AI (Gemini), gömleğin fiyatını çeşitli sitelerde takip eder.</div>
                         <div class="flow-arrow">▼</div>
-                        <div class="flow-step">3. Fiyat, kullanıcı tanımlı hedefe düşer (örneğin, 19,99$).</div>
+                        <div class="flow-step">3. Fiyat kullanıcının belirlediği hedefe düşer (örneğin, 19,99$).</div>
                         <div class="flow-arrow">▼</div>
-                        <div class="flow-step">4. YZ kullanıcıyı bilgilendirir ve açık kullanıcı denetimi/onayı ile Google Pay kullanarak satın almayı tamamlar.</div>
+                        <div class="flow-step">4. AI kullanıcıyı bilgilendirir ve, açık kullanıcı denetimi/onayı ile, Google Pay kullanarak satın alma işlemini tamamlar.</div>
                     </div>
-                    <p class="text-sm text-gray-600 mt-3 italic">Bu otomasyon çevrimiçi perakendeyi önemli ölçüde değiştirebilir ancak sağlam güvenlik ve kullanıcı güveni gerektirir.</p>
+                    <p class="text-sm text-gray-600 mt-3 italic">Bu otomasyon, online perakendeciliği önemli ölçüde değiştirebilir ancak sağlam güvenlik ve kullanıcı güveni gerektirir.</p>
                 </div>
 
-                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Kişiselleştirilmiş Arama:</strong> YZ Modu, geçmiş aramalardan ve diğer Google uygulamalarından (Gmail ile başlayarak) bağlamı kullanacak.</p>
-                <p class="text-gray-700 mb-6"><strong class="text-[#0077B6]">Canlı Arama (Project Astra Entegrasyonu):</strong> Kamera aracılığıyla gerçek zamanlı görsel yardım için Aramaya canlı video aramaları.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Kişisel Arama:</strong> AI Modu, geçmiş aramalar ve diğer Google uygulamalarından bağlamı kullanır (Gmail'den başlayarak).</p>
+                <p class="text-gray-700 mb-6"><strong class="text-[#0077B6]">Search Live (Project Astra Entegrasyonu):</strong> Gerçek zamanlı görsel yardım için canlı video aramalarıyla Arama.</p>
                 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 mt-8">Üretkenliği ve İletişimi Geliştirme</h3>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 mt-8">Üretkenliği ve İletişimi Geliştirmek</h3>
                 <ul class="list-disc list-inside space-y-3 text-gray-700">
-                    <li><strong class="text-[#0077B6]">Google Meet - Canlı Çeviriler:</strong> Ses eşleştirme (ton, ifade) ile gerçek zamanlı çeviri. Başlangıçta AI Pro/Ultra kullanıcıları için İngilizce/İspanyolca.</li>
-                    <li><strong class="text-[#0077B6]">Gmail - Kişiselleştirilmiş Akıllı Yanıtlar ve Gelen Kutusu Temizliği:</strong> YZ, kullanıcının tonuna/stiline uyan ayrıntılı yanıtlar önerir (isteğe bağlı, bu yılın sonlarında). E-postayı yönetmek için Gemini'ye sorun (örneğin, "Geçen aydan okunmamış pazarlama e-postalarını sil").</li>
-                    <li><strong class="text-[#0077B6]">Chrome Tarayıcı ve Geliştirici Araçları:</strong> Chrome'da Gemini (AI Pro/Ultra ABD), sayfaları netleştirmek/özetlemek için. Hata ayıklama için Geliştirici Araçlarında YZ yardımı. Chrome, ele geçirilmiş şifreleri değiştirmeye yardımcı olacak.</li>
-                    <li><strong class="text-[#0077B6]">NotebookLM - Video Genel Bakışları:</strong> Multimedya notlarını görsel sunumlara dönüştürün.</li>
+                    <li><strong class="text-[#0077B6]">Google Meet - Canlı Çeviriler:</strong> Ses eşleştirme (ton, ifade) ile gerçek zamanlı çeviri. İlk olarak AI Pro/Ultra kullanıcıları İngilizce/İspanyol.</li>
+                    <li><strong class="text-[#0077B6]">Gmail - Kişiselleştirilmiş Akıllı Yanıtlar & Gelen Kutusu Temizliği:</strong> AI, kullanıcının tonuna/stiline uygun detaylı yanıtlar önerir (isteğe bağlı, gelecek yıl içinde). Gemini'den e-postaları yönetmesini isteyin (örneğin, "Geçen ay okunmamış pazarlama e-postalarını sil").</li>
+                    <li><strong class="text-[#0077B6]">Chrome Tarayıcısı & DevTools:</strong> Chrome'da Gemini (AI Pro/Ultra ABD) sayfaları açıklamak/özetlemek için. DevTools'ta hata ayıklama için AI yardımı. Chrome kırılmış şifreleri değiştirmeye yardımcı olur.</li>
+                    <li><strong class="text-[#0077B6]">NotebookLM - Video Özetleri:</strong> Çoklu notları görsel sunumlara dönüştürün.</li>
                 </ul>
 
-                <p class="text-gray-600 mt-6 italic text-sm">YZ'nin Google ekosistemine derin entegrasyonu, bir "ortam YZ'si" geleceğine işaret ediyor. Kolaylık sunarken, bu durum veri gizliliği, kullanıcı özerkliği ve doğrudan YZ yanıtlarının orijinal içerik kaynaklarına yapılan tıklamaları azaltabileceği için açık web üzerindeki etki hakkında soruları gündeme getiriyor.</p>
+                <p class="text-gray-600 mt-6 italic text-sm">AI'nın Google ekosistemine derin entegrasyonu, "ortamsal AI" geleceğine işaret ediyor. Kolaylık sunarken, bu veri gizliliği, kullanıcı özerkliği ve doğrudan AI yanıtlarının orijinal içerik kaynaklarına tıklamaları azaltarak açık web üzerindeki etkisi hakkında soruları gündeme getiriyor.</p>
             </div>
         </section>
 
         <section id="generative-ai" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">Yaratıcılığı Serbest Bırakma: Üretken YZ'deki Gelişmeler</h2>
-                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, video, görüntü ve ses alanlarındaki yaratıcıları güçlendirmeyi amaçlayan üretken YZ araçları paketini geliştirmeye güçlü bir vurgu yaptı.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Yaratıcılığı Serbest Bırakmak: Üretken AI'daki Gelişmeler</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, üretken AI araçları setini ilerletmeye güçlü bir vurgu yaptı, özellikle video, görüntü ve ses alanlarında yaratıcıları güçlendirmeyi amaçladı.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="p-6 bg-purple-50 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-semibold text-purple-700 mb-2">Veo 3: Senkronize Sesli YZ Videosu</h3>
-                        <p class="text-gray-700 mb-2">Önemli bir yükseltme olan Veo 3, ortam sesleri ve tutarlı karakter diyaloğu da dahil olmak üzere <strong class="accent-text">senkronize sesli</strong> videolar üretir. DeepMind CEO'su Demis Hassabis bunu "video üretiminin sessiz çağından çıkmak" olarak nitelendirdi.</p>
-                        <p class="text-gray-700 text-sm">Bireysel klipler oluşturabilir ve bunları daha uzun filmlere bağlayabilir. Darren Aronofsky'nin laboratuvarıyla ortaklık kuruldu. Gemini uygulaması (AI Ultra ABD) ve Vertex AI aracılığıyla erişim.</p>
+                        <h3 class="text-2xl font-semibold text-purple-700 mb-2">Veo 3: Senkronize Sesli AI Video</h3>
+                        <p class="text-gray-700 mb-2">Önemli bir yükseltme olan Veo 3, ortam sesleri ve tutarlı karakter diyalogları dahil <strong class="accent-text">senkronize sesle</strong> videolar üretir. DeepMind CEO'su Hassabis, bunu "videonun sessiz çağından yükseliş" olarak tanımladı.</p>
+                        <p class="text-gray-700 text-sm">Tek tek klipler oluşturabilir ve bunları uzun filmlere bağlayabilir. Darren Aronofsky'nin laboratuvarıyla işbirliği yaptı. Gemini uygulaması (AI Ultra ABD) & Vertex AI aracılığıyla erişilebilir.</p>
                     </div>
                     <div class="p-6 bg-pink-50 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Imagen 4: Görüntü Kalitesi ve Kontrolü</h3>
-                        <p class="text-gray-700 mb-2">"Gerçekçi ayrıntılara" sahip görseller ve önemli ölçüde daha iyi metin/tipografi oluşturma üretir. Esneklik için çözünürlük <strong class="accent-text">2K</strong>'ya yükseltildi.</p>
-                        <p class="text-gray-700 text-sm">İnce ayrıntılarda (kumaşlar, su damlacıkları, kürk) ve hem fotogerçekçi hem de soyut stillerde mükemmeldir. Tüm kullanıcılar için Gemini uygulamasında mevcuttur.</p>
+                        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Imagen 4: Görüntü Kalitesi ve Kontrol</h3>
+                        <p class="text-gray-700 mb-2">"Gerçekçi detaylar" ve önemli ölçüde daha iyi metin/tipografi işleme ile görüntüler üretir. Esneklik için çözünürlük <strong class="accent-text">2K'ye** yükseltildi.</p>
+                        <p class="text-gray-700 text-sm">İnce detaylarda (kumaşlar, su damlaları, tüy) ve hem fotorealistik hem de soyut stillerde başarılıdır. Tüm kullanıcılar için Gemini uygulamasında mevcut.</p>
                     </div>
                 </div>
 
                 <div class="mt-8 p-6 bg-teal-50 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Flow: YZ Destekli Film Yapım Araç Seti</h3>
-                    <p class="text-gray-700 mb-3">Yaratıcı profesyoneller için geliştirilen Flow, Veo 3 ve Imagen 4'ü kullanır. Kullanıcılar, kamera hareketi, düzenleme ve entegrasyon kontrolleriyle metin istemlerinden sahneler, karakterler ve varlıklar oluşturur.</p>
-                    <p class="text-gray-700 mb-3">Flow ile basitleştirilmiş bir yaratıcı iş akışı:</p>
+                    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Flow: AI Destekli Film Yapım Ara Seti</h3>
+                    <p class="text-gray-700 mb-3">Yaratıcı profesyoneller için tasarlanan Flow, Veo 3 ve Imagen 4'ü kullanır. Kullanıcılar metin istemlerinden sahneler, karakterler ve varlıklar oluşturur, kamera hareketleri, düzenleme ve entegrasyon için kontrollere sahiptir.</p>
+                    <p class="text-gray-700 mb-3">Flow ile geliştirilmiş bir yaratıcı iş akışı:</p>
                     <div class="space-y-2">
-                        <div class="flow-step border-teal-500 bg-teal-100">1. Kullanıcı, sahneler, karakterler veya belirli çekimler için doğal dil istemleri sağlar.</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">1. Kullanıcı sahneler, karakterler veya belirli çekimler için doğal dil istemleri sağlar.</div>
                         <div class="flow-arrow text-teal-500">▼</div>
-                        <div class="flow-step border-teal-500 bg-teal-100">2. Flow, ilk varlıkları oluşturmak için Veo 3 (video için) ve Imagen 4'ü (fotoğraflar/dokular için) kullanır.</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">2. Flow, Veo 3 (video için) ve Imagen 4 (görüntüler/dokular için) kullanarak ilk varlıkları oluşturur.</div>
                         <div class="flow-arrow text-teal-500">▼</div>
-                        <div class="flow-step border-teal-500 bg-teal-100">3. Kullanıcı, kamera hareketi, perspektif ve mevcut çekimleri düzenleme/genişletme kontrolleriyle varlıkları iyileştirir.</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">3. Kullanıcı kamera hareketleri, perspektif ve mevcut çekimleri düzenleme/uzatma kontrolleri kullanarak varlıkları rafine eder.</div>
                         <div class="flow-arrow text-teal-500">▼</div>
-                        <div class="flow-step border-teal-500 bg-teal-100">4. Oluşturulan içerik, daha büyük film yapım projelerine sorunsuz bir şekilde entegre edilir.</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">4. Oluşturulan içerik daha büyük film yapım projelerine sorunsuz bir şekilde entegre edilir.</div>
                     </div>
-                    <p class="text-gray-700 text-sm mt-3">ABD'deki Google AI Pro ve Ultra aboneleri için mevcut, yakında genişleyecek.</p>
+                    <p class="text-gray-700 text-sm mt-3">ABD Google AI Pro & Ultra aboneleri için mevcut, yakında genişleyecek.</p>
                 </div>
 
                 <div class="mt-8 p-6 bg-indigo-50 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Lyria 2 ve Müzik YZ Korumalı Alanı</h3>
-                    <p class="text-gray-700 mb-2">Orijinal müzik üretir: armoniler, ritimler, partisyonlar, orkestra parçaları. Lyria RealTime, etkileşimli müzik oluşturmayı sağlar.</p>
-                    <p class="text-gray-700 text-sm">İşletmeler, YouTube içerik oluşturucuları, müzisyenler için mevcut.</p>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Lyria 2 ve Müzik AI Sandbox</h3>
+                    <p class="text-gray-700 mb-2">Orijinal müzik üretir: armoniler, ritimler, skorlar, orkestra parçaları. Lyria RealTime etkileşimli müzik oluşturmayı sağlar.</p>
+                    <p class="text-gray-700 text-sm">İşletmelere, YouTube yaratıcılarına, müzisyenlere sunilebilir.</p>
                 </div>
-                <p class="text-gray-600 mt-6 italic text-sm">Bu "tam yığın" yaratıcı YZ ekosistemi, içerik oluşturmayı demokratikleştirmeyi amaçlar ancak aynı zamanda yaratıcı endüstrilerdeki profesyonel yerinden edilme endişelerini de beraberinde getirir.</p>
+                <p class="text-gray-600 mt-6 italic text-sm">Bu "tam yığın" yaratıcı AI ekosistemi içerik üretimini demokratikleştirmeyi amaçlar ancak yaratıcı sektörlerde mesleki kayıp endişelerini de gündeme getirir.</p>
             </div>
         </section>
 
         <section id="developer-empowerment" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">YZ Çağında Geliştiricileri Güçlendirmek</h2>
-                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, geliştiricileri yeni YZ modelleri, araçları ve API'lerle donatarak YZ teknolojileri etrafında sağlam bir ekosistem geliştirdi.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">AI Çağında Geliştiricileri Güçlendirmek</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, geliştiricileri yeni AI modelleri, araçları ve API'leriyle donatarak AI teknolojileri etrafında sağlam bir ekosistem oluşturmaya teşvik etti.</p>
                 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Geliştiriciler için Yeni ve Güncellenmiş Modeller</h3>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Geliştiriciler için Yeni ve Güncel Modeller</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div class="p-4 bg-blue-50 rounded-lg shadow">
                         <h4 class="text-xl font-semibold text-[#00B4D8] mb-1">MedGemma</h4>
-                        <p class="text-sm text-gray-700">Çok modlu tıbbi metin/görüntü anlama için açık model (Gemma 3 varyantı). Sağlık hizmeti YZ uygulamalarını ince ayar yapmak için. Küçük, verimli, özelleştirilebilir.</p>
+                        <p class="text-sm text-gray-700">Çoklu tıbbi metin ve görüntü anlama için açık model (Gemma 3 varyantı). Sağlık hizmetleri AI uygulamalarını ince ayarlamak için. Küçük, verimli, özelleştirilebilir.</p>
                     </div>
                     <div class="p-4 bg-blue-50 rounded-lg shadow">
                         <h4 class="text-xl font-semibold text-[#00B4D8] mb-1">Gemma Ailesi (Açık Modeller)</h4>
                         <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-                            <li><strong>Gemma 3n:</strong> Cihaz üzerinde (telefonlar, dizüstü bilgisayarlar) hızlı, verimli açık çok modlu model. Ses, metin, görüntü, video işler. "Seçici parametre aktivasyonu" kullanır (daha büyük modelden 2-4 milyar etkili boyut). 2-3 GB RAM gerektirir.</li>
-                            <li><strong>PaliGemma:</strong> Görüntü altyazılama, görsel Soru-Cevap için görüş-dil modeli.</li>
-                            <li><strong>SignGemma:</strong> İşaret dillerini (başlangıçta ASL'den İngilizce metne) çevirmek için yakında çıkacak açık model.</li>
+                            <li><strong>Gemma 3n:</strong> Hızlı, verimli açık çoklu model, cihaz içi (telefonlar, dizüstüleri). Ses, metin, görüntü, video işler. "Seçici parametre aktivasyonu" kullanır (daha büyük bir modelden 2-4B etkin boyut). 2-3GB RAM gerektirir.</li>
+                            <li><strong>PaliGemma:</strong> Görüntü başlıklandırma, görsel soru cevaplama için görüntü-dil modeli.</li>
+                            <li><strong>SignGemma:</strong> İşaret dillerini çevirmek için gelecek bir açık model (başlangıçta ASL'den İngilizce metne).</li>
                         </ul>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">YZ Geliştirme Araçları</h3>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">AI Geliştirme için Araçlar</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div class="p-4 bg-green-50 rounded-lg shadow">
-                        <h4 class="text-xl font-semibold text-green-700 mb-1">Jules: Eşzamansız Kodlama Aracısı</h4>
-                        <p class="text-sm text-gray-700 mb-2">GitHub ile çalışır: sürüm yükseltmeleri, birim testleri, özellik güncellemeleri, hata düzeltmeleri. Sanal makine başlatır, düzenler, test eder, PR hazırlar. Herkese açık beta (ücretsiz).</p>
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">Jules: Asenkron Kodlama Ajanı</h4>
+                        <p class="text-sm text-gray-700 mb-2">GitHub ile çalışır: sürüm yükseltmeleri, birim testleri, özellik güncellemeleri, hata düzeltmeleri. Bulut VM'sini başlatır, depoyu klonlar. Kodu düzenler, test eder, PR hazırlar. Açık beta (ücretsiz).</p>
                         <p class="text-gray-700 text-xs mb-2">Jules'un iş akışı:</p>
                         <div class="space-y-1 text-xs">
-                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">1. Geliştirici, GitHub aracılığıyla görev atar.</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">1. Geliştirici GitHub üzerinden görevi atar.</div>
                             <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
-                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">2. Jules, Bulut Sanal Makinesi başlatır, depoyu klonlar.</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">2. Jules Bulut VM'sini başlatır, depoyu klonlar.</div>
                             <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
-                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">3. Kod tabanında koordineli kod düzenlemeleri yapar.</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">3. Kod tabanında koordineli kod değişiklikleri yapar.</div>
                             <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
-                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">4. Değişiklikleri doğrulamak için testler çalıştırır.</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">4. Değişiklikleri doğrulamak için testleri çalıştırır.</div>
                             <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
-                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">5. Geliştirici incelemesi için bir çekme isteği hazırlar.</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">5. Geliştirici incelemesi için çekme isteği hazırlar.</div>
                         </div>
                     </div>
                      <div class="p-4 bg-yellow-50 rounded-lg shadow">
-                        <h4 class="text-xl font-semibold text-yellow-700 mb-1">Stitch: YZ Kullanıcı Arayüzü Tasarımı ve Kod Üretimi</h4>
-                        <p class="text-sm text-gray-700">İstemlerden/görüntülerden kullanıcı arayüzü tasarımları ve ön uç kodu (CSS/HTML) üretir. Sohbet yoluyla yineleyin, temaları ayarlayın, CSS/HTML'ye veya Figma'ya dışa aktarın.</p>
+                        <h4 class="text-xl font-semibold text-yellow-700 mb-1">Stitch: AI UI Tasarımı ve Kod Üretimi</h4>
+                        <p class="text-sm text-gray-700">İstemlerden/resimlerden UI tasarımları ve frontend kodu (CSS/HTML) oluşturur. Sohbet aracılığıyla yineleyin, temaları ayarlayın, CSS/HTML veya Figma'ya aktarın.</p>
                     </div>
                     <div class="p-4 bg-indigo-50 rounded-lg shadow">
-                        <h4 class="text-xl font-semibold text-indigo-700 mb-1">Firebase YZ Mantığı ve Firebase Studio</h4>
-                        <p class="text-sm text-gray-700"><strong>Studio:</strong> Hızlı tam yığın uygulama geliştirme için bulut YZ çalışma alanı (Gemini 2.5). Figma'yı içe aktarın, Gemini ile özellikler ekleyin, arka ucu otomatik olarak sağlayın. <strong>Mantık:</strong> İstemci uygulamaları veya Genkit (sunucu tarafı) aracılığıyla GenAI modellerini entegre edin.</p>
+                        <h4 class="text-xl font-semibold text-indigo-700 mb-1">Firebase AI Mantığı & Firebase Stüdyosu</h4>
+                        <p class="text-sm text-gray-700"><strong>Stüdyo:</strong> Hızlı tam yığın uygulama geliştirme için Bulut AI çalışma alanı (Gemini 2.5). Figma'yı aktarın, Gemini ile özellik ekleyin, arka ucu otomatik sağlayın. <strong>Mantık:</strong> İstem uygulamaları veya Genkit (sunucu tarafı) aracılığıyla GenAI modellerini entegre edin.</p>
                     </div>
                     <div class="p-4 bg-red-50 rounded-lg shadow">
-                        <h4 class="text-xl font-semibold text-red-700 mb-1">Gemini Kod Asistanı</h4>
-                        <p class="text-sm text-gray-700">Standart sürüm, Google Geliştirici Programı avantajlarına eklendi. Ücretsiz "Bireyler için" sürümü (Gemini 2.5) şimdi genel kullanıma sunuldu. Görev tamamlama oranını <strong class="accent-text">2,5 kat</strong> artırdığını iddia ediyor. GitHub sürümü de mevcut.</p>
+                        <h4 class="text-xl font-semibold text-red-700 mb-1">Gemini Code Assist</h4>
+                        <p class="text-sm text-gray-700">Standard sürüm Google Geliştirici Programı avantajlarına eklendi. "Bireyler İçin" ücretsiz sürüm (Gemini 2.5) artık genel kullanıma açık. Görev tamamlama oranını <strong class="accent-text">2.5 katına** artırdığını iddia ediyor. GitHub sürümü de mevcut.</p>
                     </div>
                 </div>
                 
-                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3">Cihaz Üzerinde YZ: Gemini Nano ve ML Kit</h3>
-                <p class="text-gray-700 mb-4">Gizlilik, düşük gecikme süresi, çevrimdışı yetenekler için önemli bir hamle.</p>
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3">Cihaz İçi AI: Gemini Nano & ML Kit</h3>
+                <p class="text-gray-700 mb-4">Gizliliği, düşük gecikmeye, çevrimdışı yeteneklere yönelik önemli bir itme.</p>
                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                    <li><strong>ML Kit GenAI API'leri:</strong> Cihaz üzerinde görevler için Gemini Nano kullanan yeni API'ler (örneğin, Androidify uygulaması).</li>
-                    <li><strong>Chrome'da Gemini Nano:</strong> Web geliştiricileri için yerleşik YZ API'leri (Özetleyici, Dil Algılayıcı, Çevirmen, Chrome 138'de Kararlı Sürümde İstek API'leri. Yazar, Yeniden Yazar kaynak denemelerinde. Düzeltmen, çok modlu İstek Kanarya'da).</li>
+                    <li><strong>ML Kit GenAI API'leri:</strong> Gemini Nano kullanarak cihaz içi görevler için yeni API'ler (örneğin, Androidify uygulaması).</li>
+                    <li><strong>Chrome'da Gemini:</strong> Web geliştiricileri için yerleşik AI API'leri (Özetleyici, Dil Tespiti, Çevirmen, Chrome 138'de Stable'da Prompt API'leri. Yazar, Yeniden Düzenleyici köken denemelerinde. Okuyucu, çok modelli Prompt Canary'de).</li>
                 </ul>
-                 <p class="text-gray-600 mt-6 italic text-sm">Jules gibi aracılı kodlama asistanları ve Gemini Nano gibi cihaz üzerinde YZ, geliştirici iş akışlarını yeniden tanımlamaya ve gizlilik ve yanıt verme hızını vurgulayan yeni tür uygulamalar sağlamaya hazırlanıyor.</p>
+                 <p class="text-gray-600 mt-6 italic text-sm">Jules gibi ajansal kodlama yardımcıları ve Gemini Nano gibi cihaz içi AI, geliştirici iş akışlarını yeniden tanımlamaya ve yeni uygulama türlerine olanak tanımaya hazırlanıyor, gizliliği ve AI işbirliğini vurguluyor.</p>
             </div>
         </section>
 
         <section id="android-xr" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">Sürükleyici Web: Android XR ve YZ Yakınsaması</h2>
-                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, Gemini çağı için oluşturulmuş, başlıklar ve akıllı gözlüklerde YZ odaklı VR/AR uygulamalarını destekleyen yeni bir platform olan Android XR ile Genişletilmiş Gerçekliğe (XR) yeniden canlandırılmış bir hamle sinyali verdi.</p>
-                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Yerel Gemini Entegrasyonu:</strong> Tanımlayıcı özellik. Gözlük üzerindeki Gemini, kafeleri bulabilir, canlı çeviri yapabilir (Farsça/Hintçe'den İngilizce'ye demo yapıldı), çevre hakkında soruları yanıtlayabilir. Başlıktaki Gemini, sanal seyahat için Haritalar'ı kullanabilir.</p>
-                <p class="text-gray-700 mb-4">Mevcut Android uygulamaları uyumlu olacak. Prototip gözlüklerde kameralar, mikrofonlar, hoparlörler var.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Immersive Web: Android XR ve AI Yakışımı</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, Genişletilmiş Gerçeklik (XR) alanına canlandırılmış bir itmeyi işaret etti, başlıklar ve akıllı gözlüklerde AI destekli VR/AR uygulamalarını destekleyen Gemini Çağı için yeni platform Android XR.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Doğal Gemini Entegrasyonu:</strong> Belirleyici özellik. Gözlüklerdeki Gemini, kafeleri bulabilir, canlı çeviri (Farsça/Hintçe İngilizce'ye gösterildi), çevresi hakkında soruları yanıtlayabilir. Başlıktaki Gemini, sanal seyahat için Haritaları kullanabilir.</p>
+                <p class="text-gray-700 mb-4">Mevcut Android uygulamaları uyumlu olacak. Prototip gözlükler kameralara, mikrofonlara, hoparlörlere sahip.</p>
                 <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Donanım Ortaklıkları:</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
                     <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Samsung:</strong> Project Moohan VR başlığı (ilk Android XR cihazı, 2025 sonu).</div>
-                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Qualcomm:</strong> YZ teknolojisi optimizasyonu.</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Qualcomm:</strong> AI teknolojisi optimizasyonu.</div>
                     <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Gentle Monster:</strong> Android XR gözlükleri için gözlük ortağı.</div>
                     <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Warby Parker:</strong> Android XR gözlükleri için gözlük ortağı.</div>
-                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Xreal:</strong> Project Aura (bağlı akıllı gözlükler/başlık).</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Xreal:</strong> Project Aura (kablolu akıllı gözlükler/başlık).</div>
                 </div>
-                <p class="text-gray-700 mt-4">Android XR gözlük prototipleri güvenilir test kullanıcılarıyla birlikte. Geliştiriciler bu yılın sonlarında uygulamalar oluşturmaya başlayabilir. Bu, hızlı görevler için akıllı telefon etkileşimlerini artıran veya değiştiren bir "YZ öncelikli" giyilebilir geleceğe işaret ediyor.</p>
+                <p class="text-gray-700 mt-4">Android XR gözlük prototipleri güvenilir test edicilerle birlikte. Geliştiriciler bu yıl içinde uygulama oluşturabilir. Bu, hızlı görevler için akıllı telefon etkileşimlerini artıracak veya değiştirecek bir "AI-odaklı" giyilebilir geleceğe işaret ediyor.</p>
             </div>
         </section>
 
         <section id="responsible-ai-monetization" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">Gelecekte Yol Almak: Sorumlu YZ ve Para Kazanma</h2>
-                <p class="text-lg mb-6 text-gray-700">Google, içerik özgünlüğünü ve gelişmiş YZ yeteneklerinden para kazanma stratejilerini ele aldı.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Geleceğe Navigasyon: Sorumlu AI ve Monetasyon</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025, içerik bütünlüğünü ve gelişmiş AI yeteneklerini monetize etme stratejilerini ele aldı.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="p-6 bg-lime-50 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-semibold text-lime-700 mb-2">Sorumlu YZ: SynthID Dedektörü</h3>
-                        <p class="text-gray-700 mb-2">Kullanıcıların SynthID filigranlarını algılayarak YZ tarafından oluşturulan içeriği tanımlamasına yardımcı olmak için yeni bir portal. Google, 2023'ten bu yana <strong class="accent-text">10 milyardan fazla</strong> YZ içeriğine filigran ekledi.</p>
-                        <p class="text-gray-700 text-sm">Erken test kullanıcılarına (araştırmacılar, medya) açık, daha geniş erişim için bekleme listesi var. Bu şeffaflığa doğru bir adımdır ancak öncelikle Google'ın kendi filigranlarını algılar.</p>
+                        <h3 class="text-2xl font-semibold text-lime-700 mb-2">Sorumlu AI: SynthID Dedektörü</h3>
+                        <p class="text-gray-700 mb-2">SynthID filigranlarını tespit ederek kullanıcıların AI tarafından üretilen içeriği tanımasına yardımcı olmak için yeni bir portal. Google, 2023'ten beri <strong class="accent-text">10 milyardan fazla** AI içeriğini filigledi.</p>
+                        <p class="text-gray-700 text-sm">Erken test ediciler (araştırmacılar, medya) için mevcut, daha geniş erişim için bekleme listesi. Bu şeffaflığa doğru bir adımdır ancak yalnızca Google'ın kendi filigranlarını tespit eder.</p>
                     </div>
 
                     <div class="p-6 bg-orange-50 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-semibold text-orange-700 mb-2">Para Kazanma: YZ Abonelik Katmanları</h3>
-                        <p class="text-gray-700 mb-2">Gelişmiş YZ tekliflerinden katmanlı bir modelle para kazanmaya net bir odaklanma.</p>
+                        <h3 class="text-2xl font-semibold text-orange-700 mb-2">Monetasyon: AI Abonelik Seviyeleri</h3>
+                        <p class="text-gray-700 mb-2">Gelişmiş AI tekliflerini kademeli bir model aracılığıyla monetize etmeye açık bir odak.</p>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                            <li><strong>Google AI Pro:</strong> Aylık 19,99$ (Google One AI Premium olarak yeniden adlandırıldı). Gemini Advanced, Flow, NotebookLM'ye erişim.</li>
-                            <li><strong>Google AI Ultra:</strong> <strong class="accent-text">Aylık 249,99$</strong> (ilk 3 ay %50 indirim). En yüksek kullanım limitleri, en yetenekli modeller (Gemini 2.5 Pro Derin Düşünme ile, Veo 3), Veo 3 ile Flow, Whisk, Workspace/Chrome'da Gemini, Project Mariner erişimi, 30TB depolama, YouTube Premium. Profesyoneller ve "YZ tutkunları" hedefleniyor.</li>
+                            <li><strong>Google AI Pro:</strong> $19.99/ay (Google One AI Premium olarak yeniden adlandırıldı). Gemini Advanced, Flow, NotebookLM'ye erişim.</li>
+                            <li><strong>Google AI Ultra:</strong> <strong class="accent-text">$249.99/ay</strong> (ilk 3 ay için tanıtım %50 indirimli). En yüksek kullanım limitleri, en yetenekli modeller (Gemini 2.5 Pro ile Deep Think, Veo 3), Veo 3 ile Flow, Whisk, Workspace/Chrome'da Gemini, Project Mariner erişimi, 30TB depolama, YouTube Premium. Profesyoneller ve "AI meraklılarına" yönelik.</li>
                         </ul>
-                        <p class="text-gray-600 mt-3 italic text-xs">AI Ultra fiyatlandırması sürprizle karşılandı ve pazar esnekliğini test ediyor. Abonelikler, YZ aramasının reklam tıklamalarını azaltabileceği için reklamlardan elde edilen geliri çeşitlendiriyor.</p>
+                        <p class="text-gray-600 mt-3 italic text-xs">AI Ultra fiyatlandırması sürpriz karşılandı, pazar esnekliğini test etti. Abonelikler, AI aramanın reklam tıklamalarını azaltabileceği için reklamların ötesinde gelir çeşitlendirmek için kritik.</p>
                     </div>
                 </div>
-                 <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Tablo 4: Google YZ Abonelik Katmanları (I/O 2025 Sonrası)</h3>
+                 <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Tablo 4: Google AI Abonelik Seviyeleri (I/O 2025 Sonrası)</h3>
                 <div class="overflow-x-auto">
                     <table class="min-w-full border-collapse border border-gray-300">
                         <thead>
                             <tr>
-                                <th class="table-header table-cell">Katman Adı</th>
+                                <th class="table-header table-cell">Seviye Adı</th>
                                 <th class="table-header table-cell">Aylık Fiyat (USD)</th>
                                 <th class="table-header table-cell">Temel Özellikler/Erişim</th>
                                 <th class="table-header table-cell">Hedef Kitle</th>
@@ -491,22 +491,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="table-cell">Google YZ (Ücretsiz)</td>
-                                <td class="table-cell">0$</td>
+                                <td class="table-cell">Google AI (Ücretsiz)</td>
+                                <td class="table-cell">$0</td>
                                 <td class="table-cell">Gemini yeteneklerine temel erişim.</td>
                                 <td class="table-cell">Genel Kullanıcılar</td>
                             </tr>
                             <tr>
-                                <td class="table-cell">Google YZ Pro</td>
-                                <td class="table-cell">19,99$</td>
-                                <td class="table-cell">Gelişmiş model, Flow, NotebookLM ile Gemini uygulaması, daha yüksek oran limitleri.</td>
-                                <td class="table-cell">Güç Kullanıcıları, Meraklılar</td>
+                                <td class="table-cell">Google AI Pro</td>
+                                <td class="table-cell">$19.99</td>
+                                <td class="table-cell">Gemini uygulaması ile gelişmiş model, Flow, NotebookLM, daha yüksek kullanım limitleri.</td>
+                                <td class="table-cell">Güçlü Kullanıcılar, Meraklılar</td>
                             </tr>
                             <tr>
-                                <td class="table-cell">Google YZ Ultra</td>
-                                <td class="table-cell">249,99$ (ilk 3 ay 124,99$)</td>
-                                <td class="table-cell">Gemini 2.5 Pro Derin Düşünme ile, Veo 3, Veo 3 ile Flow, Whisk, Workspace/Chrome'da Gemini, Project Mariner erişimi, 30TB depolama, YouTube Premium.</td>
-                                <td class="table-cell">Film Yapımcıları, Geliştiriciler, Yaratıcı Profesyoneller, "YZ Tutkunları"</td>
+                                <td class="table-cell">Google AI Ultra</td>
+                                <td class="table-cell">$249.99 (ilk 3 ay için $124.99 indirimli)</td>
+                                <td class="table-cell">Gemini 2.5 Pro ile Derin Düşünme, Veo 3, Flow ile Veo 3, Whisk, Workspace/Chrome'da Gemini, Project Mariner erişimi, 30TB depolama, YouTube Premium.</td>
+                                <td class="table-cell">Film Yapımcıları, Geliştiriciler, Yaratıcı Profesyoneller, "AI Tutkunları"</td>
                             </tr>
                         </tbody>
                     </table>
@@ -516,50 +516,50 @@
         
         <section id="conclusion" class="nav-item mb-12">
             <div class="card">
-                <h2 class="text-3xl font-bold mb-6 text-center section-title">Sonuç Analizi: Google'ın YZ Gidişatı ve Pazar Etkisi</h2>
-                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, özellikle Gemini'yi stratejisinin merkezi olarak pekiştirdi. Duyurular, YZ'yi tüm ekosistemine dahil etme, üretken yetenekler geliştirme, geliştiricileri güçlendirme ve YZ odaklı XR gibi yeni etkileşim paradigmalarını keşfetme çabasının altını çiziyor.</p>
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Sonuç Analizi: Google'ın AI Yörüngesi ve Pazar Etkisi</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, AI'yı, özellikle Gemini'yi, stratejisinin merkezine yerleştirdi. Duyurular, Google'ın AI'yı tüm ekosistemine enjekte etme, üretken yetenekler geliştirme, geliştiricileri güçlendirme ve AI destekli XR gibi yeni etkileşim paradigmalarını keşfetme çabasını vurguluyor.</p>
                 
-                <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Temel Stratejik Çıkarımlar:</h3>
+                <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Ana Stratejik Çıkarımlar:</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                    <li><strong>YZ Her Yerde ("Ortam YZ'si"):</strong> YZ, tüm ürünlerde temel bir katman olarak.</li>
-                    <li><strong>Model Uzmanlaşması ve Katmanlı Erişim:</strong> Çeşitlendirilmiş Gemini ailesi ve abonelik katmanları.</li>
-                    <li><strong>Geliştirici Ekosistemi Odağı:</strong> Google'ın platformunu tercih edilir kılmak için zengin araçlar, API'ler ve modeller.</li>
-                    <li><strong>Dikey Entegrasyon (Ironwood TPU):</strong> Performans/maliyet açısından rekabet avantajı için özel donanım.</li>
-                    <li><strong>Aracılı YZ'nin Dikkatli Sunumu:</strong> Gelişmiş otonom yetenekler için aşamalı dağıtım.</li>
+                    <li><strong>AI Yaygınlığı ("Ortamsal AI"):</strong> AI tüm ürünlerde temel katman olarak.</li>
+                    <li><strong>Model Uzmanlaşması ve Kademeli Erişim:</strong> Çeşitlendirilmiş Gemini ailesi ve abonelik seviyeleri.</li>
+                    <li><strong>Geliştirici Ekosistemi Odaklı:</strong> Google platformunu tercih etmek için zengin araçlar, API'ler ve modeller.</li>
+                    <li><strong>Dikey Entegrasyon (Ironwood TPU):</strong> Performans/maliyette rekabet avantajı sağlayan özel donanım.</li>
+                    <li><strong>Dikkatli Ajansal AI Dağıtımı:</strong> Gelişmiş otonom yetenekler için aşamalı dağıtım.</li>
                 </ul>
 
                 <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Potansiyel Etki:</h3>
                  <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
                     <li><strong>Kullanıcılar:</strong> Daha kişiselleştirilmiş, verimli etkileşimler, ancak gizlilik/önyargı endişeleri.</li>
-                    <li><strong>Geliştiriciler:</strong> Daha düşük inovasyon engelleri, ancak YZ aracı işbirliği için gelişen beceriler.</li>
-                    <li><strong>Dijital Ortam:</strong>
+                    <li><strong>Geliştiriciler:</strong> Daha düşük inovasyon engelleri, ancak AI işbirliği için gelişen beceri setleri.</li>
+                    <li><strong>Dijital Manzara:</strong>
                         <ul class="list-circle list-inside ml-4 space-y-1 text-sm">
-                            <li>Doğrudan yanıtlar sağlayan YZ araması nedeniyle değişen açık web ekonomisi (potansiyel "YZ Vergisi").</li>
-                            <li>Çeşitli sektörlerde (sağlık, eğitim, yaratıcılık) hızlandırılmış YZ benimsenmesi.</li>
-                            <li>İstem mühendisliği, YZ etiği vb. alanlarda yeniden beceri kazandırmayı gerektiren "Büyük YZ Beceri Değişimi".</li>
-                            <li>Sorumlu YZ ve içerik özgünlüğü konusunda yoğunlaşan tartışma.</li>
-                            <li>Yüksek maliyetli üst düzey YZ erişiminden kaynaklanan potansiyel dijital uçurum.</li>
+                            <li>AI aramanın doğrudan yanıtlar sağladası nedeniyle açık web ekonomisinde değişiklikler (potansiyel "AI Vergisi").</li>
+                            <li>Farklı sektörlerde AI benimsenmesinin hızlanması (sağlık, eğitim, yaratıcı).</li>
+                            <li>"Büyük AI Beceri Kayması"nın istem mühendisliği, AI etiği vb. alanlarda yeniden eğitim gerektirmesi.</li>
+                            <li>Sorumlu AI ve içerik bütünlüğü üzerine tartışmaların artması.</li>
+                            <li>Yüksek maliyetli üst düzey AI erişiminden potansiyel dijital uçurum.</li>
                         </ul>
                     </li>
                 </ul>
-                <p class="text-gray-700">Google'ın YZ stratejisi, yenilikçiliği para kazanma, etik ve ekosistem yönetimiyle dengeleyen yüksek riskli bir oyundur. Başarı, teknolojik atılımlara, güven oluşturmaya, değer göstermeye ve bu güçlü teknolojileri sorumlu bir şekilde yönetmeye bağlıdır.</p>
+                <p class="text-gray-700">Google'ın AI stratejisi, inovasyon ile monetasyon, etik ve ekosistem yönetimini dengeleyen bir yüksek tel yürüyüşüdür. Başarı, teknolojik atılımlara, güven inşa, değer gösterme ve bu güçlü teknolojileri sorumlu bir şekilde yönetmeye bağlıdır.</p>
             </div>
         </section>
 
     </main>
 
     <footer class="text-center p-6 mt-12 bg-[#0077B6] text-white text-sm">
-        İnfografik, "Google I/O 2025: Yapay Zekada Gemini Çağının Yükselişi" raporuna dayanmaktadır.
-        <br>Tüm veri noktaları ve bilgiler sağlanan kaynak materyalden türetilmiştir. Sadece açıklama amaçlıdır.
+        İnfografi, "Google I/O 2025: Yapay Zekada Gemini Çağı'nın Yükselişi" raporuna dayanmaktadır.
+        <br>Tüm veri noktaları ve bilgiler sağlanan kaynak materyalinden türetilmiştir. Sadece görsel amaçlıdır.
     </footer>
 
     <script>
-        // Gelecekteki JS için yer tutucu, örneğin eklenirse etkileşimli öğeler için.
-        // Chart.js örnekleri, dinamik olmaları veya karmaşık kurulum gerektirmeleri durumunda burada başlatılırdı.
-        // Bu statik infografik için Chart.js yüklenir ancak grafikler rapor verilerine göre kavramsallaştırılır.
-        // Gerçek grafik oluşturma, Chart.js için biçimlendirilmiş belirli veriler gerektirir.
+        // Gelecekteki herhangi bir JS için yer tutucu, örneğin eklenen interaktif öğeler için.
+        // Chart.js örnekleri, dinamik veya karmaşık kurulum gerektirdiklerinde burada başlatılırdı.
+        // Bu statik infografi için, Chart.js yüklenmiş ancak grafikler rapor verilerine dayalı olarak kavramsaldır.
+        // Gerçek grafik çizimi, Chart.js için özel biçimlendirilmiş veri gerektirir.
 
-        // Bir grafik oluşturulursa etiket kaydırma ve araç ipucu yapılandırmasının nasıl uygulanacağına dair örnek:
+        // Bir grafik çizildiğinde etiket sarmalama ve araç ipucu yapılandırmasının nasıl uygulanacağına dair bir örnek:
         /*
         function processLabels(labels) {
             return labels.map(label => {
@@ -583,9 +583,9 @@
         }
 
         const exampleChartData = {
-            labels: processLabels(['Uzun Etiket Örneği Bir', 'Kısa', 'Başka Bir Çok Uzun Etiket Örneği İki']),
+            labels: processLabels(['Uzun Etiket Örneği Bir', 'Kısa', 'Başka Çok Uzun Etiket Örneği İki']),
             datasets: [{
-                label: 'Örnek Veri',
+                label: 'Veri Seti',
                 data: [10, 20, 15],
                 backgroundColor: ['#00B4D8', '#FFC300', '#0077B6']
             }]

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google I/O 2025: The Gemini Era - AI Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF; /* AliceBlue - Light background */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Default max-width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Base height */
+            max-height: 400px; /* Max height */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .stat-card {
+            background-color: #0077B6; /* Primary Blue */
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        .section-title {
+            color: #0077B6; /* Primary Blue */
+        }
+        .accent-text {
+            color: #FFC300; /* Vibrant Yellow/Orange Accent */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* Slightly more rounded */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .flow-step {
+            background-color: #E0F7FA; /* Light Cyan */
+            border-left: 4px solid #00B4D8; /* Secondary Blue */
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0.375rem;
+        }
+        .flow-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #00B4D8; /* Secondary Blue */
+            margin: 0.25rem 0;
+        }
+        .table-header {
+            background-color: #0077B6; /* Primary Blue */
+            color: white;
+        }
+        .table-cell {
+            padding: 0.75rem;
+            border: 1px solid #E0E0E0;
+        }
+        .nav-item {
+            scroll-margin-top: 80px; /* Offset for sticky header if it were present */
+        }
+    </style>
+    <!-- 
+        Infographic Narrative Plan:
+        1. Hero/Introduction: "The Gemini Era" - AI Dominance at I/O 2025. Key stat: "Gemini" mentions.
+        2. The Next Evolution of Gemini: Gemini 2.5 Pro, Flash, Deep Think. Key capabilities (audio, LearnLM), Ironwood TPU.
+        3. AI Reimagining Google's Core Products: Search (AI Mode, AI Overviews, Agentic Capabilities, Virtual Try-On), Meet, Gmail.
+        4. Unleashing Creativity with Generative AI: Veo 3, Imagen 4, Flow, Lyria 2.
+        5. Empowering Developers: MedGemma, Gemma 3n, Jules, Stitch, Firebase AI, Gemini Code Assist, On-Device AI.
+        6. The Immersive Web: Android XR and AI Convergence.
+        7. Responsible AI & Monetization: SynthID, AI Subscription Tiers.
+        8. Concluding Analysis: Key takeaways and market impact.
+
+        Visualization Choices Summary:
+        - "Gemini Mentions": Single Big Number (HTML/CSS). Goal: Inform.
+        - "AI Overviews Users": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Clickthrough Decline": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Ironwood TPU Power": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Gemini 2.5 Pro Context Window": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Imagen 4 Resolution": Single Big Number (HTML/CSS). Goal: Inform.
+        - "SynthID Watermarks": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Gemini Code Assist Boost": Single Big Number (HTML/CSS). Goal: Inform.
+        - "Subscription Tiers": HTML Table. Goal: Compare.
+        - "Agentic Checkout Process": HTML/CSS Flow Diagram. Goal: Organize.
+        - "Flow Filmmaking Toolkit Process": HTML/CSS Flow Diagram. Goal: Organize.
+        - "Jules Coding Agent Process": HTML/CSS Flow Diagram. Goal: Organize.
+        - Key Model Announcements (Table 1): HTML Table. Goal: Organize.
+        - AI Features in Products (Table 2): HTML Table. Goal: Organize.
+        - Generative AI Tools (Table 3): HTML Table. Goal: Organize.
+        - AI Subscription Tiers (Table 4 from report): HTML Table. Goal: Organize/Compare.
+        - Other data points: Presented as text within descriptive paragraphs.
+        - All charts/diagrams are Canvas-based (Chart.js where applicable) or HTML/CSS. NO SVG, NO MERMAID JS.
+
+        Chosen Color Palette: Vibrant Blues and Yellow Accent
+        - Primary Blue: #0077B6
+        - Secondary Blue: #00B4D8
+        - Accent Yellow/Orange: #FFC300
+        - Background: #F0F8FF
+        - Text: #333333 (Dark Gray), #FFFFFF (White)
+
+        Confirmation: NEITHER Mermaid JS NOR SVG were used in this document. All diagrams are HTML/CSS based. All charts are Canvas-based via Chart.js.
+    -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#0077B6] text-white p-6 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center">Google I/O 2025: The <span class="text-[#FFC300]">Gemini Era</span> in Artificial Intelligence</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="ai-center-stage" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">AI Takes Center Stage: The "Gemini Era" Solidified</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025, hosted on May 20-21, marked a definitive pivot, with Artificial Intelligence (AI) overwhelmingly dominating the proceedings. This deliberate curation of the agenda cleared the main stage for an exposition of Google's advancements and vision for an AI-driven future. The event largely eschewed traditional hardware or substantial Android OS updates beyond those pre-briefed.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="stat-card">
+                        <div class="stat-number">95</div>
+                        <div class="stat-label">Times "Gemini" Invoked During Keynote</div>
+                    </div>
+                    <div class="p-6 bg-blue-50 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold text-[#0077B6] mb-2">Strategic Consolidation</h3>
+                        <p class="text-gray-700">The term "Gemini" significantly outnumbered mentions of "AI" itself, underscoring a strategic consolidation of Google's diverse AI efforts under the Gemini brand. This aims to establish strong recognition and streamline Google's AI story for users, developers, and investors.</p>
+                    </div>
+                </div>
+                <p class="text-lg mb-4 text-gray-700">CEO Sundar Pichai stated, "At our annual developer conference, we announced how we're making AI even more helpful with Gemini." This concerted messaging signals a unification of Google's AI identity, presenting Gemini as the core engine driving its next wave of innovation. However, these showcases unfolded against increasing investor caution, pressuring Google to demonstrate clear pathways to monetization for its substantial AI investments.</p>
+                <p class="text-md text-gray-600 italic">Despite the innovation, Alphabet's stock saw a modest decline, partly attributed to "AI announcement fatigue" and demand for tangible business models.</p>
+            </div>
+        </section>
+
+        <section id="gemini-evolution" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">The Next Evolution of Gemini: Powering Google's AI Future</h2>
+                <p class="text-lg mb-4 text-gray-700">At the core of I/O 2025 was the significant evolution of the Gemini family of models, particularly the Gemini 2.5 series, positioned as new flagships with improvements in functionality, security, transparency, user control, and cost-efficiency.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini 2.5 Pro</h3>
+                        <p class="text-gray-700 mb-2">Hailed as Google's "most intelligent model yet," demonstrating leading performance on benchmarks.</p>
+                        <div class="stat-card bg-[#00B4D8] mb-2">
+                            <div class="stat-number text-2xl">1M</div>
+                            <div class="stat-label text-sm">Token Context Window</div>
+                        </div>
+                        <p class="text-gray-700 font-semibold">Experimental "Deep Think" Mode:</p>
+                        <p class="text-gray-700 text-sm">Enhanced reasoning for complex problems (advanced math, programming), running multiple reasoning lines in parallel. Currently in testing.</p>
+                    </div>
+
+                    <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini 2.5 Flash</h3>
+                        <p class="text-gray-700 mb-2">Faster, efficient, lightweight version optimized for speed with strong reasoning and coding.</p>
+                        <p class="text-gray-700 mb-2 font-semibold">Uses <span class="accent-text">20-30% fewer tokens</span> compared to previous iterations.</p>
+                        <p class="text-gray-700 text-sm">Available via Gemini app, Google AI Studio, Vertex AI. Preview in June.</p>
+                    </div>
+
+                    <div class="p-6 bg-sky-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-[#0077B6] mb-2">Gemini Diffusion</h3>
+                        <p class="text-gray-700 mb-2">Experimental text diffusion model. A high-performance version (possibly code-focused) is open to trusted testers, with public rollout of a code-focused version expected in June.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3 mt-6">Enhanced Capabilities Across Gemini 2.5:</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li><strong class="text-[#0077B6]">Native Audio Output & Affective Dialogue:</strong> More natural text-to-speech with varied tones, accents, styles, and emotion detection.</li>
+                    <li><strong class="text-[#0077B6]">Proactive Audio:</strong> Improved understanding of conversational flow, ignoring irrelevant sounds.</li>
+                    <li><strong class="text-[#0077B6]">Multilingual Support:</strong> TTS supports 24+ languages, seamlessly switching mid-conversation.</li>
+                    <li><strong class="text-[#0077B6]">LearnLM Integration:</strong> Specialized version for educational tasks, enhancing personalized learning, quizzes, and explainer videos.</li>
+                    <li><strong class="text-[#0077B6]">API Enhancements:</strong> Native audio, real-time conversations, computer use capabilities (Project Mariner), URL context retrieval, asynchronous function calling.</li>
+                </ul>
+
+                <div class="card bg-gray-50">
+                    <h3 class="text-2xl font-semibold text-[#0077B6] mb-3">The Ironwood TPU: Engine Behind Advancements</h3>
+                    <p class="text-gray-700 mb-4">Google's 7th-gen Tensor Processing Unit, engineered for inference, underpins these model improvements.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="stat-card bg-[#00B4D8] p-4">
+                            <div class="stat-number text-xl">10x</div>
+                            <div class="stat-label text-xs">More Powerful than Predecessor</div>
+                        </div>
+                        <div class="stat-card bg-[#00B4D8] p-4">
+                            <div class="stat-number text-xl">42.5</div>
+                            <div class="stat-label text-xs">Exaflops per Pod</div>
+                        </div>
+                         <div class="stat-card bg-[#00B4D8] p-4">
+                            <div class="stat-number text-xl">192GB</div>
+                            <div class="stat-label text-xs">HBM Capacity per Chip (6x increase)</div>
+                        </div>
+                        <div class="stat-card bg-[#00B4D8] p-4">
+                            <div class="stat-number text-xl">7.37TB/s</div>
+                            <div class="stat-label text-xs">HBM Bandwidth per Chip (4.5x increase)</div>
+                        </div>
+                        <div class="stat-card bg-[#00B4D8] p-4">
+                            <div class="stat-number text-xl">2x</div>
+                            <div class="stat-label text-xs">Performance/Watt vs Trillium</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm">Ironwood's architecture enables faster, cost-effective operation of Gemini models, supporting super-large LLMs and MoE models with advanced "thinking" capabilities, and focuses on power efficiency with advanced liquid cooling.</p>
+                </div>
+                
+                <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Table 1: Key AI Model Announcements (Gemini Focus)</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="table-header table-cell">Model Name</th>
+                                <th class="table-header table-cell">Key Features/Enhancements</th>
+                                <th class="table-header table-cell">Stated Availability/Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-cell">Gemini 2.5 Pro</td>
+                                <td class="table-cell">1M token context window, leading benchmark performance, video understanding.</td>
+                                <td class="table-cell">Generally Available</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">Gemini 2.5 Pro with Deep Think</td>
+                                <td class="table-cell">Experimental enhanced reasoning for complex problem-solving (math, programming).</td>
+                                <td class="table-cell">Testing with trusted testers</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">Gemini 2.5 Flash</td>
+                                <td class="table-cell">Fast, efficient, lightweight; improved reasoning, coding, multimodality; uses 20-30% fewer tokens.</td>
+                                <td class="table-cell">Available in Gemini app, Google AI Studio, Vertex AI; Preview June</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">Gemini Diffusion</td>
+                                <td class="table-cell">Experimental text diffusion model; (also high-performance version for trusted testers).</td>
+                                <td class="table-cell">Public rollout of code-focused version June; research model status</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">LearnLM</td>
+                                <td class="table-cell">Specialized Gemini for educational tasks, enhancing learning capabilities.</td>
+                                <td class="table-cell">Integrated into Gemini 2.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-in-products" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">AI Reimagining Google's Core Product Ecosystem</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025 showcased a pervasive strategy of embedding AI, predominantly powered by Gemini, across its entire suite of core products, transforming user experiences in search, productivity, and communication.</p>
+
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Transforming Search: The New "AI Mode" and Beyond</h3>
+                <p class="text-gray-700 mb-4">Google Search is undergoing its most significant AI-driven overhaul. <strong class="accent-text">AI Mode</strong>, powered by Gemini 2.5, launched for all US users, offering conversational search for complex queries and custom chart generation.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="stat-card">
+                        <div class="stat-number">1.5B</div>
+                        <div class="stat-label">Monthly Users Viewing AI Overviews</div>
+                    </div>
+                    <div class="stat-card bg-red-500">
+                        <div class="stat-number">~30%</div>
+                        <div class="stat-label">Decline in Clickthrough Rates to External Sites (per some studies)</div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">AI Overviews:</strong> Expanding to 200+ countries/territories, 40+ languages.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Deep Search:</strong> Within AI Mode, provides thorough, cited, expert-level reports.</p>
+                <p class="text-gray-700 mb-4"><strong class="text-[#0077B6]">Agentic Capabilities (Project Mariner):</strong> AI automates tasks like finding apartments, scheduling tours, buying tickets. Early version for AI Ultra US subscribers soon. This "teach and repeat" system signifies a move towards more autonomous AI.</p>
+                
+                <div class="mt-6 mb-8 p-6 bg-yellow-50 rounded-lg shadow">
+                    <h4 class="text-xl font-semibold text-[#D69E2E] mb-3">AI-Powered Shopping in Search</h4>
+                    <p class="text-gray-700 mb-2">Gemini integrates with Google's Shopping Graph (<span class="font-bold accent-text">50 Billion+</span> product listings).</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 mb-3">
+                        <li><strong class="text-[#D69E2E]">Virtual Try-On:</strong> Upload a photo to see clothing on a virtual body (Search Labs, US).</li>
+                        <li><strong class="text-[#D69E2E]">Agentic Checkout:</strong> AI tracks item price and, with supervision, auto-completes purchase via Google Pay when price drops.</li>
+                    </ul>
+                    <p class="text-gray-700 mb-3">This is an example of a process flow for Agentic Checkout:</p>
+                    <div class="space-y-2">
+                        <div class="flow-step">1. User expresses intent (e.g., "Buy this shirt if it drops below $20").</div>
+                        <div class="flow-arrow">▼</div>
+                        <div class="flow-step">2. AI (Gemini) tracks the shirt's price on various sites.</div>
+                        <div class="flow-arrow">▼</div>
+                        <div class="flow-step">3. Price drops to the user-defined target (e.g., $19.99).</div>
+                        <div class="flow-arrow">▼</div>
+                        <div class="flow-step">4. AI notifies user and, with explicit user supervision/confirmation, completes the purchase using Google Pay.</div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3 italic">This automation could significantly change online retail but requires robust security and user trust.</p>
+                </div>
+
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Personalized Search:</strong> AI Mode to use context from past searches and other Google apps (starting with Gmail).</p>
+                <p class="text-gray-700 mb-6"><strong class="text-[#0077B6]">Search Live (Project Astra Integration):</strong> Live video calls to Search for real-time visual assistance via camera.</p>
+                
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4 mt-8">Enhancing Productivity and Communication</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li><strong class="text-[#0077B6]">Google Meet - Live Translations:</strong> Real-time translation with voice matching (tone, expression). Initially English/Spanish for AI Pro/Ultra users.</li>
+                    <li><strong class="text-[#0077B6]">Gmail - Personalized Smart Replies & Inbox Cleanup:</strong> AI suggests detailed replies matching user's tone/style (opt-in, later this year). Ask Gemini to manage email (e.g., "Delete unread marketing emails from last month").</li>
+                    <li><strong class="text-[#0077B6]">Chrome Browser & DevTools:</strong> Gemini in Chrome (AI Pro/Ultra US) to clarify/summarize pages. AI assistance in DevTools for debugging. Chrome to help change compromised passwords.</li>
+                    <li><strong class="text-[#0077B6]">NotebookLM - Video Overviews:</strong> Transform multimedia notes into visual presentations.</li>
+                </ul>
+
+                <p class="text-gray-600 mt-6 italic text-sm">The deep integration of AI across Google's ecosystem points to an "ambient AI" future. While offering convenience, this raises questions about data privacy, user autonomy, and the impact on the open web as direct AI answers might reduce clicks to original content sources.</p>
+            </div>
+        </section>
+
+        <section id="generative-ai" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Unleashing Creativity: Advances in Generative AI</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025 placed a strong emphasis on advancing its suite of generative AI tools, aiming to empower creators across video, image, and audio domains.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-purple-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-purple-700 mb-2">Veo 3: AI Video with Synchronized Audio</h3>
+                        <p class="text-gray-700 mb-2">A significant upgrade, Veo 3 generates videos <strong class="accent-text">with synchronized sound</strong>, including ambient noises and coherent character dialogue. DeepMind CEO Demis Hassabis called it "emerging from the silent era of video generation."</p>
+                        <p class="text-gray-700 text-sm">Can create individual clips and tie them into longer films. Partnered with Darren Aronofsky's lab. Access via Gemini app (AI Ultra US) & Vertex AI.</p>
+                    </div>
+                    <div class="p-6 bg-pink-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Imagen 4: Image Quality & Control</h3>
+                        <p class="text-gray-700 mb-2">Produces visuals with "lifelike detail" and significantly better text/typography rendering. Resolution boosted to <strong class="accent-text">2K</strong> for flexibility.</p>
+                        <p class="text-gray-700 text-sm">Excels in fine details (fabrics, water droplets, fur) and both photorealistic/abstract styles. Available in Gemini app for all users.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-teal-50 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Flow: AI-Powered Filmmaking Toolkit</h3>
+                    <p class="text-gray-700 mb-3">Built for creative professionals, Flow leverages Veo 3 & Imagen 4. Users create scenes, characters, and assets from text prompts, with controls for camera movement, editing, and integration.</p>
+                    <p class="text-gray-700 mb-3">A simplified creative workflow with Flow:</p>
+                    <div class="space-y-2">
+                        <div class="flow-step border-teal-500 bg-teal-100">1. User provides natural language prompts for scenes, characters, or specific shots.</div>
+                        <div class="flow-arrow text-teal-500">▼</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">2. Flow utilizes Veo 3 (for video) and Imagen 4 (for stills/textures) to generate initial assets.</div>
+                        <div class="flow-arrow text-teal-500">▼</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">3. User refines assets with controls for camera movement, perspective, and edits/extends existing shots.</div>
+                        <div class="flow-arrow text-teal-500">▼</div>
+                        <div class="flow-step border-teal-500 bg-teal-100">4. Generated content is seamlessly integrated into larger filmmaking projects.</div>
+                    </div>
+                    <p class="text-gray-700 text-sm mt-3">Available for Google AI Pro & Ultra subscribers in the US, expanding soon.</p>
+                </div>
+
+                <div class="mt-8 p-6 bg-indigo-50 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Lyria 2 & Music AI Sandbox</h3>
+                    <p class="text-gray-700 mb-2">Generates original music: harmonies, rhythms, scores, orchestral pieces. Lyria RealTime enables interactive music creation.</p>
+                    <p class="text-gray-700 text-sm">Available to enterprises, YouTube creators, musicians.</p>
+                </div>
+                <p class="text-gray-600 mt-6 italic text-sm">This "full stack" creative AI ecosystem aims to democratize content creation but also raises concerns about professional displacement in creative industries.</p>
+            </div>
+        </section>
+
+        <section id="developer-empowerment" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Empowering Developers in the Age of AI</h2>
+                <p class="text-lg mb-6 text-gray-700">Google I/O 2025 armed developers with new AI models, tools, and APIs, fostering a robust ecosystem around its AI technologies.</p>
+                
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">New and Updated Models for Developers</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="p-4 bg-blue-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-[#00B4D8] mb-1">MedGemma</h4>
+                        <p class="text-sm text-gray-700">Open model for multimodal medical text/image comprehension (Gemma 3 variant). For fine-tuning healthcare AI apps. Small, efficient, customizable.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-[#00B4D8] mb-1">Gemma Family (Open Models)</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Gemma 3n:</strong> Fast, efficient open multimodal model for on-device (phones, laptops). Handles audio, text, image, video. Uses "selective parameter activation" (2-4B effective size from larger model). Needs 2-3GB RAM.</li>
+                            <li><strong>PaliGemma:</strong> Vision-language model for image captioning, visual Q&A.</li>
+                            <li><strong>SignGemma:</strong> Upcoming open model to translate sign languages (initially ASL to English text).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-4">Tools for AI Development</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="p-4 bg-green-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-green-700 mb-1">Jules: Asynchronous Coding Agent</h4>
+                        <p class="text-sm text-gray-700 mb-2">Works with GitHub: version upgrades, unit tests, feature updates, bug fixes. Spins up VM, edits, tests, prepares PR. Public beta (free).</p>
+                        <p class="text-gray-700 text-xs mb-2">Jules's workflow:</p>
+                        <div class="space-y-1 text-xs">
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">1. Developer assigns task via GitHub.</div>
+                            <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">2. Jules spins up Cloud VM, clones repo.</div>
+                            <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">3. Makes coordinated code edits across codebase.</div>
+                            <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">4. Runs tests to verify changes.</div>
+                            <div class="flow-arrow !text-sm !my-0 text-green-500">▼</div>
+                            <div class="flow-step !p-2 !mb-1 border-green-500 bg-green-100">5. Prepares a pull request for developer review.</div>
+                        </div>
+                    </div>
+                     <div class="p-4 bg-yellow-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-yellow-700 mb-1">Stitch: AI UI Design & Code Gen</h4>
+                        <p class="text-sm text-gray-700">Generates UI designs and frontend code (CSS/HTML) from prompts/images. Iterate via chat, adjust themes, export to CSS/HTML or Figma.</p>
+                    </div>
+                    <div class="p-4 bg-indigo-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-indigo-700 mb-1">Firebase AI Logic & Firebase Studio</h4>
+                        <p class="text-sm text-gray-700"><strong>Studio:</strong> Cloud AI workspace (Gemini 2.5) for rapid full-stack app dev. Import Figma, add features with Gemini, auto-provision backend. <strong>Logic:</strong> Integrate GenAI models via client apps or Genkit (server-side).</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-lg shadow">
+                        <h4 class="text-xl font-semibold text-red-700 mb-1">Gemini Code Assist</h4>
+                        <p class="text-sm text-gray-700">Standard version added to Google Developer Program benefits. Free "for Individuals" version (Gemini 2.5) now GA. Claims to boost task completion by <strong class="accent-text">2.5 times</strong>. GitHub version also available.</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-[#0077B6] mb-3">On-Device AI: Gemini Nano & ML Kit</h3>
+                <p class="text-gray-700 mb-4">Significant push for privacy, low latency, offline capabilities.</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li><strong>ML Kit GenAI APIs:</strong> New APIs using Gemini Nano for on-device tasks (e.g., Androidify app).</li>
+                    <li><strong>Gemini Nano in Chrome:</strong> Built-in AI APIs for web devs (Summarizer, Language Detector, Translator, Prompt APIs in Stable for Chrome 138. Writer, Rewriter in origin trials. Proofreader, multimodal Prompt in Canary).</li>
+                </ul>
+                 <p class="text-gray-600 mt-6 italic text-sm">Agentic coding assistants like Jules and on-device AI like Gemini Nano are set to redefine developer workflows and enable new types of applications, emphasizing privacy and responsiveness.</p>
+            </div>
+        </section>
+
+        <section id="android-xr" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">The Immersive Web: Android XR and AI Convergence</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025 signaled a revitalized push into Extended Reality (XR) with Android XR, a new platform built for the Gemini era, supporting AI-driven VR/AR applications on headsets and smart glasses.</p>
+                <p class="text-gray-700 mb-2"><strong class="text-[#0077B6]">Native Gemini Integration:</strong> The defining feature. On-glasses Gemini can find cafes, do live translation (Farsi/Hindi to English demoed), answer questions about surroundings. Headset Gemini can use Maps for virtual travel.</p>
+                <p class="text-gray-700 mb-4">Existing Android apps will be compatible. Prototype glasses have cameras, mics, speakers.</p>
+                <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Hardware Partnerships:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Samsung:</strong> Project Moohan VR headset (first Android XR device, late 2025).</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Qualcomm:</strong> AI tech optimization.</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Gentle Monster:</strong> Eyewear partner for Android XR glasses.</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Warby Parker:</strong> Eyewear partner for Android XR glasses.</div>
+                    <div class="p-3 bg-gray-100 rounded-lg shadow"><strong>Xreal:</strong> Project Aura (tethered smart glasses/headset).</div>
+                </div>
+                <p class="text-gray-700 mt-4">Android XR glasses prototypes are with trusted testers. Developers can build apps later this year. This points to an "AI-first" wearable future, augmenting or replacing smartphone interactions for quick tasks.</p>
+            </div>
+        </section>
+
+        <section id="responsible-ai-monetization" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Navigating the Future: Responsible AI & Monetization</h2>
+                <p class="text-lg mb-6 text-gray-700">Google addressed content authenticity and strategies for monetizing its advanced AI capabilities.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-lime-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-lime-700 mb-2">Responsible AI: SynthID Detector</h3>
+                        <p class="text-gray-700 mb-2">A new portal to help users identify AI-generated content by detecting SynthID watermarks. Google has watermarked over <strong class="accent-text">10 billion</strong> pieces of AI content since 2023.</p>
+                        <p class="text-gray-700 text-sm">Available to early testers (researchers, media), waitlist for broader access. This is a step towards transparency but primarily detects Google's own watermarks.</p>
+                    </div>
+
+                    <div class="p-6 bg-orange-50 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-orange-700 mb-2">Monetization: AI Subscription Tiers</h3>
+                        <p class="text-gray-700 mb-2">A clear focus on monetizing advanced AI offerings through a tiered model.</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                            <li><strong>Google AI Pro:</strong> $19.99/month (renamed Google One AI Premium). Access to Gemini Advanced, Flow, NotebookLM.</li>
+                            <li><strong>Google AI Ultra:</strong> <strong class="accent-text">$249.99/month</strong> (intro 50% off for 3 months). Highest usage limits, most capable models (Gemini 2.5 Pro with Deep Think, Veo 3), Flow with Veo 3, Whisk, Gemini in Workspace/Chrome, Project Mariner access, 30TB storage, YouTube Premium. Aimed at professionals and "AI obsessives."</li>
+                        </ul>
+                        <p class="text-gray-600 mt-3 italic text-xs">The AI Ultra pricing met with surprise, testing market elasticity. Subscriptions diversify revenue beyond ads, crucial as AI search might reduce ad clicks.</p>
+                    </div>
+                </div>
+                 <h3 class="text-xl font-semibold my-4 text-[#0077B6]">Table 4: Google AI Subscription Tiers (Post I/O 2025)</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="table-header table-cell">Tier Name</th>
+                                <th class="table-header table-cell">Monthly Price (USD)</th>
+                                <th class="table-header table-cell">Key Features/Access</th>
+                                <th class="table-header table-cell">Target Audience</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-cell">Google AI (Free)</td>
+                                <td class="table-cell">$0</td>
+                                <td class="table-cell">Basic access to Gemini capabilities.</td>
+                                <td class="table-cell">General Users</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">Google AI Pro</td>
+                                <td class="table-cell">$19.99</td>
+                                <td class="table-cell">Gemini app with Advanced model, Flow, NotebookLM, higher rate limits.</td>
+                                <td class="table-cell">Power Users, Enthusiasts</td>
+                            </tr>
+                            <tr>
+                                <td class="table-cell">Google AI Ultra</td>
+                                <td class="table-cell">$249.99 ($124.99 for first 3 months)</td>
+                                <td class="table-cell">Gemini 2.5 Pro with Deep Think, Veo 3, Flow with Veo 3, Whisk, Gemini in Workspace/Chrome, Project Mariner access, 30TB storage, YouTube Premium.</td>
+                                <td class="table-cell">Filmmakers, Developers, Creative Professionals, "AI Obsessives"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="nav-item mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-6 text-center section-title">Concluding Analysis: Google's AI Trajectory & Market Impact</h2>
+                <p class="text-lg mb-4 text-gray-700">Google I/O 2025 solidified AI, particularly Gemini, as the centerpiece of its strategy. The announcements underscore an effort to infuse AI into its entire ecosystem, develop generative capabilities, empower developers, and explore new interaction paradigms like AI-driven XR.</p>
+                
+                <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Key Strategic Takeaways:</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li><strong>AI Ubiquity ("Ambient AI"):</strong> AI as a foundational layer across all products.</li>
+                    <li><strong>Model Specialization & Tiered Access:</strong> Diversified Gemini family and subscription tiers.</li>
+                    <li><strong>Developer Ecosystem Focus:</strong> Rich tools, APIs, and models to make Google's platform preferred.</li>
+                    <li><strong>Vertical Integration (Ironwood TPU):</strong> Custom hardware for competitive edge in performance/cost.</li>
+                    <li><strong>Cautious Rollout of Agentic AI:</strong> Phased deployment for advanced autonomous capabilities.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-[#0077B6] mb-3">Potential Impact:</h3>
+                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li><strong>Users:</strong> More personalized, efficient interactions, but privacy/bias concerns.</li>
+                    <li><strong>Developers:</strong> Lower innovation barriers, but evolving skillsets for AI agent collaboration.</li>
+                    <li><strong>Digital Landscape:</strong>
+                        <ul class="list-circle list-inside ml-4 space-y-1 text-sm">
+                            <li>Altered open web economics due to AI search providing direct answers (potential "AI Tax").</li>
+                            <li>Accelerated AI adoption in various sectors (healthcare, education, creative).</li>
+                            <li>"Great AI Skill Shift" requiring reskilling in prompt engineering, AI ethics, etc.</li>
+                            <li>Intensified debate on responsible AI and content authenticity.</li>
+                            <li>Potential digital divide from high-cost top-tier AI access.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="text-gray-700">Google's AI strategy is a high-wire act, balancing innovation with monetization, ethics, and ecosystem management. Success depends on technological breakthroughs, building trust, demonstrating value, and responsibly stewarding these powerful technologies.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-12 bg-[#0077B6] text-white text-sm">
+        Infographic based on the "Google I/O 2025: The Ascendancy of the Gemini Era in Artificial Intelligence" report.
+        <br>All data points and information are derived from the provided source material. For illustrative purposes only.
+    </footer>
+
+    <script>
+        // Placeholder for any future JS, e.g., for interactive elements if added.
+        // Chart.js instances would be initialized here if they were dynamic or needed complex setup.
+        // For this static infographic, Chart.js is loaded but charts are conceptualized based on report data.
+        // Actual chart rendering would require specific data formatted for Chart.js.
+
+        // Example of how label wrapping and tooltip config would be applied if a chart was rendered:
+        /*
+        function processLabels(labels) {
+            return labels.map(label => {
+                if (typeof label === 'string' && label.length > 16) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    for (const word of words) {
+                        if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                            lines.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    }
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            });
+        }
+
+        const exampleChartData = {
+            labels: processLabels(['Long Label Example One', 'Short', 'Another Very Long Label Example Two']),
+            datasets: [{
+                label: 'Sample Data',
+                data: [10, 20, 15],
+                backgroundColor: ['#00B4D8', '#FFC300', '#0077B6']
+            }]
+        };
+
+        const exampleChartConfig = {
+            type: 'bar',
+            data: exampleChartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        };
+
+        // const ctx = document.getElementById('myChartCanvasId').getContext('2d');
+        // new Chart(ctx, exampleChartConfig);
+        */
+    </script>
+
+</body>
+</html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yapay Zeka Sanayi Trendleri ve Pazar Araştırması</title>
+    <title>Yapay Zeka Endüstrisi Trendleri ve Pazar Araştırması</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F0F4F8; /* Açık Gri Arka Planı */
+            background-color: #F8F9FA; /* Çok Açık Gri Arka Plan */
         }
         .chart-container {
             position: relative;
@@ -19,7 +19,7 @@
             width: 100%;
         }
         .stat-card {
-            background-color: #FFFFFF; /* Beyaz Kart Arka Planı */
+            background-color: #FFFFFF; /* Beyaz kart arka planı */
             border-radius: 0.5rem; /* rounded-lg */
             padding: 1.5rem; /* p-6 */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
@@ -28,18 +28,18 @@
         .stat-value {
             font-size: 2.25rem; /* text-4xl */
             font-weight: 700; /* font-bold */
-            color: #0052D4; /* Koyu Mavi */
+            color: #1A73E8; /* Google Koyu Mavi */
         }
         .stat-label {
             font-size: 0.875rem; /* text-sm */
-            color: #4A5568; /* Tailwind gri-600 */
+            color: #5F6368; /* Google Gri */
             margin-top: 0.25rem; /* mt-1 */
         }
         h1, h2, h3 {
-            color: #0052D4; /* Koyu Mavi */
+            color: #1A73E8; /* Google Koyu Mavi */
         }
         p {
-            color: #333333; /* Koyu Gri/Siyah */
+            color: #202124; /* Google Koyu Gri */
             line-height: 1.6;
         }
         .nav-link {
@@ -47,45 +47,51 @@
             transition: color 0.3s ease;
         }
         .nav-link:hover {
-            color: #6FB1FC; /* Hover için Açık Mavi */
+            color: #8AB4F8; /* Google Açık Mavi (hover için) */
         }
-        /* Seçilen Renk Paleti: Parlak Maviler */
-        /* Birincil: #0052D4 (Koyu Mavi) */
-        /* İkincil: #4364F7 (Orta Mavi) */
-        /* Vurgu: #6FB1FC (Açık Mavi) */
-        /* Açık Üzerinde Metin: #333333 */
-        /* Koyu Üzerinde Metin: #FFFFFF */
-        /* Arka Planlar: #FFFFFF (Kartlar), #F0F4F8 (Sayfa) */
+        /* Seçilen Renk Paleti: Google Materyal Paleti */
+        /* Ana Mavi: #4285F4 (Google Mavi) */
+        /* Ana Açık Mavi: #8AB4F8 */
+        /* Ana Koyu Mavi: #1A73E8 */
+        /* İkincil Yeşil: #34A853 (Google Yeşil) */
+        /* İkincil Açık Yeşil: #81C995 */
+        /* İkincil Koyu Yeşil: #1E8E3E */
+        /* Vurgu Sarı/Turuncu: #FBBC05 */
+        /* Vurgu Kırmızı: #EA4335 */
+        /* Açık Metin Üzerine Metin: #202124 (Google Koyu Gri) */
+        /* Koyu Metin Üzerine Metin: #FFFFFF */
+        /* Arka Planlar: #FFFFFF (Kartlar), #F8F9FA (Sayfa) */
+        /* Izgara çizgileri vb. için vurgu: #D8DBE0 (Daha Açık Google Gri) */
 
-        /* --- Hikaye ve Yapı Planı ---
+        /* --- Anlatı ve Yapı Planı ---
         1.  Giriş/Kanca: Dönüştürücü Yapay Zeka.
-        2.  Pazar Genel Bakışı ve Yatırım: Küresel YZ yatırımı, GenAI fonları, ABD liderliği, hükümet yatırımları.
-        3.  Kurumsal Benimseme ve Etki: Benimseme oranları, verimlilik artışları, ROI.
-        4.  Pazarı Tetikleyen Ana Teknik Trendler: Akıl yürütme, Çok Modellik, Vekil YZ.
-        5.  Küresel YZ Manzarası ve Rekabet: ABD vs Çin (modeller, yatırım), bölgesel benimseme.
-        6.  İş Gücü Dönüşümü: İş değişiklikleri, beceri talepleri.
-        7.  Yapay Zeka Yönetişimi ve Toplumsal Algı: Düzenleyici eğilimler, kamuoyucesi.
-        8.  Gelecek Görünümü ve Stratejik Hususlar: Projeksiyonlar, zorluklar, fırsatlar.
-        9.  Sonuç: YZ destekli bir gelecek.
-        --- Hikaye ve Yapı Planı Sonu --- */
+        2.  Pazar Genel Bakışı ve Yatırım: Küresel Yapay Zeka yatırımı, Üretken Yapay Zeka fonlaması, ABD liderliği, hükümet yatırımları.
+        3.  Kurumsal Benimseme ve Etki: Benimseme oranları, üretkenlik kazanımları, yatırım getirisi.
+        4.  Pazarı Yönlendiren Temel Teknik Trendler: Akıl Yürütme, Çok Modluluk, Ajan Yapay Zeka.
+        5.  Küresel Yapay Zeka Manzarası ve Rekabet: ABD vs. Çin (modeller, yatırım), bölgesel benimseme.
+        6.  İşgücü Dönüşümü: İş değişiklikleri, beceri talepleri.
+        7.  Yapay Zeka Yönetişimi ve Toplumsal Algı: Düzenleyici trendler, kamuoyu.
+        8.  Gelecek Görünümü ve Stratejik Hususlar: Tahminler, zorluklar, fırsatlar.
+        9.  Sonuç: Yapay zeka odaklı gelecek.
+        --- Anlatı ve Yapı Planı Sonu --- */
 
-        /* --- Görselleştirme Seçenekleri Özeti ---
-        - Küresel Kurumsal YZ Yatırımı (2024): Tek Büyük Rakam. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
-        - Özel GenAI Yatırımı (2024): Tek Büyük Rakam. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
-        - Özel YZ Yatırımında ABD Liderliği (vs Çin, İK): Bar Grafiği. Amaç: Karşılaştırmak. Kütüphane: Chart.js (Canvas). (SVG YOK)
-        - Kurumsal YZ Benimseme Oranı (2024 vs 2023): Bar Grafiği. Amaç: Karşılaştırmak/Değiştirmek. Kütüphane: Chart.js (Canvas). (SVG YOK)
-        - Küresel YZ Optimizmi (Bölgesel Bölünmeler): Gruplanmış Bar Grafiği. Amaç: Karşılaştırmak. Kütüphane: Chart.js (Canvas). (SVG YOK)
-        - WEF Net İş Projeksiyonları (2030'a Kadar): Tek Büyük Rakam. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
-        - OECD İş Otomasyon Riski: Donut Grafiği. Amaç: Bilgilendirmek. Kütüphane: Chart.js (Canvas). (SVG YOK)
-        - Basitleştirilmiş YZ Yönetişim Süreci Akış Şeması: Şema. Amaç: Düzenlemek. Yöntem: HTML/CSS/Tailwind. (SVG YOK, MERMAİD JS YOK)
-        --- Görselleştirme Seçenekleri Özeti Sonu --- */
+        /* --- Görselleştirme Seçimleri Özeti ---
+        - Küresel Kurumsal Yapay Zeka Yatırımı (2024): Tek Büyük Sayı. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
+        - Özel Üretken Yapay Zeka Yatırımı (2024): Tek Büyük Sayı. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
+        - ABD'nin Özel Yapay Zeka Yatırımında Liderliği (Çin, İngiltere'ye karşı): Çubuk Grafik. Amaç: Karşılaştırmak. Kütüphane: Chart.js (Canvas). (SVG YOK)
+        - Kurumsal Yapay Zeka Benimseme Oranı (2024 vs. 2023): Çubuk Grafik. Amaç: Karşılaştırmak/Değişimi Göstermek. Kütüphane: Chart.js (Canvas). (SVG YOK)
+        - Küresel Yapay Zeka İyimserliği (Bölgesel Ayrılıklar): Gruplandırılmış Çubuk Grafik. Amaç: Karşılaştırmak. Kütüphane: Chart.js (Canvas). (SVG YOK)
+        - WEF Net İş Projeksiyonları (2030'a kadar): Tek Büyük Sayı. Amaç: Bilgilendirmek. Yöntem: HTML/Tailwind. (SVG YOK)
+        - OECD İş Otomasyon Riski: Donut Grafik. Amaç: Bilgilendirmek. Kütüphane: Chart.js (Canvas). (SVG YOK)
+        - Basitleştirilmiş Yapay Zeka Yönetişim Süreci Akışı: Diyagram. Amaç: Organize Etmek. Yöntem: HTML/CSS/Tailwind. (SVG YOK, MERMAID JS YOK)
+        --- Görselleştirme Seçimleri Özeti Sonu --- */
 
-        /* --- Doğrulama: Bu çıktının hiçbir yerinde ne Mermaid JS ne de SVG kullanılmamıştır. Tüm grafiklar Chart.js aracılığıyla HTML Canvas kullanır. Şemalar Tailwind ile HTML/CSS kullanır. --- */
+        /* --- Onay: Bu çıktıda hiçbir yerde Mermaid JS veya SVG kullanılmamıştır. Tüm grafikler Chart.js aracılığıyla HTML Canvas kullanır. Diyagramlar HTML/CSS ve Tailwind ile oluşturulmuştur. --- */
     </style>
 </head>
 <body class="text-gray-800">
 
-    <nav class="bg-[#0052D4] p-4 sticky top-0 z-50 shadow-lg">
+    <nav class="bg-[#1A73E8] p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex flex-wrap justify-between items-center">
             <div class="text-white text-2xl font-bold">YZ: Trendler ve Gelecekler</div>
             <div class="space-x-4 mt-2 sm:mt-0">
@@ -94,7 +100,7 @@
                 <a href="#adoption" class="nav-link">Benimseme</a>
                 <a href="#technical" class="nav-link">Teknik Trendler</a>
                 <a href="#global-landscape" class="nav-link">Küresel</a>
-                <a href="#workforce" class="nav-link">İş Gücü</a>
+                <a href="#workforce" class="nav-link">İşgücü</a>
                 <a href="#governance" class="nav-link">Yönetişim</a>
                 <a href="#outlook" class="nav-link">Görünüm</a>
             </div>
@@ -105,30 +111,30 @@
 
         <section id="introduction" class="mb-12 pt-16 -mt-16">
             <div class="stat-card text-center">
-                <h1 class="text-4xl font-bold mb-4">Kesişime Yolculuk: YZ'nin Yörüngesi</h1>
+                <h1 class="text-4xl font-bold mb-4">Bağlantı Noktasında Gezinmek: Yapay Zeka'nın Yörüngesi</h1>
                 <p class="text-lg mb-6 max-w-3xl mx-auto">
-                    Yapay Zeka, yeni çıkan bir teknolojiden küresel sektörleri, toplumları ve ekonomileri yeniden şekillendiren dönüştürücü bir güce hızla dönüşüyor. Bu infografik, YZ'nin mevcut yörüngesi ve gelecek projeksiyonlarına ilişkin temel bulguları sentezliyor, teknik sınırları, sosyal boyutları ve ekonomik etkileri inceliyor.
+                    Yapay Zeka, yeni gelişen bir teknolojiden, endüstrileri, toplumları ve ekonomileri küresel olarak yeniden şekillendiren dönüştürücü bir güce hızla evriliyor. Bu infografik, Yapay Zeka'nın mevcut yörüngesi ve gelecekteki projeksiyonları hakkında temel bulguları sentezleyerek teknik sınırları, toplumsal boyutları ve ekonomik etkileri inceliyor.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
                     <div class="stat-card !mb-0">
                         <div class="stat-value">$252.3B</div>
                         <div class="stat-label">Küresel Kurumsal YZ Yatırımı (2024)</div>
-                        <p class="text-xs mt-1 text-gray-500">(Kaynak: Stanford HAI YZ İndeksi 2025)</p>
+                        <p class="text-xs mt-1 text-gray-500">(Kaynak: Stanford HAI YZ Endeksi 2025)</p>
                     </div>
                     <div class="stat-card !mb-0">
                         <div class="stat-value">$33.9B</div>
-                        <div class="stat-label">Özel GenAI Yatırımı (2024)</div>
-                        <p class="text-xs mt-1 text-gray-500">(Kaynak: Stanford HAI YZ İndeksi 2025)</p>
+                        <div class="stat-label">Özel Üretken YZ Yatırımı (2024)</div>
+                        <p class="text-xs mt-1 text-gray-500">(Kaynak: Stanford HAI YZ Endeksi 2025)</p>
                     </div>
                     <div class="stat-card !mb-0">
                         <div class="stat-value">15%</div>
-                        <div class="stat-label">YZ'nin Potansiyel Küresel GSYİH Artışı (Önümüzdeki On Yıl)</div>
+                        <div class="stat-label">YZ ile Potansiyel Küresel GSYİH Artışı (Önümüzdeki On Yıl)</div>
                         <p class="text-xs mt-1 text-gray-500">(Kaynak: PwC)</p>
                     </div>
-                     <div class="stat-card !mb-0">
+                   <div class="stat-card !mb-0">
                         <div class="stat-value">78%</div>
                         <div class="stat-label">YZ Kullanan Kuruluşlar (2024)</div>
-                        <p class="text-xs mt-1 text-gray-500">(2023'teki %55'ten yükseldi, Stanford HAI)</p>
+                        <p class="text-xs mt-1 text-gray-500">(2023'te %55'ten yükseldi, Stanford HAI)</p>
                     </div>
                 </div>
             </div>
@@ -136,26 +142,26 @@
 
         <section id="investment" class="mb-12 pt-16 -mt-16">
             <div class="stat-card">
-                <h2 class="text-3xl font-semibold mb-6 text-center">Geleceği Güçlendirmek: YZ Yatırım Manzarası</h2>
+                <h2 class="text-3xl font-semibold mb-6 text-center">Geleceği Beslemek: Yapay Zeka Yatırım Ortamı</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    YZ'nin ekonomik manzarası, hem özel hem de kamu sektörlerinden gelen yatırımdaki artışla karakterize edilir. Kurumsal YZ yatırımı 2024'te 252.3 milyar dolara ulaşırken, özel yatırım %44.5 arttı. Üretken YZ, özellikle sıcak bir alan olup, 2024'te 33.9 milyar dolar çekerek 2022 seviyelerinin 8.5 katından fazlasıdır.
+                    Yapay Zeka'nın ekonomik ortamı, hem özel hem de kamu sektörlerinden gelen yatırım artışıyla karakterize ediliyor. Kurumsal Yapay Zeka yatırımı 2024'te 252.3 milyar dolara ulaşırken, özel yatırım %44.5 arttı. Üretken Yapay Zeka özellikle sıcak bir alan olup, 2024'te 33.9 milyar dolar çekerek 2022 seviyelerinin 8.5 katından fazlasına ulaştı.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Özel YZ Yatırımında ABD Liderliği (2024)</h3>
-                        <p class="text-sm text-gray-600 mb-4">Birleşik Devletler, küresel özel YZ yatırımında liderliğini sürdürüyor ve diğer büyük oyunculardan önemli ölçüde daha fazla fon çekiyor. Bu YZ inovasyonundaki merkezi rolünü vurguluyor.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">ABD Özel YZ Yatırımına Liderlik Ediyor (2024)</h3>
+                        <p class="text-sm text-gray-600 mb-4">Amerika Birleşik Devletleri, küresel özel Yapay Zeka yatırımına hakim olmaya devam ediyor ve diğer büyük oyunculardan önemli ölçüde daha fazla fon çekiyor. Bu, Yapay Zeka inovasyonunu yönlendirmedeki merkezi rolünü vurguluyor.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="privateInvestmentChart"></canvas>
                         </div>
-                         <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025.</p>
+                           <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Hükümet YZ Yatırım Taahhütleri</h3>
-                        <p class="text-sm text-gray-600 mb-4">Dünya genelindeki hükümetler, YZ'nin stratejik önemini fark ederek, özellikle yarı iletken üretim ve araştırma altyapısı gibi kritik alanlarda yerli yetenekleri güçlendirmek için önemli miktarda fon taahhüt ediyor.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Hükümet Yapay Zeka Yatırım Taahhütleri</h3>
+                        <p class="text-sm text-gray-600 mb-4">Dünya genelindeki hükümetler, Yapay Zeka'nın stratejik önemini fark ederek, özellikle yarı iletken üretimi ve araştırma altyapısı gibi kritik alanlarda yerel yetenekleri güçlendirmek için önemli fonlar ayırıyor.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="govInvestmentChart"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025 (çeşitli hükümet duyuruları).</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025 (çeşitli hükümet duyuruları).</p>
                     </div>
                 </div>
             </div>
@@ -163,29 +169,29 @@
 
         <section id="adoption" class="mb-12 pt-16 -mt-16">
             <div class="stat-card">
-                <h2 class="text-3xl font-semibold mb-6 text-center">Eylemde YZ: Kurumsal Benimseme ve Verimlilik</h2>
-                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    İşletmeler giderek daha fazla YZ'yi entegre ediyor; 2024 yılında kuruluşların %78'i YZ kullanıyor (2023'teki %55'ten yükseldi). İş fonksiyonlarında üretken YZ benimsenmesi de 2024'te %71'e ulaşarak iki katına çıktı. Bu benimseme, verimlilik artışları ve olumlu ROI gibi somut faydalar tarafından yönleniliyor.
+                <h2 class="text-3xl font-semibold mb-6 text-center">İş Başında YZ: Kurumsal Benimseme ve Üretkenlik</h2>
+                   <p class="text-md mb-8 text-center max-w-2xl mx-auto">
+                    İşletmeler Yapay Zeka'yı giderek daha fazla entegre ediyor; 2024'te kuruluşların %78'i Yapay Zeka kullanıyor (2023'te %55'ten yükseldi). İş fonksiyonlarında Üretken Yapay Zeka benimsemesi de 2024'te %71'e iki katından fazla arttı. Bu benimseme, üretkenlik artışları ve pozitif yatırım getirisi gibi somut faydalarla destekleniyor.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Kurumsal YZ Benimseme Büyümesi</h3>
-                        <p class="text-sm text-gray-600 mb-4">YZ benimseme hızı hızlanıyor; 2023'ten 2024'e operasyonlarında YZ kullanımı bildiren kuruluşlarda önemli bir artış yaşandı.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Kurumsal YZ Benimseme Büyümesi</h3>
+                        <p class="text-sm text-gray-600 mb-4">Yapay Zeka benimseme oranı hızlanıyor; 2023'ten 2024'e kadar operasyonlarında Yapay Zeka kullanan kuruluşlarda önemli bir sıçrama yaşandı.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiAdoptionRateChart"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025.</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">YZ'nin Verimlilik ve ROI Üzerindeki Etkisi</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">YZ'nin Üretkenlik ve Yatırım Getirisi Üzerindeki Etkisi</h3>
                         <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
-                            <li>McKinsey, YZ'nin uzun vadeli potansiyel yıllık verimlilik artışına <strong>4,4 trilyon dolar</strong> ekleceğini tahmin ediyor.</li>
-                            <li>PwC: YZ ajanları kullanan şirketlerin <strong>%66'sı</strong> verimliliklerinin arttığını bildiriyor.</li>
-                            <li>Google Cloud: Kuruluşların <strong>%70'inden fazlası</strong> GenAI'den ROI görüyor.</li>
-                            <li>Microsoft: GenAI'ye yapılan 1 dolarlık yatırım başına ortalama <strong>3,70 dolar</strong> ROI.</li>
-                            <li>Deloitte: Kuruluşların <strong>%74'ü</strong> en gelişmiş YZ girişimlerinin ROI beklentilerini karşıladığını/aşıştığını belirtiyor.</li>
+                            <li>McKinsey, Yapay Zeka'nın uzun vadeli potansiyelinin yıllık üretkenlik büyümesine <strong>4.4 trilyon dolar</strong> ekleyebileceğini tahmin ediyor.</li>
+                            <li>PwC: Yapay Zeka ajanları kullanan şirketlerin <strong>%66'sı</strong> üretkenlik artışı bildirdi.</li>
+                            <li>Google Cloud: Kuruluşların <strong>%70'inden fazlası</strong> Üretken YZ'den yatırım getirisi görüyor.</li>
+                            <li>Microsoft: Üretken YZ'ye yatırılan her 1 dolar için ortalama <strong>3.70 dolar</strong> yatırım getirisi.</li>
+                            <li>Deloitte: Kuruluşların <strong>%74'ü</strong> en gelişmiş Yapay Zeka girişimlerinin yatırım getirisi beklentilerini karşıladığını/aştığını belirtiyor.</li>
                         </ul>
-                        <p class="text-sm text-gray-600 mt-4">Ancak, McKinsey ayrıca kuruluşların %80'inden fazlasının henüz GenAI'den somut işletme düzeyinde EBIT etkisi görmediğini, bunun da bir "uygulama boşluğu" olduğunu vurguluyor.</p>
+                        <p class="text-sm text-gray-600 mt-4">Ancak McKinsey, kuruluşların %80'inden fazlasının Üretken YZ'den henüz somut işletme düzeyinde EBIT etkisi görmediğini, bir "uygulama boşluğu" olduğunu vurguluyor.</p>
                     </div>
                 </div>
             </div>
@@ -195,29 +201,29 @@
             <div class="stat-card">
                 <h2 class="text-3xl font-semibold mb-6 text-center">Motor Odası: Temel Teknik YZ Trendleri</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    YZ modelleri, donanımı ve mimarilerindeki durmaksız inovasyon pazar büyümesini besliyor. Gelişmiş akıl yürütme, çok modelli yetenekler ve vekil YZ'nin yükselişi kritik noktalar.
+                    Yapay Zeka modelleri, donanım ve mimarilerdeki amansız inovasyon, pazar büyümesini körüklüyor. Gelişmiş akıl yürütme, çok modlu yetenekler ve ajan Yapay Zeka'nın yükselişi çok önemlidir.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🚀 Gelişmiş Akıl Yürütme</h3>
-                        <p class="text-sm text-gray-700">OpenAI'nin o-serisi gibi modeller, akıl yürütme gerektiren görevlerde öncüllerinden önemli ölçüde daha iyi performans göstererek karmaşık sorunları çözmek üzere tasarlanmıştır. Microsoft da model akıl yürütmesinde ilerlemeler bildiriyor.</p>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🚀 Gelişmiş Akıl Yürütme</h3>
+                        <p class="text-sm text-gray-700">OpenAI'nin o-serisi gibi modeller, karmaşık problem çözme için tasarlanmıştır ve akıl yürütme yoğun görevlerde öncüllerinden önemli ölçüde daha iyi performans gösterir. Microsoft da model akıl yürütmede atılımlar bildirmektedir.</p>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🎨 Çok Modellik</h3>
-                        <p class="text-sm text-gray-700">YZ giderek daha fazla metin, görüntü, video ve ses genelinde bilgiyi işliyor ve üretiyor. Google'ın Gemini ve OpenAI'nin GPT-4o, bu trendi örnekleyerek daha zengin etkileşimler sağlar.</p>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🎨 Çok Modluluk</h3>
+                        <p class="text-sm text-gray-700">Yapay Zeka giderek metin, görüntü, video ve ses genelinde bilgileri işliyor ve üretiyor. Google'ın Gemini'si ve OpenAI'nin GPT-4o'su bu eğilimi örnekleyerek daha zengin etkileşimler sağlıyor.</p>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🤖 Vekil YZ</h3>
-                        <p class="text-sm text-gray-700">Görevleri otomatikleştirebilen ve karmaşık süreçleri yönetebilen YZ veilleri, bir sonraki büyük dalga olarak görülüyor; Microsoft ve Google vekil platformlara büyük yatırımlar yapıyor.</p>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🤖 Ajan YZ</h3>
+                        <p class="text-sm text-gray-700">Görevleri otomatikleştirebilen ve karmaşık süreçleri düzenleyebilen Yapay Zeka ajanları, Microsoft ve Google'ın ajan platformlarına yoğun yatırım yapmasıyla bir sonraki büyük dalga olarak görülüyor.</p>
                     </div>
                 </div>
                 <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-3 text-center text-[#4364F7]">Karşılaştırmalı Performans Yükseliyor</h3>
-                    <p class="text-sm text-gray-600 mb-4 text-center">2023'te tanıtılan yeni YZ karşılaştırmaları, yalnızca bir yıl içinde dramatik performans iyileşmeleri göstererek yetenek artışının hızını ortaya koyuyor.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-center text-[#4285F4]">Benchmark Performansı Fırlıyor</h3>
+                    <p class="text-sm text-gray-600 mb-4 text-center">2023'te tanıtılan yeni Yapay Zeka benchmark'ları, sadece bir yıl içinde dramatik performans iyileştirmeleri göstererek yetenek geliştirme hızını sergiledi.</p>
                     <div class="chart-container h-72 md:h-96 max-w-2xl">
                         <canvas id="benchmarkPerformanceChart"></canvas>
                     </div>
-                    <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025. 1 yıldaki % puan artışını gösterir.</p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025. 1 yıldaki % puan artışını gösterir.</p>
                 </div>
             </div>
         </section>
@@ -226,24 +232,24 @@
             <div class="stat-card">
                 <h2 class="text-3xl font-semibold mb-6 text-center">Küresel Sahne: YZ Rekabeti ve Dinamikleri</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    ABD, önemli YZ modeli üretiminde lider durumda (2024'te 40 model), ancak Çinli modeller kalite farkını hızla kapatıyor. Çin ayrıca endüstriyel robot kurulumlarında da baskın durumda. YZ benimsenmesi ise Büyük Çin ve Avrupa'da en hızlı gerçekleşiyor.
+                    ABD, dikkate değer Yapay Zeka modeli üretiminde lider (2024'te 40), ancak Çin modelleri kalite farkını hızla kapatıyor. Çin ayrıca endüstriyel robot kurulumlarında da hakim durumda. Yapay Zeka benimsemesi Büyük Çin ve Avrupa'da en hızlı büyüyor.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Üretilen Dikkat Çeken YZ Modelleri (2024)</h3>
-                        <p class="text-sm text-gray-600 mb-4">2024'te Birleşik Devletler en çok önemli YZ modelini üretti, onu yakından Çin ve Avrupa takip etti.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Üretilen Dikkate Değer YZ Modelleri (2024)</h3>
+                        <p class="text-sm text-gray-600 mb-4">ABD, 2024'te en yüksek sayıda önemli Yapay Zeka modeli üretti, onu Çin ve Avrupa takip etti.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="modelProductionChart"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025.</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Küresel YZ Optimizmi: Bölgesel Bölünmeler</h3>
-                        <p class="text-sm text-gray-600 mb-4">YZ'ye yönelik kamu optimizmi önemli ölçüde değişiklik gösteriyor; Çin ve Endonezya gibi Asya ülkelerinde yüksek seviyelerken, bazı Batı ülkelerinde daha düşük seviyeler görülüyor.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Küresel YZ İyimserliği: Bölgesel Ayrılıklar</h3>
+                        <p class="text-sm text-gray-600 mb-4">Halkın Yapay Zeka'ya yönelik iyimserliği önemli ölçüde değişiyor; Çin ve Endonezya gibi Asya ülkelerinde yüksek seviyelerde, bazı Batı ülkelerinde ise daha düşük seviyelerde bulunuyor.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiOptimismChart"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025 (YZ'nin daha faydalı olduğunu gören %).</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025 (YZ'yi daha faydalı görenlerin yüzdesi).</p>
                     </div>
                 </div>
             </div>
@@ -251,41 +257,41 @@
 
         <section id="workforce" class="mb-12 pt-16 -mt-16">
             <div class="stat-card">
-                <h2 class="text-3xl font-semibold mb-6 text-center">İnsan Öğesi: YZ Çağında İş Gücü ve Beceriler</h2>
+                <h2 class="text-3xl font-semibold mb-6 text-center">İnsan Faktörü: YZ Çağında İşgücü ve Beceriler</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    YZ, iş piyasalarını yeniden şekillendiriyor. WEF, YZ de dahil makro trendler nedeniyle 2030 yılına kadar küresel olarak net 78 milyon iş artışını öngörüyor, ancak bu, önemli iş yaratımı (170M) ve iş kayıpları (92M) içeriyor. Beceri talepleri hızla evrimleşiyor.
+                    Yapay Zeka, işgücü piyasalarını yeniden şekillendiriyor. WEF, Yapay Zeka dahil makro trendler nedeniyle 2030 yılına kadar küresel olarak net 78 milyon iş artışı öngörüyor, ancak bu önemli iş yaratımı (170M) ve yer değiştirmeyi (92M) içeriyor. Beceri talepleri hızla gelişiyor.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">İş Otomasyon Riski (OECD)</h3>
-                        <p class="text-sm text-gray-600 mb-4">OECD, YZ nedeniyle otomasyon riski en yüksek mesleklerin, üye ülkelerindeki tüm işlerin yaklaşık %28'ini oluşturduğunu tahmin ediyor.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">İş Otomasyon Riski (OECD)</h3>
+                        <p class="text-sm text-gray-600 mb-4">OECD, Yapay Zeka nedeniyle otomasyon riski en yüksek olan mesleklerin, üye ülkelerindeki tüm işlerin yaklaşık %28'ini oluşturduğunu tahmin ediyor.</p>
                         <div class="chart-container h-64 md:h-80 max-w-xs">
                             <canvas id="jobAutomationRiskChart"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: OECD.</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: OECD.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Evrimleşen Beceri Talepleri (WEF)</h3>
-                        <p class="text-sm text-gray-600 mb-2">İşverenler, 2030 yılına kadar temel becerilerin %39'unun değişeceğini bekliyor.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Gelişen Beceri Talepleri (WEF)</h3>
+                        <p class="text-sm text-gray-600 mb-2">İşverenler, 2030 yılına kadar temel becerilerin %39'unun değişeceğini tahmin ediyor.</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <h4 class="font-semibold text-gray-700">Büyüyen Ana Teknik Beceriler:</h4>
+                                <h4 class="font-semibold text-gray-700">En Çok Gelişen Teknik Beceriler:</h4>
                                 <ul class="list-disc list-inside text-xs text-gray-600">
-                                    <li>YZ ve Büyük Veri Uzmanlığı</li>
+                                    <li>YZ ve Büyük Veri Yetkinliği</li>
                                     <li>Ağlar ve Siber Güvenlik</li>
                                     <li>Teknolojik Okuryazarlık</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-700">Büyüyen Ana Bilişsel Beceriler:</h4>
+                                <h4 class="font-semibold text-gray-700">En Çok Gelişen Bilişsel Beceriler:</h4>
                                 <ul class="list-disc list-inside text-xs text-gray-600">
                                     <li>Yaratıcı ve Analitik Düşünme</li>
-                                    <li>Dayanıklılık, Esneklik, Çeviklik</li>
+                                    <li>Esneklik, Çeviklik, Dayanıklılık</li>
                                     <li>Merak ve Yaşam Boyu Öğrenme</li>
                                 </ul>
                             </div>
                         </div>
-                        <p class="text-sm text-gray-600 mt-4">İşverenlerin %77'si 2030 yılına kadar yeniden beceri kazanmayı ve güncellemeyi önceliklendirmeyi planlıyor.</p>
+                        <p class="text-sm text-gray-600 mt-4">İşverenlerin %77'si 2030 yılına kadar yeniden beceri kazandırma ve yetkinlikleri artırmaya öncelik vermeyi planlıyor.</p>
                     </div>
                 </div>
             </div>
@@ -295,58 +301,58 @@
             <div class="stat-card">
                 <h2 class="text-3xl font-semibold mb-6 text-center">Geleceği Yönlendirmek: YZ Yönetişimi ve Etiği</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                   YZ yetenekleri geliştikçe sağlam yönetişimin aciliyeti artıyor. Dünya genelindeki hükümetler düzenleyici çabalarını artırıyor, YZ ile ilgili yasalarda artış yaşanıyor ve YZ Güvenlik Enstitüleri kuruluyor. Ancak, teknolojinin politikaların gerisinde kalmasıyla bir "yönetişim boşluğu" devam ediyor.
+                    Yapay Zeka yetenekleri arttıkça, sağlam yönetişim ihtiyacı da artıyor. Dünya genelindeki hükümetler, Yapay Zeka ile ilgili yasalarda bir artış ve Yapay Zeka Güvenlik Enstitülerinin kurulmasıyla düzenleyici çabaları artırıyor. Ancak, teknoloji politikayı geride bıraktığı için bir "yönetişim boşluğu" devam ediyor.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">YZ ile İlgili Düzenlemelerde Artış (ABD)</h3>
-                         <p class="text-sm text-gray-600 mb-4">Birleşik Devletler, 2024'te hem federal ajans YZ düzenlemelerinde hem de eyalet düzeyindeki YZ yasalarında önemli bir artış gördü.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">ABD'de YZ İlgili Düzenlemelerde Artış</h3>
+                           <p class="text-sm text-gray-600 mb-4">ABD, 2024'te hem federal kurum Yapay Zeka düzenlemelerinde hem de eyalet düzeyindeki Yapay Zeka yasalarında önemli bir artış gördü.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiRegulationsChartUS"></canvas>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500 text-center">Kaynak: Stanford HAI YZ İndeksi 2025.</p>
+                        <p class="text-xs mt-2 text-gray-500 text-center">Veri: Stanford HAI YZ Endeksi 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Basitleştirilmiş YZ Yönetişim Süreci Akış Şeması</h3>
-                        <p class="text-sm text-gray-600 mb-4">Etkin YZ yönetişimi, ihtiyaçların belirlenmesinden sürekli izlemeye ve uyarlamaya kadar uzanan, tüm aşamalarda etik prensipleri ve risk yönetimini vurgulayan döngüsel bir süreç içerir.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Basitleştirilmiş YZ Yönetişim Süreci Akışı</h3>
+                        <p class="text-sm text-gray-600 mb-4">Etkili Yapay Zeka yönetişimi, ihtiyaçları belirlemekten sürekli izleme ve uyarlamaya kadar döngüsel bir süreci içerir ve bu süreç boyunca etik ilkelere ve risk yönetimine vurgu yapar.</p>
                         <div class="space-y-3">
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">1. Amacı ve Kapsamı Tanımlayın</h4>
-                                    <p class="text-xs text-gray-600">YZ kullanım durumunu, etik yönergeleri ve uyumluluk gereksinimlerini belirleyin.</p>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">1. Amaç ve Kapsamı Tanımla</h4>
+                                    <p class="text-xs text-gray-600">YZ kullanım durumunu, etik yönergeleri ve uyumluluk ihtiyaçlarını belirle.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">2. Veri Yönetişimi ve Hazırlığı</h4>
-                                    <p class="text-xs text-gray-600">Veri kalitesini, gizliliği ve önyargı azaltmayı sağlayın.</p>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">2. Veri Yönetişimi ve Hazırlığı</h4>
+                                    <p class="text-xs text-gray-600">Veri kalitesini, gizliliğini ve yanlılık azaltmayı sağla.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">3. Model Geliştirme ve Doğrulama</h4>
-                                    <p class="text-xs text-gray-600">Eğitin, doğruluk, adalet, sağlamlık açısından test edin.</p>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">3. Model Geliştirme ve Doğrulama</h4>
+                                    <p class="text-xs text-gray-600">Doğruluk, adalet ve sağlamlık için eğit, test et.</p>
                                 </div>
                             </div>
-                             <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                           <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">4. Dağıtım ve Entegrasyon</h4>
-                                    <p class="text-xs text-gray-600">İnsan denetimi ve açık hesap verebilirlik ile uygulayın.</p>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">4. Dağıtım ve Entegrasyon</h4>
+                                    <p class="text-xs text-gray-600">İnsan gözetimi ve açık hesap verebilirlik ile uygula.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">🔄</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">🔄</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">5. İzleme ve İterasyon</h4>
-                                    <p class="text-xs text-gray-600">Performansı, etkiyi sürekli olarak değerlendirin ve uyarlayın.</p>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">5. İzleme ve Yineleme</h4>
+                                    <p class="text-xs text-gray-600">Performansı, etkiyi sürekli değerlendir ve uyum sağla.</p>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-xs mt-2 text-gray-500">Yaygın yönetişim prensiplerine dayalı kavramsal akış.</p>
+                        <p class="text-xs mt-2 text-gray-500">Ortak yönetişim ilkelerine dayalı kavramsal akış.</p>
                     </div>
                 </div>
             </div>
@@ -354,28 +360,28 @@
 
         <section id="outlook" class="mb-12 pt-16 -mt-16">
             <div class="stat-card">
-                <h2 class="text-3xl font-semibold mb-6 text-center">İlerleyen Ufuk: YZ'nin Gelecek Görünümü</h2>
+                <h2 class="text-3xl font-semibold mb-6 text-center">Ufukta: Yapay Zeka'nın Gelecek Görünümü</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                    YZ yörüngesi, giderek daha fazla "vekil" ve "gömülü" bir geleceğe işaret ediyor. Kısa dönem (1-3 yıl), daha geniş GenAI/vekil YZ benimsenmesini ve düzenleyici odaklanmayı içerecektir. Uzun dönem (5-10+ yıl), dönüştürücü bilimsel keşifleri, AGI arayışlarını ve önemli ekonomik yeniden yapılanmaları getirebilir.
+                    Yapay Zeka yörüngesi, giderek daha "ajanik" ve "gömülü" bir geleceğe işaret ediyor. Kısa vadede (1-3 yıl) daha geniş Üretken Yapay Zeka/ajanik Yapay Zeka benimsemesi ve düzenleyici odaklanma görülecek. Uzun vadede (5-10+ yıl) dönüştürücü bilimsel atılımlar, Yapay Genel Zeka (AGI) arayışları ve önemli ekonomik yeniden yapılanma gelebilir.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-xl font-semibold text-[#4364F7] mb-3">Ana Fırsatlar</h3>
+                        <h3 class="text-xl font-semibold text-[#4285F4] mb-3">Temel Fırsatlar</h3>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                            <li>Eşsiz ekonomik büyüme ve verimlilik.</li>
-                            <li>Büyük sorunlara çözümler (iklim, sağlık).</li>
-                            <li>İnsan yaratıcılığını ve inovasyonu artırma.</li>
+                            <li>Eşi benzeri görülmemiş ekonomik büyüme ve üretkenlik.</li>
+                            <li>Büyük zorluklara çözümler (iklim, sağlık).</li>
+                            <li>Gelişmiş insan yaratıcılığı ve inovasyonu.</li>
                             <li>Kişiselleştirilmiş eğitim ve sağlık hizmetleri.</li>
-                            <li>YZ yardımı aracılığıyla yaşam kalitesini iyileştirme.</li>
+                            <li>YZ yardımıyla yaşam kalitesinin artırılması.</li>
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-[#4364F7] mb-3">Ana Zorluklar</h3>
+                        <h3 class="text-xl font-semibold text-[#4285F4] mb-3">Temel Zorluklar</h3>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
-                            <li>Çift kullanım risklerini ve kötü niyetli kullanı yönetmek.</li>
+                            <li>Çift kullanımlı riskleri ve kötü niyetli kullanımı yönetmek.</li>
                             <li>Etik, adil ve şeffaf YZ sağlamak.</li>
-                            <li>YZ beceri açığını kapatmak ve iş kayıplarını ele almak.</li>
-                            <li>Çevik küresel yönetişim kurmak.</li>
+                            <li>YZ beceri boşluğunu kapatmak ve iş kaybını ele almak.</li>
+                            <li>Çevik küresel yönetişim oluşturmak.</li>
                             <li>Sistemik riskleri ve enerji tüketimini azaltmak.</li>
                         </ul>
                     </div>
@@ -384,21 +390,28 @@
         </section>
 
         <footer class="text-center mt-12 py-8 border-t border-gray-300">
-            <p class="text-sm text-gray-600">İnfografik, "Teknik, Sosyal ve Ekonomik Sınırlar Arasında YZ'nin Yörüngesini Keşfetmek" raporuna ve ilgili kaynaklara dayanmaktadır.</p>
-            <p class="text-xs text-gray-500 mt-1">Veriler esas olarak Stanford HAI YZ İndeksi 2025, McKinsey, PwC, WEF, OECD ve raporda bahsedilen diğer önemli kuruluşlardan alınmıştır.</p>
-            <p class="text-xs text-gray-500 mt-1">Bu bir görsel özet olup ve kapsamlı değildir. Tam detaylar için lütfen orijinal araştırma raporlarına başvurun.</p>
+            <p class="text-sm text-gray-600">İnfografik, "Bağlantı Noktasında Gezinmek: Yapay Zeka'nın Teknik, Sosyal ve Ekonomik Sınırlar Boyunca Yörüngesi" raporuna ve belirtilen kaynaklara dayanmaktadır.</p>
+            <p class="text-xs text-gray-500 mt-1">Veriler öncelikli olarak Stanford HAI YZ Endeksi 2025, McKinsey, PwC, WEF, OECD ve raporda belirtilen diğer önemli kurumlardan alınmıştır.</p>
+            <p class="text-xs text-gray-500 mt-1">Bu görsel bir özettir ve kapsamlı değildir. Tam detaylar için lütfen orijinal araştırma raporlarına bakınız.</p>
         </footer>
 
     </div>
 
     <script>
-        const brilliantBluesPalette = {
-            darkBlue: '#0052D4',
-            mediumBlue: '#4364F7',
-            lightBlue: '#6FB1FC',
+        const googlePalette = {
+            googleBlue: '#4285F4',
+            googleBlueLight: '#8AB4F8',
+            googleBlueDark: '#1A73E8',
+            googleGreen: '#34A853',
+            googleGreenLight: '#81C995',
+            googleGreenDark: '#1E8E3E',
+            googleYellow: '#FBBC05',
+            googleRed: '#EA4335',
+            textDark: '#202124', // Google Koyu Gri
             textLight: '#FFFFFF',
-            textDark: '#333333',
-            accentGray: '#E2E8F0' // Grid çizgileri vb. için Tailwind gri-200
+            backgroundLight: '#F8F9FA', // Çok Açık Gri
+            cardBackground: '#FFFFFF',
+            accentGray: '#D8DBE0' // Daha Açık Google Gri (ızgara çizgileri vb. için)
         };
 
         function wrapLabel(str, maxWidth) {
@@ -424,7 +437,7 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: brilliantBluesPalette.textDark,
+                        color: googlePalette.textDark,
                         font: { size: 12 }
                     }
                 },
@@ -434,9 +447,9 @@
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
                             if (Array.isArray(label)) {
-                              return label.join(' ');
+                                return label.join(' ');
                             } else {
-                              return label;
+                                return label;
                             }
                         }
                     }
@@ -445,114 +458,117 @@
             scales: {
                 y: {
                     beginAtZero: true,
-                    ticks: { color: brilliantBluesPalette.textDark, font: { size: 10 } },
-                    grid: { color: brilliantBluesPalette.accentGray }
+                    ticks: { color: googlePalette.textDark, font: { size: 10 } },
+                    grid: { color: googlePalette.accentGray }
                 },
                 x: {
-                    ticks: { color: brilliantBluesPalette.textDark, font: { size: 10 } },
-                    grid: { color: brilliantBluesPalette.accentGray }
+                    ticks: { color: googlePalette.textDark, font: { size: 10 } },
+                    grid: { color: googlePalette.accentGray }
                 }
             }
         };
 
-        // Grafik 1: Ülkeye Özel Özel YZ Yatırımı (Bar Grafiği)
+        // Grafik 1: Ülkelere Göre Özel YZ Yatırımı (Çubuk Grafik)
         const privateInvestmentCtx = document.getElementById('privateInvestmentChart').getContext('2d');
         new Chart(privateInvestmentCtx, {
             type: 'bar',
             data: {
-                labels: ['Birleşik Devletler', 'Çin', 'Birleşik Krallık'],
+                labels: ['Amerika Birleşik Devletleri', 'Çin', 'Birleşik Krallık'],
                 datasets: [{
-                    label: 'Özel YZ Yatırımı 2024 (Milyar USD)',
+                    label: 'Özel YZ Yatırımı 2024 (Milyar ABD Doları)',
                     data: [109.1, 9.3, 4.5],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
 
-        // Grafik 2: Hükümet YZ Yatırım Taahhütleri (Bar Grafiği)
+        // Grafik 2: Hükümet YZ Yatırım Taahhütleri (Çubuk Grafik)
         const govInvestmentCtx = document.getElementById('govInvestmentChart').getContext('2d');
         new Chart(govInvestmentCtx, {
             type: 'bar',
             data: {
-                labels: [wrapLabel('Çin (Yarı İletkenler)', 16), 'Fransa (YZ Altyapısı)', wrapLabel('Suudi Arabistan (Proje Transandans)', 16), 'Kanada (YZ Altyapısı)', 'Hindistan'],
+                labels: [wrapLabel('Çin (Yarı İletkenler)', 16), 'Fransa (YZ Altyapısı)', wrapLabel('Suudi Arabistan (Aşkınlık Projesi)', 16), 'Kanada (YZ Altyapısı)', 'Hindistan'],
                 datasets: [{
-                    label: 'Hükümet YZ Yatırım Taahhütleri (Milyar USD)',
-                    data: [47.5, 117, 100, 2.4, 1.25], // Not: Fransa verisi çok yüksek görünüyor, özette belirtildiği gibi $117B olarak kullanıldı.
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue, '#7F9CF5', '#A3BFFA'],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue, '#7F9CF5', '#A3BFFA'],
+                    label: 'Hükümet YZ Yatırım Taahhütleri (Milyar ABD Doları)',
+                    data: [47.5, 117, 100, 2.4, 1.25],
+                    backgroundColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow, googlePalette.googleGreenLight, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow, googlePalette.googleGreenLight, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
-        
-        // Grafik 3: YZ Benimseme Oranı (Bar Grafiği)
+
+        // Grafik 3: YZ Benimseme Oranı (Çubuk Grafik)
         const aiAdoptionRateCtx = document.getElementById('aiAdoptionRateChart').getContext('2d');
         new Chart(aiAdoptionRateCtx, {
             type: 'bar',
             data: {
                 labels: ['2023', '2024'],
                 datasets: [{
-                    label: '% YZ Kullanan Kuruluşlar',
+                    label: 'YZ Kullanan Kuruluşların %\'si',
                     data: [55, 78],
-                    backgroundColor: [brilliantBluesPalette.mediumBlue, brilliantBluesPalette.darkBlue],
-                     borderColor: [brilliantBluesPalette.mediumBlue, brilliantBluesPalette.darkBlue],
+                    backgroundColor: [googlePalette.googleBlueLight, googlePalette.googleBlueDark],
+                    borderColor: [googlePalette.googleBlueLight, googlePalette.googleBlueDark],
                     borderWidth: 1
                 }]
             },
             options: { ...commonChartOptions, indexAxis: 'y' }
         });
 
-        // Grafik 4: Benchmark Performans Artışı (Bar Grafiği)
+        // Grafik 4: Benchmark Performans Artışı (Çubuk Grafik)
         const benchmarkPerformanceCtx = document.getElementById('benchmarkPerformanceChart').getContext('2d');
         new Chart(benchmarkPerformanceCtx, {
             type: 'bar',
             data: {
-                labels: [wrapLabel('MMMU (Çok Modelli Anlama)',16), wrapLabel('GPQA (Lisans Soru-Cevap)',16), wrapLabel('SWE-bench (Yazılım Müh.)',16)],
+                labels: [wrapLabel('MMMU (Çok Modlu Anlama)',16), wrapLabel('GPQA (Lisansüstü Soru-Cevap)',16), wrapLabel('SWE-bench (Yazılım Mühendisliği)',16)],
                 datasets: [{
                     label: '1 Yılda Performans Puanı Artışı (Yüzde Puan)',
                     data: [18.8, 48.9, 67.3],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow],
+                    borderColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
 
-        // Grafik 5: Üretilen Dikkat Çeken YZ Modelleri (Bar Grafiği)
+        // Grafik 5: Üretilen Dikkate Değer YZ Modelleri (Çubuk Grafik)
         const modelProductionCtx = document.getElementById('modelProductionChart').getContext('2d');
         new Chart(modelProductionCtx, {
             type: 'bar',
             data: {
-                labels: ['Birleşik Devletler', 'Çin', 'Avrupa'],
+                labels: ['Amerika Birleşik Devletleri', 'Çin', 'Avrupa'],
                 datasets: [{
-                    label: 'Üretilen Dikkat Çeken YZ Modelleri (2024)',
+                    label: 'Üretilen Dikkate Değer YZ Modelleri (2024)',
                     data: [40, 15, 3],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
-        
-        // Grafik 6: Küresel YZ Optimizmi (Bas Bar Grafiği)
+
+        // Grafik 6: Küresel YZ İyimserliği (Farklı Renklerde Basit Çubuk Grafik)
         const aiOptimismSimpleCtx = document.getElementById('aiOptimismChart').getContext('2d');
         new Chart(aiOptimismSimpleCtx, {
             type: 'bar',
             data: {
                 labels: [wrapLabel('Çin',10), wrapLabel('Endonezya',10), wrapLabel('Tayland',10), wrapLabel('Kanada',10), wrapLabel('ABD',10), wrapLabel('Hollanda',12)],
                 datasets: [{
-                    label: 'YZ\'nin Daha Faydalı Olduğunu Gören %',
+                    label: 'YZ\'yi Daha Faydalı Görenlerin %\'si',
                     data: [83, 80, 77, 40, 39, 36],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.darkBlue, brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.mediumBlue],
+                    backgroundColor: [
+                        googlePalette.googleGreenDark, googlePalette.googleGreenDark, googlePalette.googleGreenDark, // Asya ülkeleri
+                        googlePalette.googleBlueDark, googlePalette.googleBlueDark, googlePalette.googleBlueDark // Batı ülkeleri
+                    ],
                 }]
             },
-             options: {
+               options: {
                 ...commonChartOptions,
                 scales: {
                     y: { ...commonChartOptions.scales.y, max: 100 }
@@ -561,16 +577,16 @@
         });
 
 
-        // Grafik 7: İş Otomasyon Riski (Donut Grafiği)
+        // Grafik 7: İş Otomasyon Riski (Donut Grafik)
         const jobAutomationRiskCtx = document.getElementById('jobAutomationRiskChart').getContext('2d');
         new Chart(jobAutomationRiskCtx, {
             type: 'doughnut',
             data: {
-                labels: [wrapLabel('Yüksek Otomasyon Riski Altındaki İşler (OECD)', 20), 'Diğer İşler'],
+                labels: [wrapLabel('Yüksek Otomasyon Riski Taşıyan İşler (OECD)', 20), 'Diğer İşler'],
                 datasets: [{
                     label: 'İş Otomasyon Riski',
                     data: [28, 72],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleRed, googlePalette.googleBlueLight],
                     hoverOffset: 4
                 }]
             },
@@ -578,28 +594,28 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'bottom', labels: { color: brilliantBluesPalette.textDark, font: {size: 10} } },
+                    legend: { position: 'bottom', labels: { color: googlePalette.textDark, font: {size: 10} } },
                     tooltip: commonChartOptions.plugins.tooltip
                 }
             }
         });
-        
-        // Grafik 8: YZ Düzenlemeleri ABD (Bar Grafiği)
+
+        // Grafik 8: ABD YZ Düzenlemeleri (Çubuk Grafik)
         const aiRegulationsChartUSCtx = document.getElementById('aiRegulationsChartUS').getContext('2d');
         new Chart(aiRegulationsChartUSCtx, {
             type: 'bar',
             data: {
-                labels: [wrapLabel('Federal Ajans YZ Düzenlemeleri', 16), wrapLabel('Eyalet Düzeyinde Çıkarılan YZ Yasaları', 16)],
+                labels: [wrapLabel('Federal Kurum YZ Düzenlemeleri', 16), wrapLabel('Eyalet Düzeyinde Geçen YZ Yasaları', 16)],
                 datasets: [
                     {
                         label: '2023',
-                        data: [ (59/2) /* Yaklaşık yarısı, çünkü 2024 Fed için 2023'ün iki katından fazla */, 49],
-                        backgroundColor: brilliantBluesPalette.lightBlue,
+                        data: [ (59/2) /* Yaklaşık yarısı, çünkü 2024 Federal için 2023'ün >iki katıydı */, 49],
+                        backgroundColor: googlePalette.googleBlueLight,
                     },
                     {
                         label: '2024',
                         data: [59, 131],
-                        backgroundColor: brilliantBluesPalette.darkBlue,
+                        backgroundColor: googlePalette.googleBlueDark,
                     }
                 ]
             },

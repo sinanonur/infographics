@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F0F4F8; /* Light Gray Background */
+            background-color: #F8F9FA; /* Very Light Gray Background */
         }
         .chart-container {
             position: relative;
@@ -28,18 +28,18 @@
         .stat-value {
             font-size: 2.25rem; /* text-4xl */
             font-weight: 700; /* font-bold */
-            color: #0052D4; /* Dark Blue */
+            color: #1A73E8; /* Google Blue Dark */
         }
         .stat-label {
             font-size: 0.875rem; /* text-sm */
-            color: #4A5568; /* Tailwind gray-600 */
+            color: #5F6368; /* Google Gray */
             margin-top: 0.25rem; /* mt-1 */
         }
         h1, h2, h3 {
-            color: #0052D4; /* Dark Blue */
+            color: #1A73E8; /* Google Blue Dark */
         }
         p {
-            color: #333333; /* Dark Gray/Black */
+            color: #202124; /* Google Dark Gray */
             line-height: 1.6;
         }
         .nav-link {
@@ -47,15 +47,21 @@
             transition: color 0.3s ease;
         }
         .nav-link:hover {
-            color: #6FB1FC; /* Light Blue for hover */
+            color: #8AB4F8; /* Google Blue Light for hover */
         }
-        /* Chosen Color Palette: Brilliant Blues */
-        /* Primary: #0052D4 (Dark Blue) */
-        /* Secondary: #4364F7 (Medium Blue) */
-        /* Accent: #6FB1FC (Light Blue) */
-        /* Text on Light: #333333 */
+        /* Chosen Color Palette: Google Material Palette */
+        /* Primary Blue: #4285F4 (Google Blue) */
+        /* Primary Blue Light: #8AB4F8 */
+        /* Primary Blue Dark: #1A73E8 */
+        /* Secondary Green: #34A853 (Google Green) */
+        /* Secondary Green Light: #81C995 */
+        /* Secondary Green Dark: #1E8E3E */
+        /* Accent Yellow/Orange: #FBBC05 */
+        /* Accent Red: #EA4335 */
+        /* Text on Light: #202124 (Google Dark Gray) */
         /* Text on Dark: #FFFFFF */
-        /* Backgrounds: #FFFFFF (Cards), #F0F4F8 (Page) */
+        /* Backgrounds: #FFFFFF (Cards), #F8F9FA (Page) */
+        /* Accent for grid lines, etc.: #D8DBE0 (Lighter Google Gray) */
 
         /* --- Narrative & Structure Plan ---
         1.  Introduction/Hook: Transformative AI.
@@ -85,7 +91,7 @@
 </head>
 <body class="text-gray-800">
 
-    <nav class="bg-[#0052D4] p-4 sticky top-0 z-50 shadow-lg">
+    <nav class="bg-[#1A73E8] p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex flex-wrap justify-between items-center">
             <div class="text-white text-2xl font-bold">AI: Trends & Futures</div>
             <div class="space-x-4 mt-2 sm:mt-0">
@@ -125,7 +131,7 @@
                         <div class="stat-label">Potential Global GDP Boost by AI (Next Decade)</div>
                         <p class="text-xs mt-1 text-gray-500">(Source: PwC)</p>
                     </div>
-                     <div class="stat-card !mb-0">
+                   <div class="stat-card !mb-0">
                         <div class="stat-value">78%</div>
                         <div class="stat-label">Organizations Using AI (2024)</div>
                         <p class="text-xs mt-1 text-gray-500">(Up from 55% in 2023, Stanford HAI)</p>
@@ -142,15 +148,15 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">US Leads Private AI Investment (2024)</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">US Leads Private AI Investment (2024)</h3>
                         <p class="text-sm text-gray-600 mb-4">The United States continues to dominate global private AI investment, attracting significantly more funding than other major players. This underscores its central role in driving AI innovation.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="privateInvestmentChart"></canvas>
                         </div>
-                         <p class="text-xs mt-2 text-gray-500 text-center">Data: Stanford HAI AI Index 2025.</p>
+                           <p class="text-xs mt-2 text-gray-500 text-center">Data: Stanford HAI AI Index 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Government AI Investment Pledges</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Government AI Investment Pledges</h3>
                         <p class="text-sm text-gray-600 mb-4">Governments worldwide are recognizing AI's strategic importance, committing substantial funds to bolster domestic capabilities, particularly in critical areas like semiconductor production and research infrastructure.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="govInvestmentChart"></canvas>
@@ -164,12 +170,12 @@
         <section id="adoption" class="mb-12 pt-16 -mt-16">
             <div class="stat-card">
                 <h2 class="text-3xl font-semibold mb-6 text-center">AI in Action: Corporate Adoption & Productivity</h2>
-                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
+                   <p class="text-md mb-8 text-center max-w-2xl mx-auto">
                     Businesses are increasingly integrating AI, with 78% of organizations using AI in 2024 (up from 55% in 2023). Generative AI adoption in business functions also more than doubled to 71% in 2024. This adoption is driven by tangible benefits, including productivity boosts and positive ROI.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Organizational AI Adoption Growth</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Organizational AI Adoption Growth</h3>
                         <p class="text-sm text-gray-600 mb-4">The rate of AI adoption is accelerating, with a significant jump in organizations reporting AI use in their operations from 2023 to 2024.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiAdoptionRateChart"></canvas>
@@ -177,7 +183,7 @@
                         <p class="text-xs mt-2 text-gray-500 text-center">Data: Stanford HAI AI Index 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">AI's Impact on Productivity & ROI</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">AI's Impact on Productivity & ROI</h3>
                         <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
                             <li>McKinsey estimates AI's long-term potential to add <strong>$4.4 trillion</strong> in annual productivity growth.</li>
                             <li>PwC: <strong>66%</strong> of companies using AI agents report increased productivity.</li>
@@ -198,21 +204,21 @@
                     Relentless innovation in AI models, hardware, and architectures fuels market growth. Enhanced reasoning, multimodal capabilities, and the rise of agentic AI are pivotal.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🚀 Advanced Reasoning</h3>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🚀 Advanced Reasoning</h3>
                         <p class="text-sm text-gray-700">Models like OpenAI's o-series are engineered for complex problem-solving, significantly outperforming predecessors on reasoning-intensive tasks. Microsoft also reports breakthroughs in model reasoning.</p>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🎨 Multimodality</h3>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🎨 Multimodality</h3>
                         <p class="text-sm text-gray-700">AI increasingly processes and generates information across text, image, video, and audio. Google's Gemini and OpenAI's GPT-4o exemplify this trend, enabling richer interactions.</p>
                     </div>
-                    <div class="p-6 bg-blue-50 rounded-lg">
-                        <h3 class="text-xl font-semibold text-[#0052D4] mb-2">🤖 Agentic AI</h3>
+                    <div class="p-6 bg-[#E8F0FE] rounded-lg">
+                        <h3 class="text-xl font-semibold text-[#1A73E8] mb-2">🤖 Agentic AI</h3>
                         <p class="text-sm text-gray-700">AI agents capable of automating tasks and orchestrating complex processes are seen as the next major wave, with Microsoft and Google heavily investing in agentic platforms.</p>
                     </div>
                 </div>
                 <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-3 text-center text-[#4364F7]">Benchmark Performance Skyrockets</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-center text-[#4285F4]">Benchmark Performance Skyrockets</h3>
                     <p class="text-sm text-gray-600 mb-4 text-center">New AI benchmarks introduced in 2023 saw dramatic performance improvements within just one year, showcasing the rapid pace of capability enhancement.</p>
                     <div class="chart-container h-72 md:h-96 max-w-2xl">
                         <canvas id="benchmarkPerformanceChart"></canvas>
@@ -230,7 +236,7 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Notable AI Models Produced (2024)</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Notable AI Models Produced (2024)</h3>
                         <p class="text-sm text-gray-600 mb-4">The US produced the highest number of significant AI models in 2024, followed by China and Europe.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="modelProductionChart"></canvas>
@@ -238,7 +244,7 @@
                         <p class="text-xs mt-2 text-gray-500 text-center">Data: Stanford HAI AI Index 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Global AI Optimism: Regional Divides</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Global AI Optimism: Regional Divides</h3>
                         <p class="text-sm text-gray-600 mb-4">Public optimism towards AI varies significantly, with high levels in Asian countries like China and Indonesia, and lower levels in some Western nations.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiOptimismChart"></canvas>
@@ -257,7 +263,7 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Job Automation Risk (OECD)</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Job Automation Risk (OECD)</h3>
                         <p class="text-sm text-gray-600 mb-4">The OECD estimates that occupations at the highest risk of automation due to AI account for approximately 28% of all jobs in its member countries.</p>
                         <div class="chart-container h-64 md:h-80 max-w-xs">
                             <canvas id="jobAutomationRiskChart"></canvas>
@@ -265,7 +271,7 @@
                         <p class="text-xs mt-2 text-gray-500 text-center">Data: OECD.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Evolving Skill Demands (WEF)</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Evolving Skill Demands (WEF)</h3>
                         <p class="text-sm text-gray-600 mb-2">Employers anticipate 39% of core skills will change by 2030.</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
@@ -295,53 +301,53 @@
             <div class="stat-card">
                 <h2 class="text-3xl font-semibold mb-6 text-center">Steering the Future: AI Governance & Ethics</h2>
                 <p class="text-md mb-8 text-center max-w-2xl mx-auto">
-                   As AI capabilities grow, so does the urgency for robust governance. Governments globally are increasing regulatory efforts, with a surge in AI-related laws and the establishment of AI Safety Institutes. However, a "governance gap" persists as technology outpaces policy.
+                    As AI capabilities grow, so does the urgency for robust governance. Governments globally are increasing regulatory efforts, with a surge in AI-related laws and the establishment of AI Safety Institutes. However, a "governance gap" persists as technology outpaces policy.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Rise in AI-Related Regulations (US)</h3>
-                         <p class="text-sm text-gray-600 mb-4">The US saw a significant increase in both federal agency AI regulations and state-level AI laws in 2024.</p>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Rise in AI-Related Regulations (US)</h3>
+                           <p class="text-sm text-gray-600 mb-4">The US saw a significant increase in both federal agency AI regulations and state-level AI laws in 2024.</p>
                         <div class="chart-container h-72 md:h-96">
                             <canvas id="aiRegulationsChartUS"></canvas>
                         </div>
                         <p class="text-xs mt-2 text-gray-500 text-center">Data: Stanford HAI AI Index 2025.</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-3 text-[#4364F7]">Simplified AI Governance Process Flow</h3>
+                        <h3 class="text-xl font-semibold mb-3 text-[#4285F4]">Simplified AI Governance Process Flow</h3>
                         <p class="text-sm text-gray-600 mb-4">Effective AI governance involves a cyclical process from identifying needs to ongoing monitoring and adaptation, emphasizing ethical principles and risk management throughout.</p>
                         <div class="space-y-3">
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">1. Define Purpose & Scope</h4>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">1. Define Purpose & Scope</h4>
                                     <p class="text-xs text-gray-600">Identify AI use case, ethical guidelines, and compliance needs.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">2. Data Governance & Preparation</h4>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">2. Data Governance & Preparation</h4>
                                     <p class="text-xs text-gray-600">Ensure data quality, privacy, and bias mitigation.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">3. Model Development & Validation</h4>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">3. Model Development & Validation</h4>
                                     <p class="text-xs text-gray-600">Train, test for accuracy, fairness, robustness.</p>
                                 </div>
                             </div>
-                             <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">➡️</span>
+                           <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">➡️</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">4. Deployment & Integration</h4>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">4. Deployment & Integration</h4>
                                     <p class="text-xs text-gray-600">Implement with human oversight and clear accountability.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center p-3 bg-sky-50 rounded-md shadow-sm">
-                                <span class="text-lg mr-3 text-[#0052D4]">🔄</span>
+                            <div class="flex items-center p-3 bg-[#E8F0FE] rounded-md shadow-sm">
+                                <span class="text-lg mr-3 text-[#1A73E8]">🔄</span>
                                 <div>
-                                    <h4 class="font-semibold text-sm text-sky-700">5. Monitoring & Iteration</h4>
+                                    <h4 class="font-semibold text-sm text-[#1A73E8]">5. Monitoring & Iteration</h4>
                                     <p class="text-xs text-gray-600">Continuously assess performance, impact, and adapt.</p>
                                 </div>
                             </div>
@@ -360,7 +366,7 @@
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-xl font-semibold text-[#4364F7] mb-3">Key Opportunities</h3>
+                        <h3 class="text-xl font-semibold text-[#4285F4] mb-3">Key Opportunities</h3>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
                             <li>Unprecedented economic growth and productivity.</li>
                             <li>Solutions to grand challenges (climate, health).</li>
@@ -370,7 +376,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-[#4364F7] mb-3">Key Challenges</h3>
+                        <h3 class="text-xl font-semibold text-[#4285F4] mb-3">Key Challenges</h3>
                         <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
                             <li>Managing dual-use risks and malicious use.</li>
                             <li>Ensuring ethical, fair, and transparent AI.</li>
@@ -392,13 +398,20 @@
     </div>
 
     <script>
-        const brilliantBluesPalette = {
-            darkBlue: '#0052D4',
-            mediumBlue: '#4364F7',
-            lightBlue: '#6FB1FC',
+        const googlePalette = {
+            googleBlue: '#4285F4',
+            googleBlueLight: '#8AB4F8',
+            googleBlueDark: '#1A73E8',
+            googleGreen: '#34A853',
+            googleGreenLight: '#81C995',
+            googleGreenDark: '#1E8E3E',
+            googleYellow: '#FBBC05',
+            googleRed: '#EA4335',
+            textDark: '#202124', // Google Dark Gray
             textLight: '#FFFFFF',
-            textDark: '#333333',
-            accentGray: '#E2E8F0' // Tailwind gray-200 for grid lines etc.
+            backgroundLight: '#F8F9FA', // Very Light Gray
+            cardBackground: '#FFFFFF',
+            accentGray: '#D8DBE0' // Lighter Google Gray for grid lines etc.
         };
 
         function wrapLabel(str, maxWidth) {
@@ -424,7 +437,7 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: brilliantBluesPalette.textDark,
+                        color: googlePalette.textDark,
                         font: { size: 12 }
                     }
                 },
@@ -434,9 +447,9 @@
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
                             if (Array.isArray(label)) {
-                              return label.join(' ');
+                                return label.join(' ');
                             } else {
-                              return label;
+                                return label;
                             }
                         }
                     }
@@ -445,12 +458,12 @@
             scales: {
                 y: {
                     beginAtZero: true,
-                    ticks: { color: brilliantBluesPalette.textDark, font: { size: 10 } },
-                    grid: { color: brilliantBluesPalette.accentGray }
+                    ticks: { color: googlePalette.textDark, font: { size: 10 } },
+                    grid: { color: googlePalette.accentGray }
                 },
                 x: {
-                    ticks: { color: brilliantBluesPalette.textDark, font: { size: 10 } },
-                    grid: { color: brilliantBluesPalette.accentGray }
+                    ticks: { color: googlePalette.textDark, font: { size: 10 } },
+                    grid: { color: googlePalette.accentGray }
                 }
             }
         };
@@ -464,8 +477,8 @@
                 datasets: [{
                     label: 'Private AI Investment 2024 (USD Billions)',
                     data: [109.1, 9.3, 4.5],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
@@ -480,15 +493,15 @@
                 labels: [wrapLabel('China (Semiconductors)', 16), 'France (AI Infra)', wrapLabel('Saudi Arabia (Project Transcendence)', 16), 'Canada (AI Infra)', 'India'],
                 datasets: [{
                     label: 'Government AI Investment Pledges (USD Billions)',
-                    data: [47.5, 117, 100, 2.4, 1.25], // Note: France data seems high, report states "€1.5B by 2022, part of larger plans". Using $117B as stated in summary for France.
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue, '#7F9CF5', '#A3BFFA'],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue, '#7F9CF5', '#A3BFFA'],
+                    data: [47.5, 117, 100, 2.4, 1.25],
+                    backgroundColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow, googlePalette.googleGreenLight, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow, googlePalette.googleGreenLight, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
-        
+
         // Chart 3: AI Adoption Rate (Bar Chart)
         const aiAdoptionRateCtx = document.getElementById('aiAdoptionRateChart').getContext('2d');
         new Chart(aiAdoptionRateCtx, {
@@ -498,8 +511,8 @@
                 datasets: [{
                     label: '% Organizations Using AI',
                     data: [55, 78],
-                    backgroundColor: [brilliantBluesPalette.mediumBlue, brilliantBluesPalette.darkBlue],
-                     borderColor: [brilliantBluesPalette.mediumBlue, brilliantBluesPalette.darkBlue],
+                    backgroundColor: [googlePalette.googleBlueLight, googlePalette.googleBlueDark],
+                    borderColor: [googlePalette.googleBlueLight, googlePalette.googleBlueDark],
                     borderWidth: 1
                 }]
             },
@@ -515,8 +528,8 @@
                 datasets: [{
                     label: 'Performance Score Increase in 1 Year (Percentage Points)',
                     data: [18.8, 48.9, 67.3],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow],
+                    borderColor: [googlePalette.googleGreenDark, googlePalette.googleBlueDark, googlePalette.googleYellow],
                     borderWidth: 1
                 }]
             },
@@ -532,53 +545,15 @@
                 datasets: [{
                     label: 'Notable AI Models Produced (2024)',
                     data: [40, 15, 3],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
-                    borderColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
+                    borderColor: [googlePalette.googleBlueDark, googlePalette.googleGreen, googlePalette.googleBlueLight],
                     borderWidth: 1
                 }]
             },
             options: commonChartOptions
         });
-        
-        // Chart 6: Global AI Optimism (Grouped Bar Chart)
-        const aiOptimismCtx = document.getElementById('aiOptimismChart').getContext('2d');
-        new Chart(aiOptimismCtx, {
-            type: 'bar',
-            data: {
-                labels: [wrapLabel('China',10), wrapLabel('Indonesia',10), wrapLabel('Thailand',10), wrapLabel('Germany',10), wrapLabel('France',10), wrapLabel('Canada',10), wrapLabel('USA',10), wrapLabel('Netherlands',12)],
-                datasets: [{
-                    label: '% Viewing AI as More Beneficial',
-                    data: [83, 80, 77, 0, 0, 40, 39, 36], // Placeholder 0 for GER/FRA, will update if found
-                    backgroundColor: brilliantBluesPalette.darkBlue,
-                },
-                { // Adding Germany and France from the text "rise in AI optimism in several previously skeptical developed nations, including Germany, France..."
-                  // Actual values for GER/FRA not in snippet, using placeholders or inferring rise.
-                  // For now, let's assume they rose to similar levels as US/Canada for visualization.
-                  // The report says "optimism levels are considerably lower in Canada (40%), the United States (39%), and the Netherlands (36%)"
-                  // And "rise in AI optimism in ... Germany, France, Canada, Great Britain, and the United States."
-                  // This means Germany/France are likely above previous lows, but still potentially below the Asian highs.
-                  // Let's use illustrative values assuming they rose to ~40-45%
-                  label: '% Viewing AI as More Beneficial (Illustrative Rise for GER/FRA)',
-                  data: [0,0,0, 42, 41, 0,0,0], // Illustrative values
-                  backgroundColor: brilliantBluesPalette.mediumBlue,
-                }
-                ]
-            },
-             options: {
-                ...commonChartOptions,
-                scales: {
-                    x: { ...commonChartOptions.scales.x, stacked: false },
-                    y: { ...commonChartOptions.scales.y, stacked: false, max: 100 }
-                }
-            }
-        });
-        // Update for AI Optimism: The data structure for grouped bar in Chart.js is tricky.
-        // The provided data [83, 80, 77, 0, 0, 40, 39, 36] is for a single dataset.
-        // The text says "rise in AI optimism in ... Germany, France".
-        // The chart above is not correctly representing a "grouped" bar for this.
-        // Let's simplify to a single dataset bar chart showing the provided values.
-        // The "Illustrative Rise" dataset isn't ideal without actual numbers.
-        // Re-doing AI Optimism chart for clarity with available data.
+
+        // Chart 6: Global AI Optimism (Simple Bar Chart with distinct colors)
         const aiOptimismSimpleCtx = document.getElementById('aiOptimismChart').getContext('2d');
         new Chart(aiOptimismSimpleCtx, {
             type: 'bar',
@@ -587,10 +562,13 @@
                 datasets: [{
                     label: '% Viewing AI as More Beneficial',
                     data: [83, 80, 77, 40, 39, 36],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.darkBlue, brilliantBluesPalette.darkBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.mediumBlue, brilliantBluesPalette.mediumBlue],
+                    backgroundColor: [
+                        googlePalette.googleGreenDark, googlePalette.googleGreenDark, googlePalette.googleGreenDark, // Asian countries
+                        googlePalette.googleBlueDark, googlePalette.googleBlueDark, googlePalette.googleBlueDark // Western countries
+                    ],
                 }]
             },
-             options: {
+               options: {
                 ...commonChartOptions,
                 scales: {
                     y: { ...commonChartOptions.scales.y, max: 100 }
@@ -608,7 +586,7 @@
                 datasets: [{
                     label: 'Job Automation Risk',
                     data: [28, 72],
-                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.lightBlue],
+                    backgroundColor: [googlePalette.googleRed, googlePalette.googleBlueLight],
                     hoverOffset: 4
                 }]
             },
@@ -616,12 +594,12 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'bottom', labels: { color: brilliantBluesPalette.textDark, font: {size: 10} } },
+                    legend: { position: 'bottom', labels: { color: googlePalette.textDark, font: {size: 10} } },
                     tooltip: commonChartOptions.plugins.tooltip
                 }
             }
         });
-        
+
         // Chart 8: AI Regulations US (Bar Chart)
         const aiRegulationsChartUSCtx = document.getElementById('aiRegulationsChartUS').getContext('2d');
         new Chart(aiRegulationsChartUSCtx, {
@@ -632,12 +610,12 @@
                     {
                         label: '2023',
                         data: [ (59/2) /* Approx half, as 2024 was >double 2023 for Fed */, 49],
-                        backgroundColor: brilliantBluesPalette.lightBlue,
+                        backgroundColor: googlePalette.googleBlueLight,
                     },
                     {
                         label: '2024',
                         data: [59, 131],
-                        backgroundColor: brilliantBluesPalette.darkBlue,
+                        backgroundColor: googlePalette.googleBlueDark,
                     }
                 ]
             },

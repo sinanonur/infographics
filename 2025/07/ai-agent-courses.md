@@ -6,7 +6,7 @@
 
 ## 🧾 Course Comparison Table
 
-| **Criteria** | **Vanderbilt University**<br>*AI Agents & Agentic AI in Python* (Coursera) | **DeepLearning.AI**<br>*AI Agents in LangGraph* | **IBM**<br>*RAG and Agentic AI Professional Certificate* (Coursera) | **LangChain Academy**<br>*Introduction to LangGraph* | **Udemy**<br>*2025 Bootcamp: Understand and Build Professional AI Agents* | **Hugging Face**<br>*AI Agents Course* |
+| **Criteria** | **Vanderbilt University**<br>[*AI Agents & Agentic AI in Python* (Coursera)](https://www.coursera.org/learn/ai-agents-python) | **DeepLearning.AI**<br>[*AI Agents in LangGraph*](https://learn.deeplearning.ai/courses/ai-agents-in-langgraph/lesson/qyrpc/introduction) | **IBM**<br>[*RAG and Agentic AI Professional Certificate* (Coursera)](https://www.coursera.org/professional-certificates/ibm-rag-and-agentic-ai) | **LangChain Academy**<br>[*Introduction to LangGraph*](https://academy.langchain.com/courses/intro-to-langgraph) | **Udemy**<br>[*2025 Bootcamp: Understand and Build Professional AI Agents*](https://www.udemy.com/course/generative-ai-llm-apps-ai-agents-cursor-ai/) | **Hugging Face**<br>[*AI Agents Course*](https://huggingface.co/learn/agents-course/unit0/introduction) |
 |:--|:--|:--|:--|:--|:--|:--|
 | **💲 Cost** | **Paid** (Coursera subscription) | **Free** (limited beta) | **Paid** (Coursera subscription) | **Free** | **Paid** ($54.99, dynamic) | **Free** |
 | **⏱ Duration** | ~**40 hours** (4 weeks @ 10hrs/wk) | **1h 32min** | ~**24 hours** (8 courses) | **6 hours** (54 lessons) | **80+ hours** (715+ lectures) | ~**12–16 hours** |
@@ -24,51 +24,49 @@
 
 ## 🧭 Grading and Synthesis
 
-### 🧱 **For the Foundationalist (AI Architect)**  
-🎯 **Best Pick**: **Vanderbilt University's "AI Agents & Agentic AI in Python"**  
-- Offers a **deep, fundamentals-first** curriculum that teaches building agent frameworks from scratch.  
-- Suitable for long-term, framework-independent mastery.  
-- Led by a highly credible educator, **Dr. Jules White**.  
+### 🧱 **For the Foundationalist (AI Architect)**
+🎯 **Best Pick**: **Vanderbilt University's "AI Agents & Agentic AI in Python"**
+- Offers a **deep, fundamentals-first** curriculum that teaches building agent frameworks from scratch.
+- Suitable for long-term, framework-independent mastery.
+- Led by a highly credible educator, **Dr. Jules White**.
 - Regularly updated, ensuring up-to-date knowledge.
 
 ---
 
-### 🧰 **For the Pragmatic Builder (App Developer)**  
-🪜 **Recommended Path**:  
-1. **Start with:**  
-   ✅ **LangChain Academy's "Introduction to LangGraph"**  
-   - Free, official course with deep insights into LangGraph.  
-2. **(Optional)** Follow up with:  
-   📌 *[Udacity’s Agentic AI Nanodegree]* (if revived or still available)  
-3. **Budget option:**  
-   ✅ **Udemy’s "2025 Bootcamp"**  
-   - Huge breadth, many tools, practical projects.  
-   - Be ready for fast pace and minor code tweaks due to updates.
+### 🧰 **For the Pragmatic Builder (App Developer)**
+🪜 **Recommended Path**:
+1. **Start with:**
+    ✅ **LangChain Academy's "Introduction to LangGraph"**
+    - Free, official course with deep insights into LangGraph.
+2. **(Optional)** Follow up with:
+    📌 *[Udacity’s Agentic AI Nanodegree]* (if revived or still available)
+3. **Budget option:**
+    ✅ **Udemy’s "2025 Bootcamp"**
+    - Huge breadth, many tools, practical projects.
+    - Be ready for fast pace and minor code tweaks due to updates.
 
 ---
 
-### 🏢 **For the Enterprise Specialist**  
-💼 **Best Fit**: **IBM's "RAG and Agentic AI Professional Certificate"**  
-- Tailored to **enterprise and production environments**.  
-- Deep focus on **Retrieval-Augmented Generation (RAG)** and **multi-agent orchestration**.  
+### 🏢 **For the Enterprise Specialist**
+💼 **Best Fit**: **IBM's "RAG and Agentic AI Professional Certificate"**
+- Tailored to **enterprise and production environments**.
+- Deep focus on **Retrieval-Augmented Generation (RAG)** and **multi-agent orchestration**.
 - Covers practical tools like IBM Watsonx and Gradio.
 
 ---
 
 ### 🌱 **For General Learners & Beginners**
 
-#### ✅ **Free, Hands-On & Practical**
-- **Hugging Face AI Agents Course**  
-  - Covers multiple frameworks with hands-on projects.  
-  - Living, open-source curriculum encourages updates and community learning.
+#### ✅ **Free, Hands-on & Practical**
+- **Hugging Face AI Agents Course**
+    - Covers multiple frameworks with hands-on projects.
+    - Living, open-source curriculum encourages updates and community learning.
 
 #### ✅ **Concise and Highly Credible**
-- **DeepLearning.AI’s "AI Agents in LangGraph"**  
-  - Short and focused, direct from Harrison Chase and Andrew Ng.  
-  - Great crash course on LangGraph.
+- **DeepLearning.AI’s "AI Agents in LangGraph"**
+    - Short and focused, direct from Harrison Chase and Andrew Ng.
+    - Great crash course on LangGraph.
 
 ---
 
 > 💡 All courses listed emphasize **hands-on projects**, which is crucial for mastering AI agents. Your best choice depends on your current role and learning goals—**depth vs. breadth**, **theory vs. practice**, **framework-agnostic vs. ecosystem-specific**.
-
----
